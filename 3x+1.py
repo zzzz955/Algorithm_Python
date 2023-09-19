@@ -33,7 +33,7 @@ def to_data_frame(data):
 
 
 def draw_graph(df, max_value, len_index):
-    plt.plot(df['index'], df['value'], linestyle='-', color='b', label=max_value)
+    plt.plot(df['index'], df['value'], linestyle='-', color='b', label=f'max : {max_value}')
     plt.title('3x+1 result')
     plt.xlabel('index')
     plt.ylabel('value')
@@ -46,3 +46,5 @@ def draw_graph(df, max_value, len_index):
     plt.legend()
     plt.show()
 
+
+showcase(51)
