@@ -7,28 +7,37 @@ def q2557():
     print('Hello World!')
 
 
-def q1000(a, b):
+def q1000():
     # A+B
-    print(a + b)
+    a, b = input().split()
+    print(int(a) + int(b))
 
 
-def q10998(a, b):
+def q10998():
     # A×B
-    print(a * b)
+    a, b = input().split()
+    print(int(a) * int(b))
 
 
-def q1001(a, b):
+def q1001():
     # A-B
-    print(a - b)
+    a, b = input().split()
+    print(int(a) - int(b))
 
 
-def q1008(a, b):
+def q1008():
     # A/B
+    a, b = input().split()
+    a = int(a)
+    b = int(b)
     print(a / b)
 
 
-def q10869(a, b):
+def q10869():
     # 사칙연산
+    a, b = input().split()
+    a = int(a)
+    b = int(b)
     print(a + b)
     print(a - b)
     print(a * b)
@@ -36,20 +45,29 @@ def q10869(a, b):
     print(a % b)
 
 
-def q10430(a, b, c):
+def q10430():
     # 나머지
+    a, b, c = input().split()
+    a = int(a)
+    b = int(b)
+    c = int(c)
     print((a + b) % c)
     print(((a % c) + (b % c)) % c)
     print((a * b) % c)
-    print((a % c) * (b % c))
+    print(((a % c) * (b % c)) % c)
 
 
-def q2558(a, b):
+def q2558():
+    # A+B - 2
+    a = int(input())
+    b = int(input())
     print(a + b)
 
 
-def q2588(a, b):
+def q2588():
     # 곱셈
+    a = int(input())
+    b = int(input())
     div = 1
     while b // div > 0:
         print(a * ((b // div) % 10))
@@ -57,24 +75,23 @@ def q2588(a, b):
     print(a * b)
 
 
-def q3046(r1, s):
+def q3046():
     # R2
+    r1, s = map(int, input().split())
     r2 = 2 * s - r1
     print(r2)
 
 
-def q2163(n, m):
+def q2163():
     # 초콜릿 자르기
-    divided_list = []
-    size = n * m
-    for i in range(1, size+1):
-        if size % i == 0:
-            divided_list.append(i)
-    print(len(divided_list))
+    n, m = map(int, input().split())
+    division = n * m - 1
+    print(division)
 
 
-def q11021(t):
+def q11021():
     # A+B - 7
+    t = int(input())
     input_list = []
     for _ in range(t):
         input_list.append(list(map(int, input().split())))
@@ -82,8 +99,9 @@ def q11021(t):
         print(f'Case #{i+1}: {sum(input_list[i])}')
 
 
-def q11022(t):
+def q11022():
     # A+B - 8
+    t = int(input())
     input_list = []
     for _ in range(t):
         input_list.append(list(map(int, input().split())))
@@ -111,78 +129,78 @@ def q7287():
     print(soup.find('div').find('span', {'id': 'u-solved'}).text)
 
 
-def q2525(a, b, c):
+def q2525():
     # 오븐 시계
-    b += c
-    if b > 60:
-        b = b - 60
-        a += 1
-    if a > 24:
-        a = a - 24
+    a, b = map(int, input().split())
+    c = int(input())
+    total = a * 60 + b + c
+    a = total // 60 % 24
+    b = total % 60
     print(f'{a} {b}')
 
 
-def q2530(a, b, c, d):
+def q2530():
     # 인공지능 시계
-    c += d
-    while a >= 24 or b >= 60 or c >= 60:
-        if c >= 60:
-            c -= 60
-            b += 1
-        if b >= 60:
-            b -= 60
-            a += 1
-        if a >= 24:
-            a -= 24
+    a, b, c = map(int, input().split())
+    d = int(input())
+    total = a * 3600 + b * 60 + c + d
+    a = total // 3600 % 24
+    b = total // 60 % 60
+    c = total % 60
     print(f'{a} {b} {c}')
 
 
-def q2914(a, i):
+def q2914():
     # 저작권
+    a, i = map(int, input().split())
     x = a * i
     if a != 0:
         x -= a-1
-    return x
+    print(x)
 
 
-def q5355(d, op1=None, op2=None, op3=None):
+def q5355():
     # 화성 수학
-    d = float(d)
-
-    if op1 == '@':
-        d *= 3
-    elif op1 == '%':
-        d += 5
-    elif op1 == '#':
-        d -= 7
-
-    if op2 == '@':
-        d *= 3
-    elif op2 == '%':
-        d += 5
-    elif op2 == '#':
-        d -= 7
-
-    if op3 == '@':
-        d *= 3
-    elif op3 == '%':
-        d += 5
-    elif op3 == '#':
-        d -= 7
-
-    print("{:.2f}".format(d))
+    t = int(input())
+    input_datas = []
+    for _ in range(t):
+        data = list(map(str, input().split()))
+        data[0] = float(data[0])
+        input_datas.append(data)
+    for i in range(len(input_datas)):
+        for j in range(1, len(input_datas[i])):
+            if input_datas[i][j] is not None and input_datas[i][j] == '@':
+                input_datas[i][0] *= 3
+            if input_datas[i][j] is not None and input_datas[i][j] == '%':
+                input_datas[i][0] += 5
+            if input_datas[i][j] is not None and input_datas[i][j] == '#':
+                input_datas[i][0] -= 7
+    for i in range(len(input_datas)):
+        print("{:.2f}".format(input_datas[i][0]))
 
 
-def q2675(r, s):
+def q2675():
     # 문자열 반복
-    string = ''
-    for i in range(len(s)):
-        string += s[i]*r
-    print(string)
+    t = int(input())
+    strings = []
+    for _ in range(t):
+        data = list(map(str, input().split()))
+        data[0] = int(data[0])
+        strings.append(data)
+    for i in range(len(strings)):
+        multiple = strings[i][0]
+        string = strings[i][1]
+        result = ''
+        for word in string:
+            result += word * multiple
+        print(result)
 
 
-def q2935(a, op, b):
+def q2935():
     # 소음
+    a = int(input())
+    op = input()
+    b = int(input())
     if op == '*':
         result = a * b
     elif op == '+':
@@ -192,8 +210,9 @@ def q2935(a, op, b):
     print(result)
 
 
-def q9498(n):
+def q9498():
     # 시험 성적
+    n = int(input())
     if 90 <= n <= 100:
         print('A')
     elif 80 <= n < 90:
@@ -206,13 +225,15 @@ def q9498(n):
         print('F')
 
 
-def q10817(a, b, c):
+def q10817():
     # 세 수
+    a, b, c = map(int, (input().split()))
     print(sorted([a, b, c], reverse=True)[1])
 
 
-def q11653(n):
+def q11653():
     # 소인수분해
+    n = int(input())
     divide = 2
     while n != 1:
         if n % divide == 0:
@@ -223,8 +244,9 @@ def q11653(n):
         divide += 1
 
 
-def q1789(s):
+def q1789():
     # 수들의 합
+    s = int(input())
     index = 0
     num = 0
     plus = 1
@@ -237,8 +259,9 @@ def q1789(s):
     print(index)
 
 
-def q2753(y):
+def q2753():
     # 윤년
+    y = int(input())
     if (y % 4 == 0 and y % 100 != 0) or y % 400 == 0:
         print(1)
     else:
@@ -256,24 +279,23 @@ def q10039():
     print(sum(num_list) // 5)
 
 
-def q1934(a, b):
+def q1934():
     # 최소공배수
-    divisor = []
-    common_divisor = []
-    for i in range(1, a):
-        if a % i == 0:
-            divisor.append(i)
-    for i in range(1, b):
-        if b % i == 0:
-            divisor.append(i)
-    for num in divisor:
-        if a % num == 0 and b % num == 0:
-            common_divisor.append(num)
-    print(a * b // max(common_divisor))
+    t = int(input())
+    datas = []
+    for _ in range(t):
+        a, b = (map(int, (input().split())))
+        multiple = a * b
+        while b:
+            a, b = b, a % b
+        datas.append(multiple // a)
+    for data in datas:
+        print(data)
 
 
-def q2480(a, b, c):
+def q2480():
     # 주사위 세개
+    a, b, c = map(int, (input().split()))
     if a == b == c:
         result = 10000 + a * 1000
     elif a == b or a == c:
@@ -284,21 +306,29 @@ def q2480(a, b, c):
         result = 1000 + c * 100
     elif a != b and a != c and b != c:
         result = max(a, b, c) * 100
+    else:
+        return
     print(result)
 
 
-def q4101(a, b):
+def q4101():
     # 크냐?
-    if a < 1 or b < 1:
-        return
-    if a > b:
-        print('Yes')
-    else:
-        print('No')
+    datas = []
+    while 1:
+        a, b = (map(int, (input().split())))
+        if a == 0 and b == 0:
+            break
+        if a > b:
+            datas.append('Yes')
+        else:
+            datas.append('No')
+    for data in datas:
+        print(data)
 
 
-def q10156(k, n, m):
+def q10156():
     # 과자
+    k, n, m = map(int, (input().split()))
     sum_price = k * n
     if m >= sum_price:
         print(0)
