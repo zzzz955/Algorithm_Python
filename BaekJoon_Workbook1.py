@@ -9,35 +9,31 @@ def q2557():
 
 def q1000():
     # A+B
-    a, b = input().split()
-    print(int(a) + int(b))
+    a, b = map(int, input().split())
+    print(a + b)
 
 
 def q10998():
     # A×B
-    a, b = input().split()
-    print(int(a) * int(b))
+    a, b = map(int, input().split())
+    print(a * b)
 
 
 def q1001():
     # A-B
-    a, b = input().split()
-    print(int(a) - int(b))
+    a, b = map(int, input().split())
+    print(a - b)
 
 
 def q1008():
     # A/B
-    a, b = input().split()
-    a = int(a)
-    b = int(b)
+    a, b = map(int, input().split())
     print(a / b)
 
 
 def q10869():
     # 사칙연산
-    a, b = input().split()
-    a = int(a)
-    b = int(b)
+    a, b = map(int, input().split())
     print(a + b)
     print(a - b)
     print(a * b)
@@ -47,10 +43,7 @@ def q10869():
 
 def q10430():
     # 나머지
-    a, b, c = input().split()
-    a = int(a)
-    b = int(b)
-    c = int(c)
+    a, b, c = map(int, input().split())
     print((a + b) % c)
     print(((a % c) + (b % c)) % c)
     print((a * b) % c)
@@ -162,21 +155,20 @@ def q2914():
 def q5355():
     # 화성 수학
     t = int(input())
-    input_datas = []
+    datas = []
     for _ in range(t):
         data = list(map(str, input().split()))
         data[0] = float(data[0])
-        input_datas.append(data)
-    for i in range(len(input_datas)):
-        for j in range(1, len(input_datas[i])):
-            if input_datas[i][j] is not None and input_datas[i][j] == '@':
-                input_datas[i][0] *= 3
-            if input_datas[i][j] is not None and input_datas[i][j] == '%':
-                input_datas[i][0] += 5
-            if input_datas[i][j] is not None and input_datas[i][j] == '#':
-                input_datas[i][0] -= 7
-    for i in range(len(input_datas)):
-        print("{:.2f}".format(input_datas[i][0]))
+        for i in range(1, len(data)):
+            if data[i] == '@':
+                data[0] *= 3
+            if data[i] == '%':
+                data[0] += 5
+            if data[i] == '#':
+                data[0] -= 7
+        datas.append(data[0])
+    for result in datas:
+        print("{:.2f}".format(result))
 
 
 def q2675():
