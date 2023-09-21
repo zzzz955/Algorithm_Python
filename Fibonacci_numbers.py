@@ -1,6 +1,6 @@
 def fibonacci(index):
-    if not isinstance(index, int):
-        print('정수 값을 입력해 주세요')
+    if not isinstance(index, int) or index < 1:
+        print('자연수를 입력해 주세요')
         return
     if 0 < index <= 2:
         return index
@@ -13,11 +13,20 @@ def fibonacci(index):
     return sum(default_nums)
 
 
-def fibonacci_recursive_func(index):
-    if not isinstance(index, int):
-        print('정수 값을 입력해 주세요')
+def fibonacci_recursive(index):
+    if not isinstance(index, int) or index < 1:
+        print('자연수를 입력해 주세요')
         return
     if index <= 2:
         return 1
-    return fibonacci_recursive_func(index-1) + fibonacci_recursive_func(index-2)
+    return fibonacci_recursive(index-1) + fibonacci_recursive(index-2)
 
+
+def fibonacci_dynamic(index):
+    if not isinstance(index, int) or index < 1:
+        print('자연수를 입력해 주세요')
+        return
+    dp = [0, 1]
+    for i in range(2, index+1):
+        dp.append(dp[i-1] + dp[i-2])
+    print(max(dp))
