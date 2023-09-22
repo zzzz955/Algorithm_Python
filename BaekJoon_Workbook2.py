@@ -47,4 +47,4 @@ def q1655():
         result.append(max_heap[0][1])
     for data in result:
         print(data)
-q1655()
+
