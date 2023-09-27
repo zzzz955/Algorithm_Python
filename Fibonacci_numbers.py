@@ -30,3 +30,17 @@ def fibonacci_dynamic(index):
     for i in range(2, index+1):
         dp.append(dp[i-1] + dp[i-2])
     print(max(dp))
+
+
+def fibonacci_dynamic2(index):
+    if not isinstance(index, int) or index < 1:
+        print('자연수를 입력해 주세요')
+        return
+    dp = [[0] * index]
+    dp[0][0] = 1
+    dp[0][1] = 1
+
+    for i in range(2, index):
+        dp[0][i] = dp[0][i-2] + dp[0][i-1]
+    print(max(max(dp)))
+
