@@ -37,3 +37,28 @@ def q1002():
             print(0)
 
 
+def q1769():
+    # 3의 배수
+    x = input()
+    changes = 0
+    length = len(x)
+    temp = 0
+    while length != 1:
+        temp = 0
+        for char in x:
+            temp += int(char)
+        x = str(temp)
+        length = len(x)
+        changes += 1
+    print(changes)
+    if changes == 0:
+        if int(x) % 3 == 0:
+            print('YES')
+        else:
+            print('NO')
+    else:
+        if temp % 3 == 0:
+            print('YES')
+        else:
+            print('NO')
+q1769()
