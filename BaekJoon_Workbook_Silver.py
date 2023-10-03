@@ -61,4 +61,20 @@ def q1769():
             print('YES')
         else:
             print('NO')
-q1769()
+
+
+def q1417():
+    # 국회의원 선거
+    t = int(input())
+    lst = []
+    buy = 0
+    for _ in range(t):
+        lst.append(int(input()))
+    dasom = lst.pop(0)
+    if lst:
+        while dasom <= max(lst):
+            lst[lst.index(max(lst))] -= 1
+            dasom += 1
+            buy += 1
+    print(buy)
+q1417()
