@@ -96,4 +96,30 @@ def q2828():
             result += abs(num - current - m + 1)
             current = num - m + 1
     print(result)
-q2828()
+
+
+def q1713():
+    # 후보 추천하기
+    n = int(input())
+    v = int(input())
+    s = list(map(int, input().split()))
+    frame = []
+    count = []
+    for i in range(v):
+        if s[i] in frame:
+            for j in range(len(frame)):
+                if s[i] == frame[j]:
+                    count[j] += 1
+        else:
+            if len(frame) >= n:
+                for j in range(n):
+                    if count[j] == min(count):
+                        del frame[j]
+                        del count[j]
+                        break
+            frame.append(s[i])
+            count.append(1)
+    frame.sort()
+    print(' '.join(map(str, frame)))
+q1713()
+
