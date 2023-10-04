@@ -77,4 +77,23 @@ def q1417():
             dasom += 1
             buy += 1
     print(buy)
-q1417()
+
+
+def q2828():
+    # 사과 담기 게임
+    n, m = map(int, input().split())
+    j = int(input())
+    location = []
+    current = 1
+    result = 0
+    for _ in range(j):
+        location.append(int(input()))
+    for num in location:
+        if num < current:
+            result += abs(num - current)
+            current = num
+        elif num >= current + m:
+            result += abs(num - current - m + 1)
+            current = num - m + 1
+    print(result)
+q2828()
