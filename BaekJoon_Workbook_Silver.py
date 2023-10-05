@@ -1,5 +1,3 @@
-
-
 def q1010():
     # 다리 놓기
     t = int(input())
@@ -121,5 +119,26 @@ def q1713():
             count.append(1)
     frame.sort()
     print(' '.join(map(str, frame)))
-q1713()
+
+
+def q1251():
+    # 단어 나누기
+    s = list(input())
+    temp = []
+    result = []
+
+    for i in range(1, len(s) - 1):
+        for j in range(i + 1, len(s)):
+            w1 = s[:i]
+            w2 = s[i:j]
+            w3 = s[j:]
+            w1.reverse()
+            w2.reverse()
+            w3.reverse()
+            temp.append(w1 + w2 + w3)
+
+    for data in temp:
+        result.append(''.join(data))
+    print(min(result))
+
 
