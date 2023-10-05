@@ -142,3 +142,47 @@ def q1251():
     print(min(result))
 
 
+def q2564():
+    # 경비원
+    x, y = map(int, input().split())
+    c = int(input())
+    shop_pos = []
+    distance = 0
+    for _ in range(c):
+        shop_pos.append(list(map(int, input().split())))
+    l, d = map(int, input().split())
+    for loc, dist in shop_pos:
+        if l <= 2:
+            if (loc == 1 and l == 1) or (loc == 2 and l == 2):
+                distance += abs(d - dist)
+            elif (loc == 1 and l == 2) or (loc == 2 and l == 1):
+                distance += min(d + dist + y, abs(d - x) + abs(dist - x) + y)
+            else:
+                if l == 1:
+                    if loc == 3:
+                        distance += d + dist
+                    if loc == 4:
+                        distance += abs(d - x) + dist
+                elif l == 2:
+                    if loc == 3:
+                        distance += d + abs(dist - y)
+                    if loc == 4:
+                        distance += abs(d - x) + abs(dist - y)
+        elif l >= 3:
+            if (loc == 3 and l == 3) or (loc == 4 and l == 4):
+                distance += abs(d - dist)
+            elif (loc == 3 and l == 4) or (loc == 4 and l == 3):
+                distance += min(d + dist + x, abs(d - y) + abs(dist - y) + x)
+            else:
+                if l == 3:
+                    if loc == 1:
+                        distance += d + dist
+                    if loc == 2:
+                        distance += abs(d - y) + dist
+                elif l == 4:
+                    if loc == 1:
+                        distance += d + abs(dist - x)
+                    if loc == 2:
+                        distance += abs(d - y) + abs(dist - x)
+    print(distance)
+q2564()
