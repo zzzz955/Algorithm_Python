@@ -222,4 +222,24 @@ def q4659():
             result.append(f'<{password}> is not acceptable.')
     for answer in result:
         print(answer)
-q4659()
+
+
+def q1205():
+    # 등수 구하기
+    n, new_point, p = map(int, input().split())
+    if n > 0:
+        current_rank = list(map(int, input().split()))
+        current_rank.append(new_point)
+        sorted_current_rank = sorted(current_rank, reverse=True)
+        if sorted_current_rank.index(new_point) + 1 > p:
+            print(-1)
+        else:
+            if current_rank[n - 1] >= new_point and n < p:
+                print(sorted_current_rank.index(new_point) + 1)
+            elif current_rank[n - 1] >= new_point and len(current_rank) >= p:
+                print(-1)
+            else:
+                print(sorted_current_rank.index(new_point) + 1)
+    else:
+        print(1)
+q1205()
