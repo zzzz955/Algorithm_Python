@@ -242,4 +242,22 @@ def q1205():
                 print(sorted_current_rank.index(new_point) + 1)
     else:
         print(1)
-q1205()
+
+
+def q5671():
+    # 호텔 방 번호
+    while 1:
+        try:
+            s, l = map(int, input().split())
+            count = 0
+            for num in range(s, l + 1):
+                string = str(num)
+                lst = []
+                for char in string:
+                    lst.append(char)
+                if len(set(lst)) == len(lst):
+                    count += 1
+            print(count)
+        except:
+            break
+q5671()
