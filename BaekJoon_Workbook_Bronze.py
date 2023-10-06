@@ -18,4 +18,15 @@ def q14563():
             result.append('Deficient')
     for answer in result:
         print(answer)
-q14563()
+
+
+def q1773():
+    # 폭죽쇼
+    n, c = map(int, (input().split()))
+    dp = [0] * 2000001
+    for _ in range(n):
+        time = int(input())
+        for i in range(time, c + 1, time):
+            dp[i] = 1
+    print(sum(dp))
+q1773()
