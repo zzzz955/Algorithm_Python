@@ -262,19 +262,34 @@ def q5671():
             break
 
 
-def q18429():
-    # 근손실
-    n, k = map(int, input().split())
-    kit = []
-    case = 1
-    kit.append(list(map(int, input().split())))
-    for i in range(1, n + 1):
-        case *= i
-    dp = [0] * case
-    for i in range(case):
-        for j in range(i, n + 1):
-            dp[
+def q2839():
+    # 설탕 배달
+    n = int(input())
+    d5 = n // 5
+    if n == 3:
+        print(1)
+    elif n == 4 or n == 7:
+        print(-1)
+    elif n == 5 or n == 10:
+        print(n // 5)
+    elif n == 6 or n == 9:
+        print(n // 3)
+    elif n == 8:
+        print(2)
+    elif n > 10:
+        if n % 5 == 1:
+            print(d5 + 1)
+        elif n % 5 == 2:
+            print(d5 + 2)
+        elif n % 5 == 3:
+            print(d5 + 1)
+        elif n % 5 == 4:
+            print(d5 + 2)
+        elif n % 5 == 0:
+            print(d5)
+        else:
+            print(-1)
 
 
-q18429()
+
 
