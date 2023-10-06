@@ -260,4 +260,21 @@ def q5671():
             print(count)
         except:
             break
-q5671()
+
+
+def q18429():
+    # 근손실
+    n, k = map(int, input().split())
+    kit = []
+    case = 1
+    kit.append(list(map(int, input().split())))
+    for i in range(1, n + 1):
+        case *= i
+    dp = [0] * case
+    for i in range(case):
+        for j in range(i, n + 1):
+            dp[
+
+
+q18429()
+
