@@ -185,4 +185,41 @@ def q2564():
                     if loc == 2:
                         distance += abs(d - y) + abs(dist - x)
     print(distance)
-q2564()
+
+
+def q4659():
+    # 비밀번호 발음하기
+    test_case = []
+    result = []
+    moeum = ['a', 'e', 'i', 'o', 'u']
+    excepts = ['ee', 'oo']
+    while 1:
+        case = input()
+        if case == 'end':
+            break
+        else:
+            test_case.append(case)
+    for password in test_case:
+        test = False
+        for i in moeum:
+            if i in password:
+                test = True
+                break
+        for i in range(len(password) - 2):
+            if password[i] in moeum and password[i + 1] in moeum and password[i + 2] in moeum:
+                test = False
+                break
+            if not(password[i] in moeum) and not(password[i + 1] in moeum) and not(password[i + 2] in moeum):
+                test = False
+                break
+        for i in range(len(password) - 1):
+            if password[i] == password[i + 1] and password[i] + password[i + 1] not in excepts:
+                test = False
+                break
+        if test:
+            result.append(f'<{password}> is acceptable.')
+        else:
+            result.append(f'<{password}> is not acceptable.')
+    for answer in result:
+        print(answer)
+q4659()
