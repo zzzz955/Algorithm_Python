@@ -304,6 +304,24 @@ def q9095():
         result.append(dp[n])
     for answer in result:
         print(answer)
-q9095()
 
 
+def q1003():
+    # 피보나치 함수
+    t = int(input())
+    result = []
+    for _ in range(t):
+        n = int(input())
+        dp = [0] * n
+        dp[0:2] = [1, 1]
+        if n == 0:
+            result.append('1 0')
+        elif n == 1:
+            result.append('0 1')
+        else:
+            for i in range(2, n):
+                dp[i] = dp[i - 1] + dp[i - 2]
+            result.append(f'{dp[n - 2]} {dp[n - 1]}')
+    for answer in result:
+        print(answer)
+q1003()
