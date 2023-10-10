@@ -84,4 +84,25 @@ def q1157():
         print('?')
     else:
         print(chr(dp.index(max(dp)) + 65))
-q1157()
+
+
+def q4344():
+    # 평균은 넘겠지
+    c = int(input())
+    result = []
+    for _ in range(c):
+        lst = list(map(int, input().split()))
+        count = 0
+        average = sum(lst[1:]) / lst[0]
+        for i in range(1, len(lst)):
+            if lst[i] > average:
+                count += 1
+        answer = str(round((count / lst[0] * 100), 3))
+        if answer[-1] == '0':
+            answer += '00%'
+        else:
+            answer += '%'
+        result.append(answer)
+    for answer in result:
+        print(answer)
+q4344()
