@@ -72,5 +72,16 @@ def q2609():
     lcm = for_lcm // gcd
     print(gcd)
     print(lcm)
-q2609()
 
+
+def q1157():
+    # 단어 공부
+    s = input().upper()
+    dp = [0] * 26
+    for char in s:
+        dp[ord(char) - 65] += 1
+    if dp.count(max(dp)) >= 2:
+        print('?')
+    else:
+        print(chr(dp.index(max(dp)) + 65))
+q1157()
