@@ -324,4 +324,27 @@ def q1003():
             result.append(f'{dp[n - 2]} {dp[n - 1]}')
     for answer in result:
         print(answer)
-q1003()
+
+
+def q1929():
+    # 소수 구하기
+    import sys
+    m, n = map(int, sys.stdin.readline().split())
+    dp = [1] * (n + 1)
+    dp[0] = 0
+    dp[1] = 0
+    index = 2
+    while index <= n // 2:
+        if dp[index] == 0:
+            index += 1
+            continue
+        else:
+            index2 = 2
+            while index * index2 < n + 1:
+                dp[index * index2] = 0
+                index2 += 1
+            index += 1
+    for i in range(m, n + 1):
+        if dp[i]:
+            sys.stdout.write(str(i) + '\n')
+q1929()
