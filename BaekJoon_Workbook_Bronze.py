@@ -177,4 +177,16 @@ def q5073():
             result.append("Scalene")
     for answer in result:
         print(answer)
-q5073()
+
+
+def q2292():
+    # 벌집
+    n = int(input())
+    index = 1
+    first = 1
+    prod = 6
+    while first < n:
+        first += prod * index
+        index += 1
+    print(index)
+q2292()
