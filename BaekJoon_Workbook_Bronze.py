@@ -149,4 +149,11 @@ def q10872():
         else:
             return num * factor(num - 1)
     print(factor(n))
-q10872()
+
+
+def q23971():
+    # ZOAC 4
+    import math
+    h, w, n, m = map(int, input().split())
+    print(math.ceil(h / (n + 1)) * math.ceil(w / (m + 1)))
+q23971()
