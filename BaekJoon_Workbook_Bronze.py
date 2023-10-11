@@ -128,4 +128,13 @@ def q1032():
             string += '?'
             index += 1
     print(string)
-q1032()
+
+
+def q2562():
+    # 최댓값
+    lst = []
+    for _ in range(9):
+        lst.append(int(input()))
+    print(max(lst))
+    print(lst.index(max(lst)) + 1)
+q2562()
