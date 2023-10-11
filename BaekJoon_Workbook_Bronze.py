@@ -105,4 +105,27 @@ def q4344():
         result.append(answer)
     for answer in result:
         print(answer)
-q4344()
+
+
+def q1032():
+    # 명령 프롬프트
+    n = int(input())
+    files = []
+    for _ in range(n):
+        files.append(input())
+    string = ''
+    index = 0
+
+    for j in range(len(files[0])):
+        temp = True
+        for i in range(1, n):
+            if files[i - 1][j] != files[i][j]:
+                temp = False
+        if temp:
+            string += files[0][index]
+            index += 1
+        else:
+            string += '?'
+            index += 1
+    print(string)
+q1032()
