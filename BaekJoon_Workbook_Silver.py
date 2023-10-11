@@ -380,4 +380,13 @@ def q11723():
                     print(1)
                 else:
                     print(0)
-q11723()
+
+
+def q9655():
+    # 돌 게임
+    n = int(input())
+    if n % 2 == 0:
+        print('CY')
+    else:
+        print('SK')
+q9655()
