@@ -156,4 +156,25 @@ def q23971():
     import math
     h, w, n, m = map(int, input().split())
     print(math.ceil(h / (n + 1)) * math.ceil(w / (m + 1)))
-q23971()
+
+
+def q5073():
+    # 삼각형과 세 변
+    result = []
+    while 1:
+        lst = list(map(int, input().split()))
+        if sum(lst) == 0:
+            break
+        lst_temp1 = lst.copy()
+        max_temp1 = lst_temp1.pop(lst_temp1.index(max(lst_temp1)))
+        if sum(lst_temp1) <= max_temp1:
+            result.append("Invalid")
+        elif len(set(lst)) == 1:
+            result.append("Equilateral")
+        elif len(set(lst)) == 2:
+            result.append("Isosceles")
+        else:
+            result.append("Scalene")
+    for answer in result:
+        print(answer)
+q5073()
