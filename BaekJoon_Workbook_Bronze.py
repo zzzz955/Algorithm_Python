@@ -137,4 +137,16 @@ def q2562():
         lst.append(int(input()))
     print(max(lst))
     print(lst.index(max(lst)) + 1)
-q2562()
+
+
+def q10872():
+    # 팩토리얼
+    n = int(input())
+
+    def factor(num):
+        if num <= 1:
+            return 1
+        else:
+            return num * factor(num - 1)
+    print(factor(n))
+q10872()
