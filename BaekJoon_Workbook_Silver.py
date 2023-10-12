@@ -389,4 +389,22 @@ def q9655():
         print('CY')
     else:
         print('SK')
-q9655()
+
+
+def q10431():
+    # 줄세우기
+    p = int(input())
+    result = []
+    for _ in range(p):
+        lst = list(map(int, input().split()))
+        lst.pop(0)
+        count = 0
+        for i in range(19):
+            for j in range(i + 1, 20):
+                if lst[i] > lst[j]:
+                    lst[i], lst[j] = lst[j], lst[i]
+                    count += 1
+        result.append(count)
+    for i, j in enumerate(result):
+        print(f'{i + 1} {j}')
+q10431()
