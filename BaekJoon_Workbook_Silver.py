@@ -407,4 +407,17 @@ def q10431():
         result.append(count)
     for i, j in enumerate(result):
         print(f'{i + 1} {j}')
-q10431()
+
+
+def q8979():
+    # 올림픽
+    n, k = map(int, input().split())
+    dic = {}
+    val = []
+    for _ in range(n):
+        countries = list(map(int, input().split()))
+        val.append(countries[1:])
+        dic[countries[0]] = countries[1:]
+    rank_val = sorted(val, reverse=True)
+    print(rank_val.index(dic[k]) + 1)
+q8979()
