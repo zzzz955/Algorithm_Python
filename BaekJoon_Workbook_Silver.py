@@ -420,4 +420,18 @@ def q8979():
         dic[countries[0]] = countries[1:]
     rank_val = sorted(val, reverse=True)
     print(rank_val.index(dic[k]) + 1)
-q8979()
+
+
+def q7568():
+    # 덩치
+    n = int(input())
+    lst = []
+    for _ in range(n):
+        lst.append(list(map(int, input().split())))
+    for i in lst:
+        rank = 1
+        for j in lst:
+            if i[0] < j[0] and i[1] < j[1]:
+                rank += 1
+        print(rank, end=' ')
+q7568()
