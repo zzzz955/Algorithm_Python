@@ -492,4 +492,56 @@ def q20125():
     heart = [i + 1 for i in heart]
     print(' '.join(map(str, heart)))
     print(' '.join(map(str, bodies)))
-q20125()
+
+
+def q1244():
+    # 스위치 켜고 끄기(재채점 필요)
+    n = int(input())
+    s = list(map(int, input().split()))
+    dp = [0] * (n + 1)
+    students = []
+    for i in range(1, n + 1):
+        dp[i] = s[i - 1]
+    student = int(input())
+    for _ in range(student):
+        students.append(list(map(int, input().split())))
+    while students:
+        if students[0][0] == 1:
+            index2 = 1
+            while index2 * students[0][1] <= n:
+                if dp[index2 * students[0][1]] == 0:
+                    dp[index2 * students[0][1]] = 1
+                else:
+                    dp[index2 * students[0][1]] = 0
+                index2 += 1
+        if students[0][0] == 2:
+            index3 = 0
+            while 1:
+                if index3 == 0:
+                    if dp[students[0][1]] == 0:
+                        dp[students[0][1]] = 1
+                    else:
+                        dp[students[0][1]] = 0
+                try:
+                    if dp[students[0][1] + index3] == dp[students[0][1] - index3]:
+                        if dp[students[0][1] + index3] == 0:
+                            dp[students[0][1] + index3] = 1
+                        else:
+                            dp[students[0][1] + index3] = 0
+                        if dp[students[0][1] - index3] == 0:
+                            dp[students[0][1] - index3] = 1
+                        else:
+                            dp[students[0][1] - index3] = 0
+                    else:
+                        break
+                except:
+                    break
+                index3 += 1
+        students.pop(0)
+    dp.pop(0)
+    for i in range(len(dp)):
+        print(dp[i], end=' ')
+        if i % 19 == 0 and i != 0:
+            print()
+
+
