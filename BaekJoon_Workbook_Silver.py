@@ -590,4 +590,19 @@ def q9017():
                     result.append(t)
     for answer in result:
         print(answer)
-q9017()
+
+
+def q17266():
+    # 어두운 굴다리
+    import math
+    n = int(input())
+    m = int(input())
+    x = list(map(int, input().split()))
+    minus = []
+    if m > 1:
+        for i in range(1, m):
+            minus.append(math.ceil((x[i] - x[i - 1]) / 2))
+        print(max(min(x), n - max(x), max(minus)))
+    else:
+        print(max(min(x), n - max(x)))
+q17266()
