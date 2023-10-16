@@ -434,4 +434,62 @@ def q7568():
             if i[0] < j[0] and i[1] < j[1]:
                 rank += 1
         print(rank, end=' ')
-q7568()
+
+
+def q25757():
+    # 임스와 함께하는 미니게임
+    n, y = input().split()
+    players = []
+    for _ in range(int(n)):
+        players.append(input())
+    play = len(set(players))
+    if y == 'Y':
+        print(play)
+    elif y == 'F':
+        print(play // 2)
+    else:
+        print(play // 3)
+
+
+def q20125():
+    #쿠키의 신체 측정
+    n = int(input())
+    lst = []
+    heart = []
+    bodies = []
+    for i in range(n):
+        lst.append(input())
+    for i in range(len(lst)):
+        if lst[i].count('*') == 1:
+            heart.append(i + 1)
+            heart.append(lst[i].index('*'))
+            break
+    count = 0
+    for char in lst[heart[0]][:heart[1]]:
+        if char == '*':
+            count += 1
+    bodies.append(count)
+    count = 0
+    for char in lst[heart[0]][heart[1] + 1:]:
+        if char == '*':
+            count += 1
+    bodies.append(count)
+    count = 0
+    for i in range(heart[0] + 1, n):
+        if lst[i][heart[1]] == '*':
+            count += 1
+    bodies.append(count)
+    count = 0
+    for i in range(heart[0] + bodies[2], n):
+        if lst[i][heart[1] - 1] == '*':
+            count += 1
+    bodies.append(count)
+    count = 0
+    for i in range(heart[0] + bodies[2], n):
+        if lst[i][heart[1] + 1] == '*':
+            count += 1
+    bodies.append(count)
+    heart = [i + 1 for i in heart]
+    print(' '.join(map(str, heart)))
+    print(' '.join(map(str, bodies)))
+q20125()
