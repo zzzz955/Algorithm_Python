@@ -545,3 +545,49 @@ def q1244():
             print()
 
 
+def q9017():
+    # 크로스 컨트리(재채점 필요)
+    t = int(input())
+    case = []
+    result = []
+    for _ in range(t):
+        n = int(input())
+        temp = list(map(int, input().split()))
+        for data in sorted(set(temp)):
+            if temp.count(data) < 6:
+                while temp.count(data) > 0:
+                    temp.remove(data)
+        case.append(temp)
+    for data in case:
+        team = {}
+        count_u = []
+        for i in set(data):
+            team[i] = 0
+        temp_team = team.copy()
+        first = 0
+        for i in data:
+            temp_team[i] += 1
+            if temp_team[i] == 5:
+                first = i
+                break
+        point = 1
+        for i in data:
+            count_u.append(i)
+            if count_u.count(i) <= 4:
+                team[i] += point
+            point += 1
+        count = 0
+        for p in team.values():
+            if min(team.values()) == p:
+                count += 1
+        for t, p in team.items():
+            if count >= 2:
+                if p == min(team.values()) and t == first:
+                    result.append(first)
+                    break
+            else:
+                if p == min(team.values()):
+                    result.append(t)
+    for answer in result:
+        print(answer)
+q9017()
