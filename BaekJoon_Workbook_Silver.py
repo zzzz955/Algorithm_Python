@@ -633,4 +633,22 @@ def q13305():
         if dp[i] + (dis[i] * pri[i]) > dp[i] + (dis[i] * pri[i - 1]):
             pri[i] = pri[i - 1]
     print(dp[n - 1])
-q13305()
+
+
+def q20920():
+    # 영단어 암기는 괴로워
+    import sys
+    from collections import Counter
+    n, m = map(int, sys.stdin.readline().split())
+    count = Counter()
+
+    for _ in range(n):
+        sentence = sys.stdin.readline().strip()
+        if len(sentence) >= m:
+            count[sentence] += 1
+
+    sorted_words = sorted(count.keys(), key=lambda x: (-count[x], -len(x), x))
+
+    for word in sorted_words:
+        sys.stdout.write(word + '\n')
+q20920()
