@@ -618,4 +618,19 @@ def q2164():
     for i in range(2**index - n + 1):
         result = 2**index - (2 * i)
     print(result)
-q2164()
+
+
+def q13305():
+    # 주유소
+    n = int(input())
+    dis = list(map(int, input().split()))
+    pri = list(map(int, input().split()))
+    pri[-1] = 10001
+    dp = [0] * n
+    dp[1] = dis[0] * pri[0]
+    for i in range(1, n - 1):
+        dp[i + 1] = min(dp[i] + (dis[i] * pri[i]), dp[i] + (dis[i] * pri[i - 1]))
+        if dp[i] + (dis[i] * pri[i]) > dp[i] + (dis[i] * pri[i - 1]):
+            pri[i] = pri[i - 1]
+    print(dp[n - 1])
+q13305()
