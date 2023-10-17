@@ -605,4 +605,17 @@ def q17266():
         print(max(min(x), n - max(x), max(minus)))
     else:
         print(max(min(x), n - max(x)))
-q17266()
+
+
+def q2164():
+    # 카드2
+    import sys
+    n = int(sys.stdin.readline())
+    index = 0
+    while 2 ** index < n:
+        index += 1
+    result = 0
+    for i in range(2**index - n + 1):
+        result = 2**index - (2 * i)
+    print(result)
+q2164()
