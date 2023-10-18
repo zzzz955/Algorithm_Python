@@ -660,3 +660,9 @@ def q2512():
     m = int(input())
     if sum(lst) <= m:
         print(max(lst))
+    else:
+        temp = lst.copy()
+        while temp and m // len(temp) > min(temp):
+            m -= temp.pop(temp.index(min(temp)))
+        print(m // len(temp))
+q2512()
