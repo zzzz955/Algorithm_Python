@@ -665,4 +665,33 @@ def q2512():
         while temp and m // len(temp) > min(temp):
             m -= temp.pop(temp.index(min(temp)))
         print(m // len(temp))
-q2512()
+
+
+def q21921():
+    # 블로그
+    import sys
+    m, x = map(int, sys.stdin.readline().split())
+    lst = list(map(int, sys.stdin.readline().split()))
+
+    prefix_sum = [0] * m
+    for i in range(m):
+        prefix_sum[i] = lst[i] + (prefix_sum[i - 1] if i > 0 else 0)
+
+    max_sum = 0
+    count = 0
+    for i in range(m - x + 1):
+        current_sum = prefix_sum[i + x - 1] - (prefix_sum[i - 1] if i > 0 else 0)
+        if current_sum > max_sum:
+            max_sum = current_sum
+            count = 1
+        elif current_sum == max_sum:
+            count += 1
+
+    if max_sum == 0:
+        print('SAD')
+    else:
+        print(max_sum)
+        print(count)
+
+
+q21921()
