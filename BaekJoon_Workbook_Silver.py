@@ -495,7 +495,7 @@ def q20125():
 
 
 def q1244():
-    # 스위치 켜고 끄기(재채점 필요)
+    # 스위치 켜고 끄기
     n = int(input())
     s = list(map(int, input().split()))
     dp = [0] * (n + 1)
@@ -523,7 +523,7 @@ def q1244():
                     else:
                         dp[students[0][1]] = 0
                 try:
-                    if dp[students[0][1] + index3] == dp[students[0][1] - index3]:
+                    if dp[students[0][1] + index3] == dp[students[0][1] - index3] and (students[0][1] - index3) != 0:
                         if dp[students[0][1] + index3] == 0:
                             dp[students[0][1] + index3] = 1
                         else:
@@ -539,9 +539,9 @@ def q1244():
                 index3 += 1
         students.pop(0)
     dp.pop(0)
-    for i in range(len(dp)):
-        print(dp[i], end=' ')
-        if i % 19 == 0 and i != 0:
+    for i in range(1, n + 1):
+        print(dp[i - 1], end=' ')
+        if i % 20 == 0:
             print()
 
 
@@ -651,4 +651,12 @@ def q20920():
 
     for word in sorted_words:
         sys.stdout.write(word + '\n')
-q20920()
+
+
+def q2512():
+    # 예산
+    n = int(input())
+    lst = list(map(int, input().split()))
+    m = int(input())
+    if sum(lst) <= m:
+        print(max(lst))
