@@ -708,4 +708,33 @@ def q1515():
         if nums == '':
             print(i)
             break
-q1515()
+
+
+def q19941():
+    # 햄버거 분배
+    import sys
+    n, k = map(int, sys.stdin.readline().split())
+    hp = sys.stdin.readline()
+    count = 0
+    for i in range(n):
+        if hp[i] == 'P':
+            done = False
+            for j in range(k, 0, -1):
+                if i - j >= 0:
+                    if hp[i - j] == 'H':
+                        hp = hp[:i - j] + 'X' + hp[i - j + 1:]
+                        count += 1
+                        done = True
+                        break
+            if done:
+                continue
+            for j in range(1, k + 1):
+                if i + j < n:
+                    if hp[i + j] == 'H':
+                        hp = hp[:i + j] + 'X' + hp[i + j + 1:]
+                        count += 1
+                        break
+    print(count)
+q19941()
+
+
