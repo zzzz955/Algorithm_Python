@@ -735,6 +735,39 @@ def q19941():
                         count += 1
                         break
     print(count)
-q19941()
 
+
+def q17484():
+    # 진우의 달 여행 (틀림, dfs 공부 후 재채점 필요)
+    import sys
+    import copy
+
+    n, m = map(int, sys.stdin.readline().split())
+    lst = []
+    val = []
+    for i in range(n):
+        temp = list(map(int, sys.stdin.readline().split()))
+        temp.insert(0, 101)
+        temp.append(101)
+        lst.append(temp)
+    for i in range(1, m + 1):
+        result = 0
+        temp_lst = copy.deepcopy(lst)
+        current = i
+        for j in range(n):
+            min_val = min(temp_lst[j][current - 1], temp_lst[j][current], temp_lst[j][current + 1])
+            result += min_val
+            if j + 1 < n:
+                if min_val == temp_lst[j][current - 1]:
+                    temp_lst[j + 1][current - 2] = 101
+                    current -= 1
+                elif min_val == temp_lst[j][current]:
+                    temp_lst[j + 1][current] = 101
+                else:
+                    temp_lst[j + 1][current + 2] = 101
+                    current += 1
+            print(min_val)
+        val.append(result)
+    print(min(val))
+q17484()
 
