@@ -769,5 +769,26 @@ def q17484():
             print(min_val)
         val.append(result)
     print(min(val))
-q17484()
 
+
+def q2607():
+    # 비슷한 단어
+    n = int(input())
+    lst = []
+    for _ in range(n):
+        lst.append(input().upper())
+    length = len(lst[0])
+    count = 0
+    while len(lst) > 1:
+        if abs(length - len(lst[1])) > 1:
+            lst.pop(1)
+        elif len(set(lst[0]).difference(set(lst[1]))) > 1:
+            lst.pop(1)
+        else:
+            for t in lst[0]:
+                if t in lst[1]: lst[1] = lst[1].replace(t, "", 1)
+            if len(lst[1]) <= 1:
+                count += 1
+            lst.pop(1)
+    print(count)
+q2607()
