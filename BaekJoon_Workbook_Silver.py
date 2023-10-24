@@ -791,4 +791,46 @@ def q2607():
                 count += 1
             lst.pop(1)
     print(count)
-q2607()
+
+
+def q3758():
+    # KCPC
+    import sys
+    import collections
+
+    t = int(sys.stdin.readline())
+    for _ in range(t):
+        n, k, ids, m = map(int, sys.stdin.readline().split())
+        lst = []
+        order = []
+        point = {}
+        for _ in range(m):
+            lst.append(list(map(int, sys.stdin.readline().split())))
+        index = 0
+        desc_lst = list(reversed(lst))
+        while len(order) < n:
+            if desc_lst[index][0] not in order:
+                order.append(desc_lst[index][0])
+            index += 1
+        count = collections.Counter(item[0] for item in lst)
+        lst = sorted(lst)
+        index = 0
+        while index < len(lst) - 1:
+            if lst[index][:2] == lst[index + 1][:2]:
+                max_val = max(lst[index][2], lst[index + 1][2])
+                lst[index + 1][2] = max_val
+                lst.pop(index)
+                index -= 1
+            index += 1
+        while lst:
+            if lst[0][0] in point:
+                point[lst[0][0]] += lst[0][2]
+            else:
+                point[lst[0][0]] = lst[0][2]
+            lst.pop(0)
+        count = dict(count)
+        rank = sorted(point.keys(), key=lambda x: (-point[x], count[x], list(reversed(order)).index(x)))
+        for data in rank:
+            if data == ids:
+                print(rank.index(data) + 1)
+q3758()
