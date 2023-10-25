@@ -833,4 +833,27 @@ def q3758():
         for data in rank:
             if data == ids:
                 print(rank.index(data) + 1)
-q3758()
+
+
+def q20310():
+    # 타노스
+    s = list(input())
+    count0, count1 = s.count('0') // 2, s.count('1') // 2
+    index = 1
+    while 1:
+        if count0 == 0 and count1 == 0:
+            break
+        elif s[-index] == '0' and count0 > 0:
+            count0 -= 1
+            s.pop(-index)
+            index = 1
+            continue
+        elif s[index - 1] == '1' and count1 > 0:
+            count1 -= 1
+            s.pop(index - 1)
+            index = 1
+            continue
+        else:
+            index += 1
+    print(''.join(s))
+q20310()
