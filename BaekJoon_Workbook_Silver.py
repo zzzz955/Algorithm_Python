@@ -856,4 +856,31 @@ def q20310():
         else:
             index += 1
     print(''.join(s))
-q20310()
+
+
+def q19637():
+    # IF문 좀 대신 써줘
+    import sys
+
+    n, m = map(int, sys.stdin.readline().split())
+    lst = []
+
+    for _ in range(n):
+        a, b = map(str, sys.stdin.readline().split())
+        lst.append([a, int(b)])
+
+    cps = [int(sys.stdin.readline()) for _ in range(m)]
+
+    for cp in cps:
+        start = 0
+        end = n
+        result = 0
+        while start <= end:
+            mid = (start + end) // 2
+            if lst[mid][1] >= cp:
+                result = mid
+                end = mid - 1
+            else:
+                start = mid + 1
+        print(lst[result][0])
+q19637()
