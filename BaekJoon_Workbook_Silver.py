@@ -883,4 +883,23 @@ def q19637():
             else:
                 start = mid + 1
         print(lst[result][0])
-q19637()
+
+
+def q22233():
+    # 가희와 키워드
+    import sys
+
+    n, m = map(int, sys.stdin.readline().split())
+    lst = set()
+
+    for _ in range(n):
+        keyword = sys.stdin.readline().strip()
+        lst.add(keyword)
+
+    for _ in range(m):
+        key = list(map(str, sys.stdin.readline().rstrip().split(',')))
+        for sentence in key:
+            if sentence in lst:
+                lst.remove(sentence)
+        print(len(lst))
+q22233()
