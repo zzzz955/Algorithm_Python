@@ -948,18 +948,12 @@ def q20006():
                 item = sorted(item, key=lambda x: x[1])
                 print('Started!')
                 for i in item:
-                    if i == item[-1]:
-                        print(*i, end='')
-                    else:
-                        print(*i)
+                    print(*i)
                 room.pop(key)
                 break
     for key, item in room.items():
         item = sorted(item, key=lambda x: x[1])
         print('Waiting!')
         for i in item:
-            if i == item[-1]:
-                print(*i, end='')
-            else:
-                print(*i)
+            print(*i)
 q20006()
