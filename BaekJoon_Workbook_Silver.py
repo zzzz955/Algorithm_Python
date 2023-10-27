@@ -956,4 +956,26 @@ def q20006():
         print('Waiting!')
         for i in item:
             print(*i)
-q20006()
+
+
+def q11501():
+    # 주식
+    import sys
+
+    t = int(sys.stdin.readline())
+    result = []
+    for _ in range(t):
+        n = int(input())
+        lst = list(map(int, sys.stdin.readline().split()))
+        prizes = 0
+        max_val = 0
+
+        for i in range(n - 1, -1, -1):
+            if lst[i] > max_val:
+                max_val = lst[i]
+            else:
+                prizes += max_val - lst[i]
+        result.append(prizes)
+    for answer in result:
+        print(answer)
+q11501()
