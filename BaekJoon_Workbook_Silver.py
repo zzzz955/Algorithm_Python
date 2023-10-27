@@ -920,4 +920,46 @@ def q1927():
                 print(heapq.heappop(lst))
             else:
                 print(0)
-q1927()
+
+
+def q20006():
+    # 랭킹전 대기열(재채점 필요)
+    p, m = map(int, input().split())
+    room = {}
+
+    for _ in range(p):
+        l, n = map(str, input().split())
+        l = int(l)
+        do = False
+        if not room:
+            room[l] = []
+            room[l].append([l, n])
+            continue
+        for key in room.keys():
+            if key - 10 <= l <= key + 10:
+                room[key].append([l, n])
+                do = True
+                break
+        if not do:
+            room[l] = []
+            room[l].append([l, n])
+        for key, item in room.items():
+            if len(item) == m:
+                item = sorted(item, key=lambda x: x[1])
+                print('Started!')
+                for i in item:
+                    if i == item[-1]:
+                        print(*i, end='')
+                    else:
+                        print(*i)
+                room.pop(key)
+                break
+    for key, item in room.items():
+        item = sorted(item, key=lambda x: x[1])
+        print('Waiting!')
+        for i in item:
+            if i == item[-1]:
+                print(*i, end='')
+            else:
+                print(*i)
+q20006()
