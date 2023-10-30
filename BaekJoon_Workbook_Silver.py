@@ -978,4 +978,35 @@ def q11501():
         result.append(prizes)
     for answer in result:
         print(answer)
-q11501()
+
+
+def q1406():
+    # 에디터(작성 중)
+    import sys
+
+    s = list(sys.stdin.readline().strip())
+    s.insert(0, '')
+    s.append('')
+    n = int(sys.stdin.readline())
+    index = len(s) - 1
+    lst = []
+    for _ in range(n):
+        lst.append(list(map(str, sys.stdin.readline().split())))
+    while lst:
+        if lst[0][0] == 'L' and index > 0:
+            index -= 1
+        elif lst[0][0] == 'D' and index < len(s):
+            index += 1
+        elif lst[0][0] == 'B' and index > 1:
+            s.pop(index - 1)
+            index -= 1
+        elif lst[0][0] == 'P' and index == 0:
+            s.insert(1, lst[0][1])
+        elif lst[0][0] == 'P' and index > 0:
+            s.insert(index, lst[0][1])
+            index += 1
+        else:
+            pass
+        lst.pop(0)
+    print(s)
+q1406()
