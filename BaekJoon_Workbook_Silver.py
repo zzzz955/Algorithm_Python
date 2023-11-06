@@ -925,35 +925,29 @@ def q20006():
     room = {}
 
     for _ in range(p):
-        l, n = map(str, input().split())
+        l, n = input().split()
         l = int(l)
         do = False
-        if not room:
-            room[l] = []
-            room[l].append([l, n])
-            continue
         for key in room.keys():
-            if key - 10 <= l <= key + 10:
+            if key - 10 <= l <= key + 10 and len(room[key]) < 5:
                 room[key].append([l, n])
                 do = True
                 break
         if not do:
             room[l] = []
             room[l].append([l, n])
-        for key, item in room.items():
-            if len(item) == m:
-                item = sorted(item, key=lambda x: x[1])
-                print('Started!')
-                for i in item:
-                    print(*i)
-                room.pop(key)
-                break
     for key, item in room.items():
-        item = sorted(item, key=lambda x: x[1])
-        print('Waiting!')
-        for i in item:
-            print(*i)
-
+        if len(item) == m:
+            item = sorted(item, key=lambda x: x[1])
+            print('Started!')
+            for i in item:
+                print(*i)
+        else:
+            item = sorted(item, key=lambda x: x[1])
+            print('Waiting!')
+            for i in item:
+                print(*i)
+q20006()
 
 def q11501():
     # 주식
@@ -995,4 +989,3 @@ def q1406():
         elif op[0] == 'P':
             left.append(op[2])
     print(''.join(left + list(reversed(right))))
-q1406()
