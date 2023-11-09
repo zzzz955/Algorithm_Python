@@ -947,7 +947,7 @@ def q20006():
             print('Waiting!')
             for i in key:
                 print(*i)
-q20006()
+
 
 def q11501():
     # 주식
@@ -989,3 +989,33 @@ def q1406():
         elif op[0] == 'P':
             left.append(op[2])
     print(''.join(left + list(reversed(right))))
+
+
+def q2304():
+    # 창고 다각형
+    n = int(input())
+    lst = []
+    area = 0
+    for _ in range(n):
+        lst.append(list(map(int, input().split())))
+    lst.sort()
+
+    max_h = max(range(len(lst)), key=lambda x: lst[x][1])
+    height = lst[0][1]
+    for i in range(max_h):
+        if height < lst[i + 1][1]:
+            area += (lst[i + 1][0] - lst[i][0]) * height
+            height = lst[i + 1][1]
+        else:
+            area += (lst[i + 1][0] - lst[i][0]) * height
+
+    height = lst[-1][1]
+    for i in range(-1, -(len(lst) - max_h), -1):
+        if height < lst[i - 1][1]:
+            area += (lst[i][0] - lst[i - 1][0]) * height
+            height = lst[i - 1][1]
+        else:
+            area += (lst[i][0] - lst[i - 1][0]) * height
+    area += lst[max_h][1]
+    print(area)
+q2304()
