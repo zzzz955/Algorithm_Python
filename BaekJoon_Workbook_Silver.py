@@ -1018,4 +1018,23 @@ def q2304():
             area += (lst[i][0] - lst[i - 1][0]) * height
     area += lst[max_h][1]
     print(area)
-q2304()
+
+
+def q2075():
+    # N번째 큰 수
+    import heapq
+    lst = []
+
+    n = int(input())
+    for _ in range(n):
+        nums = list(map(int, input().split()))
+        if not lst:
+            for num in nums:
+                heapq.heappush(lst, num)
+        else:
+            for num in nums:
+                if lst[0] < num:
+                    heapq.heappush(lst, num)
+                    heapq.heappop(lst)
+    print(lst[0])
+q2075()
