@@ -1037,4 +1037,15 @@ def q2075():
                     heapq.heappush(lst, num)
                     heapq.heappop(lst)
     print(lst[0])
-q2075()
+
+
+def q1138():
+    # 한 줄로 서기
+    n = int(input())
+    order = list(map(int, input().split()))
+    lst = []
+    while order:
+        lst.insert(order[-1], len(order))
+        order.pop()
+    print(*lst)
+q1138()
