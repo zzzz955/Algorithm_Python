@@ -189,4 +189,21 @@ def q2292():
         first += prod * index
         index += 1
     print(index)
-q2292()
+
+
+def q13458():
+    # 시험 감독
+    import math
+
+    n = int(input())
+    a = list(map(int, input().split()))
+    b, c = map(int, input().split())
+    result = 0
+    for i in range(n):
+        if a[i] >= b:
+            a[i] -= b
+        else:
+            a[i] = a[i] // b
+        result += math.ceil(a[i] / c) + 1
+    print(result)
+q13458()
