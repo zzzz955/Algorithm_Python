@@ -224,4 +224,15 @@ def q11382():
     # 꼬마 정민
     a, b, c = map(int, input().split())
     print(str(a + b + c))
-q11382()
+
+
+def q10171():
+    # 고양이
+    l1 = "\\    /\\"
+    l2 = " )  ( ')"
+    l3 = "(  /  )"
+    l4 = " \\(__)|"
+    lst = [l1, l2, l3, l4]
+    for i in lst:
+        print(i)
+q10171()
