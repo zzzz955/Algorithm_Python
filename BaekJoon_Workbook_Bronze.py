@@ -218,4 +218,10 @@ def q18108():
     # 1998년생인 내가 태국에서는 2541년생?!
     y = int(input())
     print(str(y - 543))
-q18108()
+
+
+def q11382():
+    # 꼬마 정민
+    a, b, c = map(int, input().split())
+    print(str(a + b + c))
+q11382()
