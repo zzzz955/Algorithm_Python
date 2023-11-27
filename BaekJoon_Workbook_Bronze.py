@@ -206,4 +206,13 @@ def q13458():
             a[i] = a[i] // b
         result += math.ceil(a[i] / c) + 1
     print(result)
-q13458()
+
+
+def q10926():
+    # ??!
+    s = input()
+    print(s + '??!')
+
+
+def q18108():
+    # 1998년생인 내가 태국에서는 2541년생?!
