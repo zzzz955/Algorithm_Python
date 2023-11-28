@@ -263,4 +263,13 @@ def q10950():
     for _ in range(t):
         a, b = map(int, input().split())
         print(a + b)
-q10950()
+
+
+def q8393():
+    # 합
+    n = int(input())
+    result = 0
+    for i in range(1, n + 1):
+        result += i
+    print(result)
+q8393()
