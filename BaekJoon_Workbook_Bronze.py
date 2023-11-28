@@ -285,4 +285,17 @@ def q25304():
         print('No')
     else:
         print('Yes')
-q25304()
+
+
+def q25314():
+    # 코딩은 체육과목 입니다
+    n = int(input())
+    result = ''
+    if n % 4 == 0:
+        f = n // 4
+    else:
+        f = n // 4 + 1
+    for _ in range(f):
+        result += 'long '
+    print(result + 'int')
+q25314()
