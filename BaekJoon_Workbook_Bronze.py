@@ -247,4 +247,12 @@ def q10172():
     lst = [l1, l2, l3, l4, l5]
     for i in lst:
         print(i)
-q10172()
+
+
+def q2739():
+    # 구구단
+    n = int(input())
+    for i in range(1, 10):
+        s = str(n) + f' * {i} = {n*i}'
+        print(s)
+q2739()
