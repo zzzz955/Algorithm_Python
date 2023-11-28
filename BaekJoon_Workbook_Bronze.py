@@ -272,4 +272,17 @@ def q8393():
     for i in range(1, n + 1):
         result += i
     print(result)
-q8393()
+
+
+def q25304():
+    # 영수증
+    x = int(input())
+    n = int(input())
+    for _ in range(n):
+        a, b = map(int, input().split())
+        x -= a * b
+    if x:
+        print('No')
+    else:
+        print('Yes')
+q25304()
