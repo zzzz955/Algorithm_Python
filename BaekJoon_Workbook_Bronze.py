@@ -255,4 +255,12 @@ def q2739():
     for i in range(1, 10):
         s = str(n) + f' * {i} = {n*i}'
         print(s)
-q2739()
+
+
+def q10950():
+    # A+B - 3
+    t = int(input())
+    for _ in range(t):
+        a, b = map(int, input().split())
+        print(a + b)
+q10950()
