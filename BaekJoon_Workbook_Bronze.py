@@ -315,5 +315,13 @@ def q2438():
     n = int(input())
     for i in range(1, n + 1):
         print('*' * i)
-q2438()
+
+
+def q2439():
+    # 별 찍기 - 2
+    n = int(input())
+    for i in range(1, n + 1):
+        result = ' ' * (n - i) + '*' * i
+        print(result)
+q2439()
 
