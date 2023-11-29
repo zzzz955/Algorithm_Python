@@ -308,4 +308,12 @@ def q15552():
     for _ in range(t):
         a, b = map(int, sys.stdin.readline().split())
         print(a + b)
-q15552()
+
+
+def q2438():
+    # 별 찍기 - 1
+    n = int(input())
+    for i in range(1, n + 1):
+        print('*' * i)
+q2438()
+
