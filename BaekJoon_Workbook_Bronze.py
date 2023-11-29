@@ -333,4 +333,17 @@ def q10952():
             break
         else:
             print(a + b)
-q10952()
+
+
+def q10951():
+    # A+B - 4
+    import sys
+
+    while 1:
+        s = sys.stdin.readline().rstrip()
+        if not s:
+            break
+        else:
+            a, b = int(s[0]), int(s[-1])
+            print(a + b)
+q10951()
