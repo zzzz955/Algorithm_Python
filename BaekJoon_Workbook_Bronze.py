@@ -323,5 +323,14 @@ def q2439():
     for i in range(1, n + 1):
         result = ' ' * (n - i) + '*' * i
         print(result)
-q2439()
 
+
+def q10952():
+    # A+B - 5
+    while 1:
+        a, b = map(int, input().split())
+        if a == b == 0:
+            break
+        else:
+            print(a + b)
+q10952()
