@@ -298,4 +298,14 @@ def q25314():
     for _ in range(f):
         result += 'long '
     print(result + 'int')
-q25314()
+
+
+def q15552():
+    # 빠른 A+B
+    import sys
+
+    t = int(input())
+    for _ in range(t):
+        a, b = map(int, sys.stdin.readline().split())
+        print(a + b)
+q15552()
