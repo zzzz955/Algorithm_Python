@@ -373,4 +373,15 @@ def q10818():
     lst = list(map(int, input().split()))
     lst.sort()
     print(str(lst[0]) + ' ' + str(lst[-1]))
-q10818()
+
+
+def q10810():
+    # 공 넣기
+    n, m = map(int, input().split())
+    lst = [0] * (n + 1)
+    for _ in range(m):
+        i, j, k = map(int, input().split())
+        for l in range(i, j + 1):
+            lst[l] = k
+    print(*lst[1:n + 1])
+q10810()
