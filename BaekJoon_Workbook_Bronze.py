@@ -384,4 +384,15 @@ def q10810():
         for l in range(i, j + 1):
             lst[l] = k
     print(*lst[1:n + 1])
-q10810()
+
+
+def q10813():
+    # 공 바꾸기
+    n, m = map(int, input().split())
+    lst = [i for i in range(1, n + 1)]
+    for _ in range(m):
+        i, j = map(int, input().split())
+        temp = lst[i - 1]
+        lst[i - 1], lst[j - 1] = lst[j - 1], temp
+    print(*lst)
+q10813()
