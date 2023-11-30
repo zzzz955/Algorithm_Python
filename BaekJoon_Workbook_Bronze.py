@@ -365,4 +365,12 @@ def q10871():
         if i < x:
             result.append(i)
     print(*result)
-q10871()
+
+
+def q10818():
+    # 최소, 최대
+    n = int(input())
+    lst = list(map(int, input().split()))
+    lst.sort()
+    print(str(lst[0]) + ' ' + str(lst[-1]))
+q10818()
