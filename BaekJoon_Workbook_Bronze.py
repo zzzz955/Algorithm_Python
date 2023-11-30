@@ -346,4 +346,12 @@ def q10951():
         else:
             a, b = int(s[0]), int(s[-1])
             print(a + b)
-q10951()
+
+
+def q10807():
+    # 개수 세기
+    n = int(input())
+    lst = list(map(int, input().split()))
+    v = int(input())
+    print(lst.count(v))
+q10807()
