@@ -354,4 +354,15 @@ def q10807():
     lst = list(map(int, input().split()))
     v = int(input())
     print(lst.count(v))
-q10807()
+
+
+def q10871():
+    # X보다 작은 수
+    n, x = map(int, input().split())
+    lst = list(map(int, input().split()))
+    result = []
+    for i in lst:
+        if i < x:
+            result.append(i)
+    print(*result)
+q10871()
