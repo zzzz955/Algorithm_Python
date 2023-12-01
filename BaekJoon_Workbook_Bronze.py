@@ -404,4 +404,14 @@ def q5597():
         lst.remove(int(input()))
     for result in lst:
         print(result)
-q5597()
+
+
+def q3052():
+    # 나머지
+    lst = []
+    for _ in range(10):
+        n = int(input())
+        lst.append(n % 42)
+    lst = list(set(lst))
+    print(len(lst))
+q3052()
