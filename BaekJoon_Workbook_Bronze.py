@@ -395,4 +395,13 @@ def q10813():
         temp = lst[i - 1]
         lst[i - 1], lst[j - 1] = lst[j - 1], temp
     print(*lst)
-q10813()
+
+
+def q5597():
+    # 과제 안 내신 분..?
+    lst = [i for i in range(1, 31)]
+    for _ in range(28):
+        lst.remove(int(input()))
+    for result in lst:
+        print(result)
+q5597()
