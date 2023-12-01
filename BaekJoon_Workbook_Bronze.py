@@ -434,4 +434,11 @@ def q1546():
     for i in range(len(lst)):
         lst[i] = lst[i] / max_val * 100
     print(sum(lst) / n)
-q1546()
+
+
+def q27866():
+    # 문자열
+    s = input()
+    i = int(input())
+    print(s[i - 1])
+q27866()
