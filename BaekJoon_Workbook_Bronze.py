@@ -424,4 +424,14 @@ def q10811():
         i, j = map(int, input().split())
         lst[i - 1:j] = list(reversed(lst[i - 1:j]))
     print(*lst)
-q10811()
+
+
+def q1546():
+    # 평균
+    n = int(input())
+    lst = list(map(int, input().split()))
+    max_val = max(lst)
+    for i in range(len(lst)):
+        lst[i] = lst[i] / max_val * 100
+    print(sum(lst) / n)
+q1546()
