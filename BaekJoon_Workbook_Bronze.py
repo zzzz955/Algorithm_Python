@@ -469,4 +469,15 @@ def q11720():
     for i in range(n):
         result += int(s[i])
     print(result)
-q11720()
+
+
+def q10809():
+    # 알파벳 찾기
+    s = input()
+    alphabet = [chr(i) for i in range(97, 123)]
+    result = [-1 for _ in range(len(alphabet))]
+    for i in range(len(s)):
+        if s[i] in alphabet:
+            result[alphabet.index(s[i])] = s.index(s[i])
+    print(*result)
+q10809()
