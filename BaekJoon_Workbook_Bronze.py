@@ -446,4 +446,12 @@ def q27866():
 def q2743():
     # 단어 길이 재기
     print(len(input()))
-q2743()
+
+
+def q9086():
+    # 문자열
+    t = int(input())
+    for _ in range(t):
+        s = input()
+        print(s[0] + s[-1])
+q9086()
