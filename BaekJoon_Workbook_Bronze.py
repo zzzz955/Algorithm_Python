@@ -454,4 +454,9 @@ def q9086():
     for _ in range(t):
         s = input()
         print(s[0] + s[-1])
-q9086()
+
+
+def q11654():
+    # 아스키 코드
+    print(ord(input()))
+q11654()
