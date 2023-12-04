@@ -441,4 +441,9 @@ def q27866():
     s = input()
     i = int(input())
     print(s[i - 1])
-q27866()
+
+
+def q2743():
+    # 단어 길이 재기
+    print(len(input()))
+q2743()
