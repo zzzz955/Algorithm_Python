@@ -459,4 +459,14 @@ def q9086():
 def q11654():
     # 아스키 코드
     print(ord(input()))
-q11654()
+
+
+def q11720():
+    # 숫자의 합
+    n = int(input())
+    s = input()
+    result = 0
+    for i in range(n):
+        result += int(s[i])
+    print(result)
+q11720()
