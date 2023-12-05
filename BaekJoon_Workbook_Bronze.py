@@ -480,4 +480,10 @@ def q10809():
         if s[i] in alphabet:
             result[alphabet.index(s[i])] = s.index(s[i])
     print(*result)
-q10809()
+
+
+def q1152():
+    # 단어의 개수
+    s = list(map(str, input().split()))
+    print(len(s))
+q1152()
