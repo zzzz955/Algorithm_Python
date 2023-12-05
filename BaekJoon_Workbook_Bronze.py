@@ -486,4 +486,15 @@ def q1152():
     # 단어의 개수
     s = list(map(str, input().split()))
     print(len(s))
-q1152()
+
+
+def q2908():
+    # 상수
+    a, b = map(str, input().split())
+    new_a, new_b = '', ''
+    for i in range(2, -1, -1):
+        new_a += a[i]
+        new_b += b[i]
+    print(max(int(new_a), int(new_b)))
+q2908()
+
