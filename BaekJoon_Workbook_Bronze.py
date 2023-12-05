@@ -496,5 +496,21 @@ def q2908():
         new_a += a[i]
         new_b += b[i]
     print(max(int(new_a), int(new_b)))
-q2908()
+
+
+def q5622():
+    # 다이얼
+    s = input()
+    dic = {3: ['A', 'B', 'C'], 4: ['D', 'E', 'F'], 5: ['G', 'H', 'I'], 6: ['J', 'K', 'L'], 7: ['M', 'N', 'O'],
+           8: ['P', 'Q', 'R', 'S'], 9: ['T', 'U', 'V'], 10: ['W', 'X', 'Y', 'Z']}
+    result = 0
+    for i in range(len(s)):
+        for key, item in dic.items():
+            if s[i] in item:
+                result += key
+    print(result)
+q5622()
+
+
+
 
