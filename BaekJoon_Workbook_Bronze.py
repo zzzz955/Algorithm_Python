@@ -1,5 +1,3 @@
-
-
 def q14563():
     # 완전수
     n = int(input())
@@ -148,6 +146,7 @@ def q10872():
             return 1
         else:
             return num * factor(num - 1)
+
     print(factor(n))
 
 
@@ -253,7 +252,7 @@ def q2739():
     # 구구단
     n = int(input())
     for i in range(1, 10):
-        s = str(n) + f' * {i} = {n*i}'
+        s = str(n) + f' * {i} = {n * i}'
         print(s)
 
 
@@ -519,7 +518,16 @@ def q11718():
     while count < 100:
         print(sys.stdin.readline().rstrip())
         count += 1
-q11718()
 
 
-
+def q25083():
+    # 새싹
+    print(
+        "         ,r'\"7" + "\n"
+        "r`-_   ,'  ,/" + "\n"
+        " \\. \". L_r'" + "\n"
+        "   `~\\/" + "\n"
+        "      |" + "\n"
+        "      |"
+    )
+q25083()
