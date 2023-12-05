@@ -509,8 +509,17 @@ def q5622():
             if s[i] in item:
                 result += key
     print(result)
-q5622()
 
+
+def q11718():
+    # 그대로 출력하기
+    import sys
+
+    count = 0
+    while count < 100:
+        print(sys.stdin.readline().rstrip())
+        count += 1
+q11718()
 
 
 
