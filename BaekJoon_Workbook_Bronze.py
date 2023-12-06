@@ -540,4 +540,14 @@ def q3033():
     for i in range(6):
         result.append(answer[i] - lst[i])
     print(*result)
-q3033()
+
+
+def q2444():
+    # 별 찍기 - 7
+    n = int(input())
+    for i in range(n - 1, 0, -1):
+        print((' ' * i) + ('*' * (2 * (n - i) - 1)))
+    print('*' * (2 * n - 1))
+    for i in range(1, n):
+        print((' ' * i) + ('*' * (2 * (n - i) - 1)))
+q2444()
