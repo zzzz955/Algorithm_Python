@@ -1083,14 +1083,14 @@ def q1316():
 def q25206():
     # 너의 평점은
     table = {'A+': 4.5, 'A0': 4.0, 'B+': 3.5, 'B0': 3.0, 'C+': 2.5, 'C0': 2.0, 'D+': 1.5, 'D0': 1.0, 'F': 0.0}
-    table_points = []
+    table_points = 0
     points = 0
     for _ in range(20):
         lst = list(input().split())
         if lst[2] == 'P':
             continue
         else:
-            table_points.append(float(lst[1]) * float(table[lst[2]]))
+            table_points += float(lst[1]) * float(table[lst[2]])
             points += float(lst[1])
-    print(sum(table_points) / points)
+    print(table_points / points)
 q25206()
