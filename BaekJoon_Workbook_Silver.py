@@ -1048,4 +1048,13 @@ def q1138():
         lst.insert(order[-1], len(order))
         order.pop()
     print(*lst)
-q1138()
+
+
+def q2941():
+    # 크로아티아 알파벳
+    s = input()
+    lst = ['c=', 'c-', 'dz=', 'd-', 'lj', 'nj', 's=', 'z=']
+    for word in lst:
+        s = s.replace(word, 'x')
+    print(len(s))
+q2941()
