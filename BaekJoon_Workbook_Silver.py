@@ -1057,4 +1057,25 @@ def q2941():
     for word in lst:
         s = s.replace(word, 'x')
     print(len(s))
-q2941()
+
+
+def q1316():
+    # 그룹 단어 체커
+    t = int(input())
+    result = 0
+    for _ in range(t):
+        s = list(input())
+        lst = list(set(s))
+        check = True
+        for word in lst:
+            start = s.index(word)
+            end = len(s) - list(reversed(s)).index(word)
+            while start < end:
+                if s[start] != word:
+                    check = False
+                    break
+                start += 1
+        if check:
+            result += 1
+    print(result)
+q1316()
