@@ -530,4 +530,14 @@ def q25083():
         "      |" + "\n"
         "      |"
     )
-q25083()
+
+
+def q3033():
+    # 킹, 퀸, 룩, 비숍, 나이트, 폰
+    lst = list(map(int, input().split()))
+    answer = [1, 1, 2, 2, 2, 8]
+    result = []
+    for i in range(6):
+        result.append(answer[i] - lst[i])
+    print(*result)
+q3033()
