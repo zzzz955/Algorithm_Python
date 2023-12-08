@@ -550,4 +550,18 @@ def q2444():
     print('*' * (2 * n - 1))
     for i in range(1, n):
         print((' ' * i) + ('*' * (2 * (n - i) - 1)))
-q2444()
+
+
+def q2738():
+    # 행렬 덧셈
+    n, m = map(int, input().split())
+    a = []
+    for _ in range(n):
+        a.append(list(map(int, input().split())))
+    for i in range(n):
+        b = list(map(int, input().split()))
+        for j in range(m):
+            a[i][j] += b[j]
+    for i in range(n):
+        print(*a[i])
+q2738()
