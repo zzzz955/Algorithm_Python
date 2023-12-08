@@ -579,4 +579,19 @@ def q2566():
             index[1] = temp.index(temp_max) + 1
     print(max_val)
     print(*index)
-q2566()
+
+
+def q10798():
+    # 세로읽기
+    lst = []
+    result = ''
+    for _ in range(5):
+        temp = list(input())
+        for _ in range(15 - len(temp)):
+            temp.append('')
+        lst.append(temp)
+    for i in range(15):
+        for j in range(5):
+            result += lst[j][i]
+    print(result)
+q10798()
