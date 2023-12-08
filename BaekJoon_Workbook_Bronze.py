@@ -564,4 +564,19 @@ def q2738():
             a[i][j] += b[j]
     for i in range(n):
         print(*a[i])
-q2738()
+
+
+def q2566():
+    # 최댓값
+    max_val = 0
+    index = [1, 1]
+    for i in range(1, 10):
+        temp = list(map(int, input().split()))
+        temp_max = max(temp)
+        if max_val < temp_max:
+            max_val = temp_max
+            index[0] = i
+            index[1] = temp.index(temp_max) + 1
+    print(max_val)
+    print(*index)
+q2566()
