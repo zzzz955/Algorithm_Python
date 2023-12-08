@@ -1093,4 +1093,25 @@ def q25206():
             table_points += float(lst[1]) * float(table[lst[2]])
             points += float(lst[1])
     print(table_points / points)
-q25206()
+
+
+def q2563():
+    # 색종이
+    dp = [[0] * 100 for _ in range(100)]
+    result = 0
+    t = int(input())
+    for _ in range(t):
+        a, b = map(int, input().split())
+        for i in range(a, a + 10):
+            if i > 100:
+                continue
+            else:
+                for j in range(b, b + 10):
+                    if j > 100:
+                        continue
+                    else:
+                        dp[i][j] = 1
+    for i in range(100):
+        result += sum(dp[i])
+    print(result)
+q2563()
