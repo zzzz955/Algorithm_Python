@@ -594,4 +594,10 @@ def q10798():
         for j in range(5):
             result += lst[j][i]
     print(result)
-q10798()
+
+
+def q2745():
+    # 진법 변환
+    n, b = input().split()
+    print(int(n, int(b)))
+q2745()
