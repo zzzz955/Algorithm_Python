@@ -600,4 +600,27 @@ def q2745():
     # 진법 변환
     n, b = input().split()
     print(int(n, int(b)))
-q2745()
+
+
+def q11005():
+    # 진법 변환 2
+    import sys
+
+    n, b = map(int, sys.stdin.readline().split())
+    dic = {}
+    for i in range(10, 36):
+        dic[i] = str(chr(55 + i))
+    dic[0] = '0'
+    result = ''
+    while n > 0:
+        remainder = n % b
+        if b == 10:
+            print(n)
+            break
+        elif remainder < 10:
+            result = str(remainder) + result
+        else:
+            result = dic[remainder] + result
+        n //= b
+    print(result)
+q11005()
