@@ -655,4 +655,13 @@ def q2903():
     for i in range(1, 16):
         dp[i] = dp[i - 1] + dp[i - 1] - 1
     print(dp[n] * dp[n])
-q2903()
+
+
+def q2869():
+    # 달팽이는 올라가고 싶다
+    import math
+
+    a, b, v = map(int, input().split())
+    v -= a
+    print(math.ceil(v / (a - b)) + 1)
+q2869()
