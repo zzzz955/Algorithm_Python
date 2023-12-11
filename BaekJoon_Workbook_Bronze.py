@@ -623,4 +623,26 @@ def q11005():
             result = dic[remainder] + result
         n //= b
     print(result)
-q11005()
+
+
+def q2720():
+    # 세탁소 사장 동혁
+    t = int(input())
+    for _ in range(t):
+        c = int(input())
+        lst = [0, 0, 0, 0]
+        while c:
+            if c // 25 != 0:
+                lst[0] += 1
+                c -= 25
+            elif c // 10 != 0:
+                lst[1] += 1
+                c -= 10
+            elif c // 5 != 0:
+                lst[2] += 1
+                c -= 5
+            else:
+                lst [3] += 1
+                c -= 1
+        print(*lst)
+q2720()
