@@ -645,4 +645,14 @@ def q2720():
                 lst [3] += 1
                 c -= 1
         print(*lst)
-q2720()
+
+
+def q2903():
+    # 중앙 이동 알고리즘
+    n = int(input())
+    dp = [0] * 16
+    dp[0] = 2
+    for i in range(1, 16):
+        dp[i] = dp[i - 1] + dp[i - 1] - 1
+    print(dp[n] * dp[n])
+q2903()
