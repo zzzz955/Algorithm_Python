@@ -1114,4 +1114,25 @@ def q2563():
     for i in range(100):
         result += sum(dp[i])
     print(result)
-q2563()
+
+
+def q1193():
+    # 분수찾기
+    x = int(input())
+    dp = [0] * 4500
+    dp[1] = 1
+    index = 0
+    for i in range(2, 4501):
+        dp[i] = dp[i - 1] + i
+        if dp[i - 1] >= x:
+            index = i - 2
+            break
+    if index % 2 == 1:
+        first = x - dp[index]
+        last = dp[index + 1] - x + 1
+        print(str(first) + '/' + str(last))
+    else:
+        first = dp[index + 1] - x + 1
+        last = x - dp[index]
+        print(str(first) + '/' + str(last))
+q1193()
