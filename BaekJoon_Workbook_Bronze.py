@@ -734,4 +734,10 @@ def q27323():
     a = int(input())
     b = int(input())
     print(a * b)
-q27323()
+
+
+def q1085():
+    # 직사각형에서 탈출
+    x, y, w, h = map(int, input().split())
+    print(min(abs(w - x), abs(h - y), x, y))
+q1085()
