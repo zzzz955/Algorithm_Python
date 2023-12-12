@@ -727,4 +727,11 @@ def q2581():
         print(min(s))
     else:
         print(-1)
-q2581()
+
+
+def q27323():
+    # 직사각형
+    a = int(input())
+    b = int(input())
+    print(a * b)
+q27323()
