@@ -687,4 +687,22 @@ def q2501():
         print(lst[k - 1])
     else:
         print(0)
-q2501()
+
+
+def q1978():
+    # 소수 찾기
+    n = int(input())
+    lst = list(map(int, input().split()))
+    result = 0
+    dp = [0] * 1001
+    dp[1] = 1
+    for i in range(2, 500):
+        for j in range(2, 500):
+            if i * j > 1000:
+                continue
+            dp[i * j] = 1
+    for num in lst:
+        if not dp[num]:
+            result += 1
+    print(result)
+q1978()
