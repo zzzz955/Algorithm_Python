@@ -705,4 +705,26 @@ def q1978():
         if not dp[num]:
             result += 1
     print(result)
-q1978()
+
+
+def q2581():
+    # 소수
+    m = int(input())
+    n = int(input())
+    dp = [0] * 10001
+    dp[1] = 1
+    s = []
+    for i in range(2, 5001):
+        for j in range(2, 5001):
+            if i * j > 10000:
+                continue
+            dp[i * j] = 1
+    for i in range(m, n + 1):
+        if not dp[i]:
+            s.append(i)
+    if s:
+        print(sum(s))
+        print(min(s))
+    else:
+        print(-1)
+q2581()
