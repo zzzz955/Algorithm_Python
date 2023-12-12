@@ -664,4 +664,27 @@ def q2869():
     a, b, v = map(int, input().split())
     v -= a
     print(math.ceil(v / (a - b)) + 1)
-q2869()
+
+
+def q2501():
+    # 약수 구하기
+    n, k = map(int, input().split())
+    lst = []
+    d = 1
+    if n % 2 == 0:
+        while n // 2 >= d:
+            if n % d == 0:
+                lst.append(d)
+            d += 1
+        lst.append(n)
+    else:
+        while n // 3 >= d:
+            if n % d == 0:
+                lst.append(d)
+            d += 1
+        lst.append(n)
+    if len(lst) >= k:
+        print(lst[k - 1])
+    else:
+        print(0)
+q2501()
