@@ -787,5 +787,11 @@ def q14215():
     else:
         result = (lst[0] + lst[1]) * 2 - 1
     print(result)
-q14215()
+
+
+def q24262():
+    # 알고리즘 수업 - 알고리즘의 수행 시간 1
+    print(1)
+    print(0)
+q24262()
 
