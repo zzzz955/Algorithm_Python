@@ -775,4 +775,17 @@ def q10101():
             print('Scalene')
     else:
         print('Error')
-q10101()
+
+
+def q14215():
+    # 세 막대
+    lst = list(map(int, input().split()))
+    lst.sort()
+    result = 0
+    if lst[0] + lst[1] > lst[2]:
+        result = sum(lst)
+    else:
+        result = (lst[0] + lst[1]) * 2 - 1
+    print(result)
+q14215()
+
