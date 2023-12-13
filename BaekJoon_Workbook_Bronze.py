@@ -758,5 +758,21 @@ def q9063():
         xs.append(x)
         ys.append(y)
     print((max(ys) - min(ys)) * (max(xs) - min(xs)))
-q9063()
 
+
+def q10101():
+    # 삼각형 외우기
+    lst = []
+    for _ in range(3):
+        lst.append(int(input()))
+
+    if lst[0] + lst[1] + lst[2] == 180:
+        if lst[0] == lst[1] == 60:
+            print('Equilateral')
+        elif lst[0] == lst[1] or lst[1] == lst[2] or lst[0] == lst[2]:
+            print('Isosceles')
+        else:
+            print('Scalene')
+    else:
+        print('Error')
+q10101()
