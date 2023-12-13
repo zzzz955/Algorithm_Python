@@ -740,4 +740,10 @@ def q1085():
     # 직사각형에서 탈출
     x, y, w, h = map(int, input().split())
     print(min(abs(w - x), abs(h - y), x, y))
-q1085()
+
+
+def q15894():
+    # 수학은 체육과목 입니다
+    n = int(input())
+    print(n * 4)
+q15894()
