@@ -746,4 +746,17 @@ def q15894():
     # 수학은 체육과목 입니다
     n = int(input())
     print(n * 4)
-q15894()
+
+
+def q9063():
+    # 대지
+    n = int(input())
+    xs = []
+    ys = []
+    for _ in range(n):
+        x, y = map(int, input().split())
+        xs.append(x)
+        ys.append(y)
+    print((max(ys) - min(ys)) * (max(xs) - min(xs)))
+q9063()
+
