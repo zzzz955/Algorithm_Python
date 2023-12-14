@@ -816,5 +816,12 @@ def q24265():
         result += i
     print(result)
     print(2)
-q24265()
+
+
+def q24266():
+    # 알고리즘 수업 - 알고리즘의 수행 시간 5
+    n = int(input())
+    print(n * n * n)
+    print(3)
+q24266()
 
