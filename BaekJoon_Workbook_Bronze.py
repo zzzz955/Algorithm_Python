@@ -835,5 +835,17 @@ def q24267():
         result += s
     print(result)
     print(3)
-q24267()
 
+
+def q2798():
+    # 블랙잭
+    n, m = map(int, input().split())
+    lst = list(map(int, input().split()))
+    max_val = 0
+    for i in range(n):
+        for j in range(i + 1, n):
+            for k in range(j + 1, n):
+                if max_val < lst[i] + lst[j] + lst[k] <= m:
+                    max_val = lst[i] + lst[j] + lst[k]
+    print(max_val)
+q2798()
