@@ -889,4 +889,14 @@ def q2750():
     lst.sort()
     for num in lst:
         print(num)
-q2750()
+
+
+def q2587():
+    # 대표값2
+    lst = []
+    for _ in range(5):
+        lst.append(int(input()))
+    lst.sort()
+    print(sum(lst) // 5)
+    print(lst[2])
+q2587()
