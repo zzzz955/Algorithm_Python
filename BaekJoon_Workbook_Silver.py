@@ -449,7 +449,7 @@ def q25757():
 
 
 def q20125():
-    #쿠키의 신체 측정
+    # 쿠키의 신체 측정
     n = int(input())
     lst = []
     heart = []
@@ -612,8 +612,8 @@ def q2164():
     while 2 ** index < n:
         index += 1
     result = 0
-    for i in range(2**index - n + 1):
-        result = 2**index - (2 * i)
+    for i in range(2 ** index - n + 1):
+        result = 2 ** index - (2 * i)
     print(result)
 
 
@@ -1146,4 +1146,31 @@ def q24313():
         print(1)
     else:
         print(0)
-q24313()
+
+
+def q1018():
+    # 체스판 다시 칠하기
+    n, m = map(int, input().split())
+    lst = []
+    result = []
+    for _ in range(n):
+        lst.append(list(input()))
+    for i in range(n - 7):
+        for j in range(m - 7):
+            w = 0
+            b = 0
+            for k in range(i, i + 8):
+                for l in range(j, j + 8):
+                    if (k + l) % 2 == 0:
+                        if lst[k][l] != 'W':
+                            w += 1
+                        if lst[k][l] != 'B':
+                            b += 1
+                    else:
+                        if lst[k][l] != 'B':
+                            w += 1
+                        if lst[k][l] != 'W':
+                            b += 1
+            result.append(min(w, b))
+    print(min(result))
+q1018()
