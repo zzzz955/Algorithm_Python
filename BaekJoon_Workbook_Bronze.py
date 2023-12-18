@@ -878,4 +878,15 @@ def q19532():
         for y in range(-999, 1000):
             if a * x + b * y == c and d * x + e * y == f:
                 print(x, y)
-q19532()
+
+
+def q2750():
+    # 수 정렬하기
+    n = int(input())
+    lst = []
+    for _ in range(n):
+        lst.append(int(input()))
+    lst.sort()
+    for num in lst:
+        print(num)
+q2750()
