@@ -899,4 +899,12 @@ def q2587():
     lst.sort()
     print(sum(lst) // 5)
     print(lst[2])
-q2587()
+
+
+def q25303():
+    # 커트라인
+    n, k = map(int, input().split())
+    lst = list(map(int, input().split()))
+    lst.sort(reverse=True)
+    print(lst[k - 1])
+q25303()
