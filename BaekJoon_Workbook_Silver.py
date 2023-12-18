@@ -1173,4 +1173,18 @@ def q1018():
                             b += 1
             result.append(min(w, b))
     print(min(result))
-q1018()
+
+
+def q1436():
+    # 영화감독 숌
+    n = int(input())
+    find = 666
+    count = 0
+    while 1:
+        if '666' in str(find):
+            count += 1
+        if count == n:
+            print(find)
+            break
+        find += 1
+q1436()
