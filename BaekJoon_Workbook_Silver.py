@@ -1187,4 +1187,17 @@ def q1436():
             print(find)
             break
         find += 1
-q1436()
+
+
+def q2751():
+    # 수 정렬하기 2
+    import sys
+
+    n = int(sys.stdin.readline())
+    lst = []
+    for _ in range(n):
+        lst.append(int(sys.stdin.readline()))
+    lst.sort()
+    for num in lst:
+        print(num)
+q2751()
