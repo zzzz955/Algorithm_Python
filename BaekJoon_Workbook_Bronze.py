@@ -907,4 +907,22 @@ def q25303():
     lst = list(map(int, input().split()))
     lst.sort(reverse=True)
     print(lst[k - 1])
-q25303()
+
+
+def q10989():
+    # 수 정렬하기 3
+    import sys
+
+    n = int(sys.stdin.readline())
+    dic = {}
+    for _ in range(n):
+        temp = int(sys.stdin.readline())
+        if temp in dic:
+            dic[temp] += 1
+        else:
+            dic[temp] = 1
+    dic = sorted(dic.items())
+    for key, val in dic:
+        for _ in range(val):
+            print(key)
+q10989()
