@@ -1200,4 +1200,14 @@ def q2751():
     lst.sort()
     for num in lst:
         print(num)
-q2751()
+
+
+def q1427():
+    # 소트인사이드
+    n = list(input())
+    n.sort(reverse=True)
+    result = ''
+    for num in n:
+        result += num
+    print(result)
+q1427()
