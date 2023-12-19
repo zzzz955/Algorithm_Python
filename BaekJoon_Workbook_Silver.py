@@ -1210,4 +1210,16 @@ def q1427():
     for num in n:
         result += num
     print(result)
-q1427()
+
+
+def q11650():
+    # 좌표 정렬하기
+    n = int(input())
+    xy = []
+    for _ in range(n):
+        x, y = map(int, input().split())
+        xy.append([x, y])
+    xy.sort()
+    for i in xy:
+        print(*i)
+q11650()
