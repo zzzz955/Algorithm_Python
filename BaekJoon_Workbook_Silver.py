@@ -1222,4 +1222,16 @@ def q11650():
     xy.sort()
     for i in xy:
         print(*i)
-q11650()
+
+
+def q11651():
+    # 좌표 정렬하기 2
+    n = int(input())
+    xy = []
+    for _ in range(n):
+        x, y = map(int, input().split())
+        xy.append([y, x])
+    xy.sort()
+    for i in range(n):
+        print(xy[i][1], xy[i][0])
+q11651()
