@@ -1259,4 +1259,16 @@ def q10814():
     lst.sort(key=lambda x: x[0])
     for s in lst:
         print(*s)
-q10814()
+
+
+def q18870():
+    # 좌표 압축
+    n = int(input())
+    lst = list(map(int, input().split()))
+    temp = sorted(set(lst))
+    dic = {}
+    for i in range(len(temp)):
+        dic[temp[i]] = i
+    for s in lst:
+        print(dic[s], end=' ')
+q18870()
