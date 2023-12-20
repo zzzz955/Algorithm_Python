@@ -1271,4 +1271,20 @@ def q18870():
         dic[temp[i]] = i
     for s in lst:
         print(dic[s], end=' ')
-q18870()
+
+
+def q10815():
+    # 숫자 카드
+    n = int(input())
+    lst1 = list(map(int, input().split()))
+    m = int(input())
+    lst2 = list(map(int, input().split()))
+    dic = {}
+    for i in lst1:
+        dic[i] = 1
+    for j in lst2:
+        if j in dic.keys():
+            print(1, end=' ')
+        else:
+            print(0, end=' ')
+q10815()
