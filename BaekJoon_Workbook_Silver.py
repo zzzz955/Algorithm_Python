@@ -1234,4 +1234,17 @@ def q11651():
     xy.sort()
     for i in range(n):
         print(xy[i][1], xy[i][0])
-q11651()
+
+
+def q1181():
+    # 단어 정렬
+    n = int(input())
+    lst = []
+    for _ in range(n):
+        lst.append(input())
+    lst = list(set(lst))
+    lst.sort()
+    lst.sort(key=lambda x: len(x))
+    for s in lst:
+        print(s)
+q1181()
