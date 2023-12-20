@@ -1247,4 +1247,16 @@ def q1181():
     lst.sort(key=lambda x: len(x))
     for s in lst:
         print(s)
-q1181()
+
+
+def q10814():
+    # 나이순 정렬
+    n = int(input())
+    lst = []
+    for _ in range(n):
+        y, n = input().split()
+        lst.append([int(y), n])
+    lst.sort(key=lambda x: x[0])
+    for s in lst:
+        print(*s)
+q10814()
