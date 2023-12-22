@@ -1303,4 +1303,19 @@ def q14425():
         if s in lst:
             result += 1
     print(result)
-q14425()
+
+
+def q7785():
+    # 회사에 있는 사람
+    n = int(input())
+    dic = {}
+    for _ in range(n):
+        a, b = input().split()
+        if a not in dic.keys():
+            dic[a] = 'enter'
+        else:
+            dic.pop(a)
+    lst = sorted(dic.keys(), reverse=True)
+    for name in lst:
+        print(name)
+q7785()
