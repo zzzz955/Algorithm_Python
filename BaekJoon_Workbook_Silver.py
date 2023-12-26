@@ -1337,4 +1337,23 @@ def q1620():
             print(dic1[a])
         else:
             print(dic2[a])
-q1620()
+
+
+def q10816():
+    # 숫자 카드 2
+    n = int(input())
+    lst = list(map(int, input().split()))
+    dic = {}
+    for num in lst:
+        if num in dic.keys():
+            dic[num] += 1
+        else:
+            dic[num] = 1
+    m = int(input())
+    lst = list(map(int, input().split()))
+    for num in lst:
+        if num in dic.keys():
+            print(dic[num], end=' ')
+        else:
+            print(0, end=' ')
+q10816()
