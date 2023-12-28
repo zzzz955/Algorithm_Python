@@ -1356,4 +1356,27 @@ def q10816():
             print(dic[num], end=' ')
         else:
             print(0, end=' ')
-q10816()
+
+
+def q1764():
+    # 듣보잡
+    import sys
+
+    n, m = map(int, sys.stdin.readline().split())
+    dic1 = {}
+    for _ in range(n):
+        s = sys.stdin.readline().rstrip()
+        dic1[s] = 1
+    for _ in range(m):
+        a = sys.stdin.readline().rstrip()
+        if a in dic1.keys():
+            dic1[a] = 0
+    print(list(dic1.values()).count(0))
+    lst = []
+    for key, val in dic1.items():
+        if val == 0:
+            lst.append(key)
+    lst.sort()
+    for name in lst:
+        print(name)
+q1764()
