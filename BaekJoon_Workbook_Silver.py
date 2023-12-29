@@ -1397,4 +1397,22 @@ def q1269():
         else:
             dic1[num] = 1
     print(sum(list(dic1.values())))
-q1269()
+
+
+def q11478():
+    # 서로 다른 부분 문자열의 개수
+    s = input()
+    lst = []
+    length = len(s)
+    slices = 1
+    while slices <= length:
+        index = 0
+        while 1:
+            if index + slices > length:
+                break
+            else:
+                lst.append(s[index:index + slices])
+            index += 1
+        slices += 1
+    print(len(list(set(lst))))
+q11478()
