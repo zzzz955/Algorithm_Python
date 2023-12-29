@@ -1379,4 +1379,22 @@ def q1764():
     lst.sort()
     for name in lst:
         print(name)
-q1764()
+
+
+def q1269():
+    # 대칭 차집합
+    import sys
+
+    n, m = map(int, sys.stdin.readline().split())
+    dic1 = {}
+    lst1 = list(map(int, sys.stdin.readline().split()))
+    lst2 = list(map(int, sys.stdin.readline().split()))
+    for num in lst1:
+        dic1[num] = 1
+    for num in lst2:
+        if num in dic1.keys():
+            dic1[num] = 0
+        else:
+            dic1[num] = 1
+    print(sum(list(dic1.values())))
+q1269()
