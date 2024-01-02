@@ -1415,4 +1415,13 @@ def q11478():
             index += 1
         slices += 1
     print(len(list(set(lst))))
-q11478()
+
+
+def q13241():
+    # 최소공배수
+    import math
+    a, b = map(int, input().split())
+
+    gcd = math.gcd(a, b)
+    print((a * b) // gcd)
+q13241()
