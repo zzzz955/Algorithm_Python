@@ -1420,8 +1420,20 @@ def q11478():
 def q13241():
     # 최소공배수
     import math
-    a, b = map(int, input().split())
 
+    a, b = map(int, input().split())
     gcd = math.gcd(a, b)
     print((a * b) // gcd)
-q13241()
+
+
+def q1735():
+    # 분수 합
+    import math
+
+    a1, b1 = map(int, input().split())
+    a2, b2 = map(int, input().split())
+    lcm = math.lcm(b1, b2)
+    result = (a1 * lcm // b1) + (a2 * lcm // b2)
+    gcd = math.gcd(result, lcm)
+    print(result // gcd, lcm // gcd)
+q1735()
