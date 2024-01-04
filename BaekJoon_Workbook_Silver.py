@@ -1476,4 +1476,21 @@ def q4134():
                 break
             else:
                 n += 1
-q4134()
+
+
+def q4948():
+    # 베르트랑 공준
+    while 1:
+        n = int(input())
+        if n == 0:
+            break
+        else:
+            limit = 246912
+            dp = [1] * (limit + 1)
+            dp[0] = dp[1] = 0
+            for i in range(2, int(limit ** 0.5) + 1):
+                if dp[i]:
+                    for j in range(i * i, limit + 1, i):
+                        dp[j] = 0
+            print(sum(dp[n + 1:2 * n + 1]))
+q4948()
