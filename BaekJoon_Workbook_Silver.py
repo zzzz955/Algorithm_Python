@@ -1493,4 +1493,24 @@ def q4948():
                     for j in range(i * i, limit + 1, i):
                         dp[j] = 0
             print(sum(dp[n + 1:2 * n + 1]))
-q4948()
+
+
+def q17103():
+    # 골드바흐 파티션
+
+    t = int(input())
+    limit = 1000000
+    dp = [1] * 1000001
+    dp[0] = dp[1] = 0
+    for i in range(2, int(limit ** 0.5) + 1):
+        if dp[i]:
+            for j in range(i * i, limit + 1, i):
+                dp[j] = 0
+    for _ in range(t):
+        result = 0
+        n = int(input())
+        for i in range(2, n // 2 + 1):
+            if dp[i] and dp[n - i]:
+                result += 1
+        print(result)
+q17103()
