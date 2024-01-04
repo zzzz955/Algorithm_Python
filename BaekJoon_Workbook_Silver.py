@@ -1436,4 +1436,44 @@ def q1735():
     result = (a1 * lcm // b1) + (a2 * lcm // b2)
     gcd = math.gcd(result, lcm)
     print(result // gcd, lcm // gcd)
-q1735()
+
+
+def q2485():
+    # 가로수
+    import math, sys
+
+    n = int(input())
+    first = int(input())
+    gcd = 1000000000
+    lst = []
+    for _ in range(n - 1):
+        num = int(sys.stdin.readline())
+        lst.append(num - first)
+    for i in range(1, n - 1):
+        gcd = min(gcd, math.gcd(lst[0], lst[i]))
+
+    print((lst[-1] // gcd) - (n - 1))
+
+
+def q4134():
+    # 다음 소수
+    t = int(input())
+
+    def find(x):
+        for i in range(2, int(x ** 0.5) + 1):
+            if x % i == 0:
+                return 0
+        return 1
+
+    for _ in range(t):
+        n = int(input())
+        while 1:
+            if n == 0 or n == 1:
+                print(2)
+                break
+            elif find(n):
+                print(n)
+                break
+            else:
+                n += 1
+q4134()
