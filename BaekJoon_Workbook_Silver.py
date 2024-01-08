@@ -1513,4 +1513,13 @@ def q17103():
             if dp[i] and dp[n - i]:
                 result += 1
         print(result)
-q17103()
+
+
+def q13909():
+    # 창문 닫기
+    n = int(input())
+    result = 0
+    for _ in range(1, int(n ** 0.5) + 1):
+        result += 1
+    print(result)
+q13909()
