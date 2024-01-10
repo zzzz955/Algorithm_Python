@@ -1522,4 +1522,34 @@ def q13909():
     for _ in range(1, int(n ** 0.5) + 1):
         result += 1
     print(result)
-q13909()
+
+
+def q28278():
+    # 스택 2
+    import sys
+
+    t = int(input())
+    lst = []
+    for _ in range(t):
+        n = sys.stdin.readline().split()
+        if n[0] == '1':
+            lst.append(int(n[1]))
+        elif n[0] == '2':
+            if lst:
+                print(lst.pop(-1))
+            else:
+                print(-1)
+        elif n[0] == '3':
+            print(len(lst))
+        elif n[0] == '4':
+            if lst:
+                print(0)
+            else:
+                print(1)
+        else:
+            if lst:
+                print(lst[-1])
+            else:
+                print(-1)
+q28278()
+
