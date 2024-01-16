@@ -1551,5 +1551,18 @@ def q28278():
                 print(lst[-1])
             else:
                 print(-1)
-q28278()
+
+
+def q10773():
+    # 제로
+    k = int(input())
+    lst = []
+    for _ in range(k):
+        n = int(input())
+        if n:
+            lst.append(n)
+        else:
+            lst.pop(-1)
+    print(sum(lst))
+q10773()
 
