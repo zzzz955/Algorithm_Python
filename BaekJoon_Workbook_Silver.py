@@ -1583,5 +1583,40 @@ def q9012():
             print('YES')
         else:
             print('NO')
-q9012()
+
+
+def q4949():
+    # 균형잡힌 세상
+    while 1:
+        s = input()
+        if s == '.':
+            break
+        lst = []
+        result = 1
+        for char in s:
+            if char == '(' or char == '[':
+                lst.append(char)
+            if char == ')':
+                if not lst:
+                    result = 0
+                    break
+                if lst[-1] != '(':
+                    result = 0
+                    break
+                else:
+                    lst.pop(-1)
+            if char == ']':
+                if not lst:
+                    result = 0
+                    break
+                if lst[-1] != '[':
+                    result = 0
+                    break
+                else:
+                    lst.pop(-1)
+        if not lst and result:
+            print('yes')
+        else:
+            print('no')
+q4949()
 
