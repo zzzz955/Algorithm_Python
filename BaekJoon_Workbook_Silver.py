@@ -1564,5 +1564,24 @@ def q10773():
         else:
             lst.pop(-1)
     print(sum(lst))
-q10773()
+
+
+def q9012():
+    # 괄호
+    t = int(input())
+    for _ in range(t):
+        s = input()
+        stack = 0
+        for char in s:
+            if char == '(':
+                stack += 1
+            else:
+                stack -= 1
+            if stack < 0:
+                break
+        if stack == 0:
+            print('YES')
+        else:
+            print('NO')
+q9012()
 
