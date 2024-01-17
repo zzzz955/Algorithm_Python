@@ -1649,4 +1649,38 @@ def q12789():
         print('Nice')
     else:
         print('Sad')
-q12789()
+
+
+def q18258():
+    # 큐 2
+    import collections as q, sys
+
+    n = int(input())
+    que = q.deque()
+    for _ in range(n):
+        p = sys.stdin.readline().split()
+        if p[0] == 'push':
+            que.append(p[1])
+        elif p[0] == 'pop':
+            if que:
+                print(que.popleft())
+            else:
+                print(-1)
+        elif p[0] == 'size':
+            print(len(que))
+        elif p[0] == 'empty':
+            if que:
+                print(0)
+            else:
+                print(1)
+        elif p[0] == 'front':
+            if que:
+                print(que[0])
+            else:
+                print(-1)
+        else:
+            if que:
+                print(que[-1])
+            else:
+                print(-1)
+q18258()
