@@ -1618,5 +1618,35 @@ def q4949():
             print('yes')
         else:
             print('no')
-q4949()
 
+
+def q12789():
+    # 도키도키 간식드리미
+    n = int(input())
+    lst = list(map(int, input().split()))
+    stack = []
+    current = 1
+    while 1:
+        if not lst:
+            break
+        if lst[0] == current:
+            lst.pop(0)
+            current += 1
+            continue
+        if stack:
+            if stack[-1] == current:
+                stack.pop(-1)
+                current += 1
+                continue
+        stack.append(lst.pop(0))
+    if stack:
+        stack.reverse()
+        for _ in range(len(stack)):
+            if current == stack[0]:
+                stack.pop(0)
+                current += 1
+    if not stack:
+        print('Nice')
+    else:
+        print('Sad')
+q12789()
