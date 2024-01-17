@@ -1594,21 +1594,18 @@ def q4949():
         lst = []
         result = 1
         for char in s:
+            if (char == ')' or char == ']') and not lst:
+                result = 0
+                break
             if char == '(' or char == '[':
                 lst.append(char)
             if char == ')':
-                if not lst:
-                    result = 0
-                    break
                 if lst[-1] != '(':
                     result = 0
                     break
                 else:
                     lst.pop(-1)
             if char == ']':
-                if not lst:
-                    result = 0
-                    break
                 if lst[-1] != '[':
                     result = 0
                     break
@@ -1618,6 +1615,7 @@ def q4949():
             print('yes')
         else:
             print('no')
+q4949()
 
 
 def q12789():
@@ -1700,4 +1698,3 @@ def q11866():
     print('<', end='')
     print(', '.join(map(str, result)), end='')
     print('>')
-q11866()
