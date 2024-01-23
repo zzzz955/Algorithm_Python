@@ -1738,4 +1738,26 @@ def q28279():
                 print(q[-1])
             else:
                 print(-1)
-q28279()
+
+
+def q2346():
+    # 풍선 터뜨리기
+    import collections
+    n = int(input())
+    lst = list(map(int, input().split()))
+    q = collections.deque()
+    for i in range(1, n + 1):
+        q.append(i)
+    for _ in range(n):
+        current = q[0]
+        move = lst[current - 1]
+        q.remove(current)
+        print(current, end=' ')
+        if move < 0 and q:
+            move = abs(move)
+            for _ in range(move):
+                q.appendleft(q.pop())
+        elif move > 0 and q:
+            for _ in range(move - 1):
+                q.append(q.popleft())
+q2346()
