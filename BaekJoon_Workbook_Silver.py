@@ -1760,4 +1760,25 @@ def q2346():
         elif move > 0 and q:
             for _ in range(move - 1):
                 q.append(q.popleft())
-q2346()
+
+
+def q24511():
+    # queuestack
+    from collections import deque
+
+    n = int(input())
+    qs = list(map(int, input().split()))
+    lst = list(map(int, input().split()))
+    m = int(input())
+    c = list(map(int, input().split()))
+    q = deque()
+    for i in range(n):
+        if qs[i] == 0:
+            q.append(lst[i])
+    for num in c:
+        if q:
+            print(q.pop(), end=' ')
+            q.appendleft(num)
+        else:
+            print(num, end=' ')
+q24511()
