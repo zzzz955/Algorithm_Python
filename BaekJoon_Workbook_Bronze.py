@@ -937,4 +937,21 @@ def q24723():
     # 녹색거탑
     n = int(input())
     print(2 ** n)
-q24723()
+
+
+def q11050():
+    # 이항 계수 1
+    n, k = map(int, input().split())
+    fact_n = 1
+    fact_k = 1
+    fact_kn = n - k
+    if not fact_kn:
+        fact_kn = 1
+    for i in range(1, n + 1):
+        fact_n *= i
+    for i in range(1, k + 1):
+        fact_k *= i
+    for i in range(1, fact_kn + 1):
+        fact_k *= i
+    print(fact_n // fact_k)
+q11050()
