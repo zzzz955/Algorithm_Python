@@ -925,4 +925,10 @@ def q10989():
     for key, val in dic:
         for _ in range(val):
             print(key)
-q10989()
+
+
+def q15439():
+    # 베라의 패션
+    n = int(input())
+    print(n ** 2 - n)
+q15439()
