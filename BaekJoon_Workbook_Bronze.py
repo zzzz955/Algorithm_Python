@@ -931,4 +931,10 @@ def q15439():
     # 베라의 패션
     n = int(input())
     print(n ** 2 - n)
-q15439()
+
+
+def q24723():
+    # 녹색거탑
+    n = int(input())
+    print(2 ** n)
+q24723()
