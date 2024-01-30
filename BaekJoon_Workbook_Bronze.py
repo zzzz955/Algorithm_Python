@@ -954,4 +954,14 @@ def q11050():
     for i in range(1, fact_kn + 1):
         fact_k *= i
     print(fact_n // fact_k)
-q11050()
+
+
+def q1037():
+    # 약수
+    n = int(input())
+    lst = list(map(int, input().split()))
+    if n > 1:
+        print(max(lst) * min(lst))
+    else:
+        print(lst[0] ** 2)
+q1037()
