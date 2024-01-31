@@ -1797,4 +1797,21 @@ def q25192():
             dic[s] = 1
     result += len(dic)
     print(result)
-q25192()
+
+
+def q26069():
+    # 붙임성 좋은 총총이
+    n = int(input())
+    dic = {'ChongChong': 1}
+    for _ in range(n):
+        one, two = input().split()
+        if one not in dic.keys():
+            dic[one] = 0
+        if two not in dic.keys():
+            dic[two] = 0
+        if not dic[one] and not dic[two]:
+            continue
+        else:
+            dic[one], dic[two] = 1, 1
+    print(sum(dic.values()))
+q26069()
