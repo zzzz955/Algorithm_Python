@@ -1814,4 +1814,33 @@ def q26069():
         else:
             dic[one], dic[two] = 1, 1
     print(sum(dic.values()))
-q26069()
+
+
+def q2108():
+    # 통계학
+    import sys
+
+    n = int(input())
+    lst = []
+    dic = {}
+    result = 0
+    for _ in range(n):
+        num = int(sys.stdin.readline())
+        result += num
+        lst.append(num)
+        if num in dic.keys():
+            dic[num] += 1
+        else:
+            dic[num] = 1
+    lst.sort()
+    many = max(dic.values())
+    temps = []
+    for key, item in dic.items():
+        if item == many:
+            temps.append(key)
+    temps.sort()
+    print(round(result / n))
+    print(lst[n // 2])
+    print(temps[1] if len(temps) > 1 else temps[0])
+    print(lst[-1] - lst[0])
+q2108()
