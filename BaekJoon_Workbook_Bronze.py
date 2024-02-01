@@ -991,4 +991,26 @@ def q10870():
         else:
             return fibo(a - 2) + fibo(a - 1)
     print(fibo(n))
-q10870()
+
+
+def q25501():
+    # 재귀의 귀재
+    n = int(input())
+
+    def recursion(s, l, r, c):
+        c += 1
+        if l >= r:
+            return 1, c
+        elif s[l] != s[r]:
+            return 0, c
+        else:
+            return recursion(s, l + 1, r - 1, c)
+
+    def is_palindrome(s, c):
+        return recursion(s, 0, len(s) - 1, c)
+
+    for _ in range(n):
+        string = input()
+        count = 0
+        print(*is_palindrome(string, count))
+q25501()
