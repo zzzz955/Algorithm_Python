@@ -964,4 +964,17 @@ def q1037():
         print(max(lst) * min(lst))
     else:
         print(lst[0] ** 2)
-q1037()
+
+
+def q27433():
+    # 팩토리얼 2
+    n = int(input())
+
+    def fact(a):
+        if a <= 1:
+            return 1
+        else:
+            return a * fact(a - 1)
+
+    print(fact(n))
+q27433()
