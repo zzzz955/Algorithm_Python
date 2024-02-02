@@ -1843,4 +1843,23 @@ def q2108():
     print(lst[n // 2])
     print(temps[1] if len(temps) > 1 else temps[0])
     print(lst[-1] - lst[0])
-q2108()
+
+
+def q4779():
+    # 칸토어 집합
+    def cantor(start, depth):
+        if depth == 1:
+            return
+        for i in range(start + depth // 3, start + (depth // 3 * 2)):
+            lst[i] = ' '
+        cantor(start, depth // 3)
+        cantor(start + (depth // 3 * 2), depth // 3)
+    while 1:
+        try:
+            n = int(input())
+            lst = ['-'] * (3 ** n)
+            cantor(0, 3 ** n)
+            print(''.join(lst))
+        except:
+            break
+q4779()
