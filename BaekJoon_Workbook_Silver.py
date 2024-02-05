@@ -1862,4 +1862,22 @@ def q4779():
             print(''.join(lst))
         except:
             break
-q4779()
+
+
+def q15649():
+    # N과 M (1)
+    n, m = map(int, input().split())
+
+    def result(N, M, lst=[]):
+        if M == 0:
+            print(" ".join(map(str, lst)))
+            return
+
+        for i in range(1, N + 1):
+            if i not in lst:
+                lst.append(i)
+                result(N, M - 1, lst)
+                lst.pop()
+
+    result(n, m)
+q15649()
