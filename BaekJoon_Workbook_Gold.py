@@ -17,4 +17,19 @@ def q12348():
             result = i
             break
     print(result)
-q2231()
+
+
+def q10986():
+    # 나머지 합
+    n, m = map(int, input().split())
+    lst = list(map(int, input().split()))
+    sum_val = 0
+    remainder = [0] * m
+    for i in range(n):
+        sum_val += lst[i]
+        remainder[sum_val % m] += 1
+    result = remainder[0]
+    for i in remainder:
+        result += i * (i - 1) // 2
+    print(result)
+q10986()
