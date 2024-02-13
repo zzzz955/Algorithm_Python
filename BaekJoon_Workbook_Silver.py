@@ -1962,4 +1962,20 @@ def q11659():
     for _ in range(m):
         id1, id2 = map(int, sys.stdin.readline().split())
         print(dp[id2] - dp[id1 - 1])
-q11659()
+
+
+def q2559():
+    # 수열
+    n, m = map(int, input().split())
+    lst = list(map(int, input().split()))
+    result = -10000000
+    sum_val = 0
+    index = 0
+    for i in range(n):
+        sum_val += lst[i]
+        if i >= m - 1:
+            result = max(sum_val, result)
+            sum_val -= lst[index]
+            index += 1
+    print(result)
+q2559()
