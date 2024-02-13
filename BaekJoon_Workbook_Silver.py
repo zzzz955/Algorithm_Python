@@ -1978,4 +1978,25 @@ def q2559():
             sum_val -= lst[index]
             index += 1
     print(result)
-q2559()
+
+
+def q16139():
+    # 인간-컴퓨터 상호작용
+    import sys
+
+    s = input()
+    n = int(input())
+    dp = [[0] * 200001 for _ in range(27)]
+    for i in range(26):
+        count = 0
+        for j in range(len(s)):
+            if s[j] == chr(i + 97):
+                count += 1
+            dp[i][j] = count
+    for _ in range(n):
+        a, start, end = sys.stdin.readline().split()
+        start, end = int(start), int(end)
+        print(dp[ord(a) - 97][end] - dp[ord(a) - 97][start - 1])
+q16139()
+
+
