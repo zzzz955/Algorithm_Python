@@ -1997,6 +1997,19 @@ def q16139():
         a, start, end = sys.stdin.readline().split()
         start, end = int(start), int(end)
         print(dp[ord(a) - 97][end] - dp[ord(a) - 97][start - 1])
-q16139()
 
+
+def q11047():
+    # 동전 0
+    n, k = map(int, input().split())
+    lst = []
+    for _ in range(n):
+        lst.append(int(input()))
+    lst.sort(reverse=True)
+    count = 0
+    for num in lst:
+        count += k // num
+        k %= num
+    print(count)
+q11047()
 
