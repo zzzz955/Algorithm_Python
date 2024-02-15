@@ -2011,5 +2011,24 @@ def q11047():
         count += k // num
         k %= num
     print(count)
-q11047()
+
+
+def q1931():
+    # 회의실 배정
+    import sys
+
+    n = int(input())
+    lst = []
+    for _ in range(n):
+        s, e = map(int, sys.stdin.readline().split())
+        lst.append((s, e))
+    lst.sort(key=lambda x: (x[1], x[0]))
+    count = 1
+    end = lst[0][1]
+    for i in range(n - 1):
+        if end <= lst[i + 1][0]:
+            end = lst[i + 1][1]
+            count += 1
+    print(count)
+q1931()
 
