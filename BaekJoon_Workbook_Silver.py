@@ -2030,5 +2030,18 @@ def q1931():
             end = lst[i + 1][1]
             count += 1
     print(count)
-q1931()
+
+
+def q11399():
+    # ATM
+    n = int(input())
+    lst = list(map(int, input().split()))
+    lst.sort()
+    current = 0
+    result = 0
+    for num in lst:
+        current += num
+        result += current
+    print(result)
+q11399()
 
