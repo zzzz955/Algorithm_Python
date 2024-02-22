@@ -1687,7 +1687,7 @@ def q11866():
     from collections import deque
 
     n, k = map(int, input().split())
-    lst = [i for i in range(1, n+1)]
+    lst = [i for i in range(1, n + 1)]
     q = deque(lst)
     result = []
     while q:
@@ -1854,6 +1854,7 @@ def q4779():
             lst[i] = ' '
         cantor(start, depth // 3)
         cantor(start + (depth // 3 * 2), depth // 3)
+
     while 1:
         try:
             n = int(input())
@@ -2070,5 +2071,32 @@ def q1541():
             index1 = i + 1
             minus = True
     print(sum(lst))
-q1541()
 
+
+def q1920():
+    # 수 찾기
+    n = int(input())
+    lst1 = list(map(int, input().split()))
+    m = int(input())
+    lst2 = list(map(int, input().split()))
+    length = len(lst1)
+    lst1.sort()
+    for num in lst2:
+        low = 0
+        high = length - 1
+        temp = lst1
+        isin = False
+        while low <= high:
+            mid = (low + high) // 2
+            if temp[mid] == num:
+                isin = True
+                break
+            elif temp[mid] < num:
+                low = mid + 1
+            else:
+                high = mid - 1
+        if isin:
+            print(1)
+        else:
+            print(0)
+q1920()
