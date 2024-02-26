@@ -1023,4 +1023,22 @@ def q2748():
     for i in range(2, n + 1):
         dp[i] = dp[i - 2] + dp[i - 1]
     print(dp[n])
-q2748()
+
+
+def q17202():
+    # 핸드폰 번호 궁합
+    a = list(map(int, input()))
+    b = list(map(int, input()))
+    dp = [[] for _ in range(16)]
+    lst = []
+    for i in range(8):
+        lst.append(a.pop(0))
+        lst.append(b.pop(0))
+    for i in range(len(lst) - 1):
+        dp[0].append((lst[i] + lst[i + 1]) % 10)
+    for i in range(1, 16):
+        for j in range(len(dp[i - 1]) - 1):
+            dp[i].append((dp[i - 1][j] + dp[i - 1][j + 1]) % 10)
+    print(''.join(map(str, dp[13])))
+q17202()
+
