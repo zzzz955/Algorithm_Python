@@ -2153,4 +2153,24 @@ def q11660():
     for _ in range(m):
         x1, y1, x2, y2 = map(int, sys.stdin.readline().split())
         print(dp[x2][y2] - dp[x1 - 1][y2] - dp[x2][y1 - 1] + dp[x1 - 1][y1 - 1])
-q11660()
+
+
+def q14916():
+    # 거스름돈
+    n = int(input())
+    result = 0
+    if n // 5:
+        if n % 5 % 2:
+            result += (n // 5) - 1
+            n = n % 5 + 5
+        else:
+            result += n // 5
+            n = n % 5
+    if n // 2:
+        result += n // 2
+        n %= 2
+    if n:
+        print(-1)
+    else:
+        print(result)
+q14916()
