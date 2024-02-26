@@ -2243,4 +2243,15 @@ def q15312():
             temp.append(sum_val)
         name = temp
     print(''.join(map(str, name)))
-q15312()
+
+
+def q14606():
+    # 피자 (Small)
+    n = int(input())
+
+    dp = [0] * (n + 1)
+    dp[1] = 0
+    for i in range(2, n + 1):
+        dp[i] = dp[i - 1] + (i // 2)
+    print(dp[n] + dp[n - 1])
+q14606()
