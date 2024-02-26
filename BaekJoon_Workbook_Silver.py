@@ -2221,4 +2221,26 @@ def q16395():
     for i in range(1, n - k + 1):
         nkf *= i
     print(nf // kf // nkf)
-q16395()
+
+
+def q15312():
+    # 이름 궁합
+    a = input()
+    b = input()
+    name = []
+    alpha = [3, 2, 1, 2, 3, 3, 2, 3, 3, 2, 2, 1, 2, 2, 1, 2, 2, 2, 1, 2, 1, 1, 1, 2, 2, 1]
+    for i in range(len(a)):
+        name.append(a[i])
+        name.append(b[i])
+    for i in range(len(name)):
+        name[i] = alpha[ord(name[i]) - 65]
+    while len(name) > 2:
+        temp = []
+        for i in range(len(name) - 1):
+            sum_val = sum(name[i:i + 2])
+            if sum_val >= 10:
+                sum_val %= 10
+            temp.append(sum_val)
+        name = temp
+    print(''.join(map(str, name)))
+q15312()
