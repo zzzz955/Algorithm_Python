@@ -1013,4 +1013,14 @@ def q25501():
         string = input()
         count = 0
         print(*is_palindrome(string, count))
-q25501()
+
+
+def q2748():
+    # 피보나치 수 2
+    n = int(input())
+    dp = [0] * 91
+    dp[1] = 1
+    for i in range(2, n + 1):
+        dp[i] = dp[i - 2] + dp[i - 1]
+    print(dp[n])
+q2748()
