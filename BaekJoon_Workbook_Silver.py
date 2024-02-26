@@ -2206,4 +2206,19 @@ def q13301():
     for i in range(2, n + 1):
         dp2[i] = dp2[i - 1] + (dp[i - 1] * 2)
     print(dp2[n])
-q13301()
+
+
+def q16395():
+    # 파스칼의 삼각형
+    n, k = map(int, input().split())
+    nf = 1
+    kf = 1
+    nkf = 1
+    for i in range(1, n):
+        nf *= i
+    for i in range(1, k):
+        kf *= i
+    for i in range(1, n - k + 1):
+        nkf *= i
+    print(nf // kf // nkf)
+q16395()
