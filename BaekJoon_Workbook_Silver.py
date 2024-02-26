@@ -2173,4 +2173,14 @@ def q14916():
         print(-1)
     else:
         print(result)
-q14916()
+
+
+def q9625():
+    # BABBA
+    k = int(input())
+    dp = [0] * 46
+    dp[1] = 1
+    for i in range(2, 46):
+        dp[i] = dp[i - 2] + dp[i - 1]
+    print(dp[k - 1], dp[k])
+q9625()
