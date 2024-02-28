@@ -2318,4 +2318,17 @@ def q2491():
         else:
             dp2[i] = 1
     print(max(max(dp1), max(dp2)))
-q2491()
+
+
+def q2670():
+    # 연속부분최대곱
+    import sys
+
+    n = int(input())
+    lst = [float(input()) for _ in range(n)]
+    dp = [1] * (n + 1)
+    for i in range(1, n + 1):
+        dp[i] = max(dp[i - 1] * lst[i - 1], lst[i - 1])
+    dp[0] = 0
+    print(f'{max(dp):.3f}')
+q2670()
