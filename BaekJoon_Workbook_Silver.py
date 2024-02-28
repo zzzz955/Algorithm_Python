@@ -2287,4 +2287,18 @@ def q19947():
             h *= 1.35
         h = int(h)
     print(h)
-q19947()
+
+
+def q25644():
+    # 최대 상승
+    n = int(input())
+    lst = list(map(int, input().split()))
+    lst.reverse()
+    dp = [0] * (n + 1)
+    max_val = lst[0]
+    for i in range(1, len(lst)):
+        dp[i] = max_val - lst[i]
+        max_val = max(max_val, lst[i])
+    print(max(dp))
+q25644()
+
