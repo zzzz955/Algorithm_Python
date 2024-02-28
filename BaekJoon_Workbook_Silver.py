@@ -2269,4 +2269,22 @@ def q9656():
         print('CY')
     else:
         print('SK')
-q9656()
+
+
+def q19947():
+    # 투자의 귀재 배주형
+    h, y = map(int, input().split())
+    while y:
+        if y % 5:
+            if y // 3:
+                y -= 3
+                h *= 1.2
+            else:
+                y -= 1
+                h *= 1.05
+        else:
+            y -= 5
+            h *= 1.35
+        h = int(h)
+    print(h)
+q19947()
