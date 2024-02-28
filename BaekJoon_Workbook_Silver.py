@@ -2300,5 +2300,22 @@ def q25644():
         dp[i] = max_val - lst[i]
         max_val = max(max_val, lst[i])
     print(max(dp))
-q25644()
 
+
+def q2491():
+    # 수열
+    n = int(input())
+    lst = list(map(int, input().split()))
+    dp1 = [1] * (n + 1)
+    dp2 = [1] * (n + 1)
+    for i in range(1, n):
+        if lst[i - 1] <= lst[i]:
+            dp1[i] = dp1[i - 1] + 1
+        else:
+            dp1[i] = 1
+        if lst[i - 1] >= lst[i]:
+            dp2[i] = dp2[i - 1] + 1
+        else:
+            dp2[i] = 1
+    print(max(max(dp1), max(dp2)))
+q2491()
