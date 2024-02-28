@@ -2254,4 +2254,19 @@ def q14606():
     for i in range(2, n + 1):
         dp[i] = dp[i - 1] + (i // 2)
     print(dp[n] + dp[n - 1])
-q14606()
+
+
+def q14607():
+    # 피자 (Large)
+    n = int(input())
+    print(n * (n - 1) // 2)
+
+
+def q9656():
+    # 돌 게임 2
+    n = int(input())
+    if n % 2 == 1:
+        print('CY')
+    else:
+        print('SK')
+q9656()
