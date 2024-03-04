@@ -2377,4 +2377,18 @@ def q14495():
     for i in range(4, n + 1):
         dp[i] = dp[i - 3] + dp[i - 1]
     print(dp[n])
-q14495()
+
+
+def q15489():
+    # 파스칼 삼각형
+    r, c, w = map(int, input().split())
+    dp = [[1] * 31 for _ in range(31)]
+    for i in range(1, 31):
+        for j in range(1, 32 - i):
+            dp[i][j] = dp[i - 1][j] + dp[i][j - 1]
+    result = 0
+    for i in range(w):
+        for j in range(w - i):
+            result += dp[r - c + i][j + c - 1]
+    print(result)
+q15489()
