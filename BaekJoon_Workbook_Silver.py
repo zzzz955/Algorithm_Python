@@ -2391,4 +2391,17 @@ def q15489():
         for j in range(w - i):
             result += dp[r - c + i][j + c - 1]
     print(result)
-q15489()
+
+
+def q25214():
+    # 크림 파스타
+    n = int(input())
+    lst = list(map(int, input().split()))
+    dp = [0] * (n + 1)
+    min_val = 1000000000
+    for i in range(1, n + 1):
+        min_val = min(min_val, lst[i - 1])
+        dp[i] = max(lst[i - 1] - min_val, dp[i - 1])
+    dp.pop(0)
+    print(*dp)
+q25214()
