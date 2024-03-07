@@ -1069,4 +1069,16 @@ def q2605():
         order.insert(lst[i - 1], i)
     order.reverse()
     print(*order)
-q2605()
+
+
+def q12605():
+    # 단어순서 뒤집기
+    n = int(input())
+    words = []
+    for _ in range(n):
+        lst = list(map(str, input().split()))
+        lst.reverse()
+        words.append(lst)
+    for i in range(n):
+        print(f'Case #{i + 1}:', *words[i])
+q12605()
