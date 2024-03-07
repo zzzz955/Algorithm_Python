@@ -1040,5 +1040,22 @@ def q17202():
         for j in range(len(dp[i - 1]) - 1):
             dp[i].append((dp[i - 1][j] + dp[i - 1][j + 1]) % 10)
     print(''.join(map(str, dp[13])))
-q17202()
 
+
+def q17608():
+    # 막대기
+    import sys
+
+    n = int(sys.stdin.readline())
+    lst = []
+    count = 1
+    for _ in range(n):
+        lst.append(int(sys.stdin.readline()))
+    lst.reverse()
+    max_val = lst[0]
+    for i in range(n):
+        if lst[i] > max_val:
+            max_val = lst[i]
+            count += 1
+    print(count)
+q17608()
