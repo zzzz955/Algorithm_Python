@@ -1058,4 +1058,15 @@ def q17608():
             max_val = lst[i]
             count += 1
     print(count)
-q17608()
+
+
+def q2605():
+    # 줄 세우기
+    n = int(input())
+    lst = list(map(int, input().split()))
+    order = []
+    for i in range(1, n + 1):
+        order.insert(lst[i - 1], i)
+    order.reverse()
+    print(*order)
+q2605()
