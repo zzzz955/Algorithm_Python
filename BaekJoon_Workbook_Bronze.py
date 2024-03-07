@@ -1134,4 +1134,32 @@ def q29701():
     }
     for char in lst:
         print(dic[char], end='')
-q29701()
+
+
+def q30034():
+    # Slice String
+    n = int(input())
+    slice_char = input().split()
+    m = int(input())
+    slice_num = input().split()
+    slices = slice_char + slice_num
+    k = int(input())
+    merge = input().split()
+    for char in merge:
+        while char in slices:
+            slices.remove(char)
+    s = int(input())
+    string = input().split()
+    for char in slices:
+        index = 0
+        while index < len(string):
+            if char in string[index]:
+                temp = list(string[index].split(char))
+                string.pop(index)
+                for i in range(len(temp)):
+                    string.insert(index + i, temp[i])
+            index += 1
+    for char in string:
+        if char:
+            print(char)
+q30034()
