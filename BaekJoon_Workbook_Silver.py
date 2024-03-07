@@ -2404,4 +2404,13 @@ def q25214():
         dp[i] = max(lst[i - 1] - min_val, dp[i - 1])
     dp.pop(0)
     print(*dp)
-q25214()
+
+
+def q24417():
+    # 알고리즘 수업 - 피보나치 수 2
+    n = int(input())
+    x, y = 1, 1
+    for i in range(n - 2):
+        y, x = ((x + y) % 1000000007), y
+    print(y, n - 2)
+q24417()
