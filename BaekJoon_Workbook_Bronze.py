@@ -1094,4 +1094,27 @@ def q27160():
         else:
             dic[fruit] = int(ea)
     print('YES' if 5 in dic.values() else 'NO')
-q27160()
+
+
+def q11531():
+    # ACM 대회 채점
+    dic = {}
+    while 1:
+        lst = input().split()
+        if int(lst[0]) == -1:
+            break
+        if lst[1] not in dic.keys():
+            dic[lst[1]] = [False, 0]
+        if lst[2] == 'right':
+            dic[lst[1]][0] = True
+            dic[lst[1]][1] += int(lst[0])
+        else:
+            dic[lst[1]][1] += 20
+    solved = 0
+    penalties = 0
+    for _, item in dic.items():
+        if item[0]:
+            solved += 1
+            penalties += item[1]
+    print(solved, penalties)
+q11531()
