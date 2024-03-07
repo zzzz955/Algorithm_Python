@@ -1081,4 +1081,17 @@ def q12605():
         words.append(lst)
     for i in range(n):
         print(f'Case #{i + 1}:', *words[i])
-q12605()
+
+
+def q27160():
+    # 할리갈리
+    n = int(input())
+    dic = {}
+    for _ in range(n):
+        fruit, ea = input().split()
+        if fruit in dic.keys():
+            dic[fruit] += int(ea)
+        else:
+            dic[fruit] = int(ea)
+    print('YES' if 5 in dic.values() else 'NO')
+q27160()
