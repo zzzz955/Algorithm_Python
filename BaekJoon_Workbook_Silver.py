@@ -2413,4 +2413,18 @@ def q24417():
     for i in range(n - 2):
         y, x = ((x + y) % 1000000007), y
     print(y, n - 2)
-q24417()
+
+
+def q2161():
+    # 카드1
+    import collections
+
+    n = int(input())
+    deq = collections.deque()
+    for i in range(n, 0, -1):
+        deq.append(i)
+    for _ in range(n):
+        print(deq.pop(), end=' ')
+        if deq:
+            deq.appendleft(deq.pop())
+q2161()
