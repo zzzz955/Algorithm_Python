@@ -1162,4 +1162,19 @@ def q30034():
     for char in string:
         if char:
             print(char)
-q30034()
+
+
+def q15098():
+    # No Duplicates
+    lst = input().split()
+    dic = {}
+    is_dup = True
+    while lst:
+        current = lst.pop()
+        if current in dic.keys():
+            is_dup = False
+            break
+        else:
+            dic[current] = 1
+    print('yes' if is_dup else 'no')
+q15098()
