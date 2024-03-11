@@ -1177,4 +1177,24 @@ def q15098():
         else:
             dic[current] = 1
     print('yes' if is_dup else 'no')
-q15098()
+
+
+def q25593():
+    # 근무 지옥에 빠진 푸앙이 (Small)
+    n = int(input())
+    dic = {}
+    lst = [4, 6, 4, 10]
+    for _ in range(n):
+        for time in lst:
+            workers = input().split()
+            for worker in workers:
+                if worker != '-':
+                    if worker in dic.keys():
+                        dic[worker] += time
+                    else:
+                        dic[worker] = time
+    if dic:
+        print('Yes' if max(dic.values()) - min(dic.values()) <= 12 else 'No')
+    else:
+        print('Yes')
+q25593()
