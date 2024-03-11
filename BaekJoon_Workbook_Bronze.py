@@ -1197,4 +1197,27 @@ def q25593():
         print('Yes' if max(dic.values()) - min(dic.values()) <= 12 else 'No')
     else:
         print('Yes')
-q25593()
+
+
+def q31562():
+    # 전주 듣고 노래 맞히기
+    n, m = map(int, input().split())
+    music = {}
+    for _ in range(n):
+        lst = input().split()
+        music[lst[1]] = lst[2:5]
+    for _ in range(m):
+        lst = input().split()
+        count = 0
+        result = ''
+        for key, val in music.items():
+            if val == lst:
+                result = key
+                count += 1
+        if count > 1:
+            print('?')
+        elif count:
+            print(result)
+        else:
+            print('!')
+q31562()
