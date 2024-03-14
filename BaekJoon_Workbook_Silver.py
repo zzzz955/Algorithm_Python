@@ -2449,4 +2449,23 @@ def q4158():
             if val == 1:
                 result += 1
         print(result)
-q4158()
+
+
+def q23253():
+    # 자료구조는 정말 최고야
+    import sys
+
+    n, m = map(int, sys.stdin.readline().split())
+    result = 1
+    for _ in range(m):
+        k = int(sys.stdin.readline())
+        lst = list(map(int, sys.stdin.readline().split()))
+        if result:
+            for i in range(k - 1):
+                if lst[i] < lst[i + 1]:
+                    result = 0
+                    break
+        else:
+            break
+    print('Yes' if result else 'No')
+q23253()
