@@ -2427,4 +2427,26 @@ def q2161():
         print(deq.pop(), end=' ')
         if deq:
             deq.appendleft(deq.pop())
-q2161()
+
+
+def q4158():
+    # CD
+    import sys
+
+    while 1:
+        n, m = map(int, sys.stdin.readline().split())
+        if n == m == 0:
+            break
+        dic = {}
+        for _ in range(n):
+            dic[int(sys.stdin.readline())] = 0
+        for _ in range(m):
+            num = int(sys.stdin.readline())
+            if num in dic.keys():
+                dic[num] += 1
+        result = 0
+        for val in dic.values():
+            if val == 1:
+                result += 1
+        print(result)
+q4158()
