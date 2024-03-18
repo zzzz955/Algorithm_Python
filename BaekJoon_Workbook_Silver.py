@@ -2565,4 +2565,14 @@ def q25325():
     keys = sorted(keys, key=lambda x: x[1], reverse=True)
     for name, num in keys:
         print(name, num)
-q25325()
+
+
+def q28445():
+    # 알록달록 앵무새
+    dad = input().split()
+    mom = input().split()
+    colors = sorted(set(dad + mom))
+    for i in colors:
+        for j in colors:
+            print(i, j)
+q28445()
