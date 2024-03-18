@@ -2575,4 +2575,23 @@ def q28445():
     for i in colors:
         for j in colors:
             print(i, j)
-q28445()
+
+
+def q26042():
+    # 식당 입구 대기 줄
+    import sys
+
+    n = int(sys.stdin.readline())
+    lst = []
+    count = 0
+    for _ in range(n):
+        temp = sys.stdin.readline().split()
+        if temp[0] == '1':
+            count += 1
+            lst.append((count, int(temp[1])))
+        else:
+            count -= 1
+            lst.append((count, lst[-1][1]))
+    lst.sort(key=lambda x: (-x[0], x[1]))
+    print(*lst[0])
+q26042()
