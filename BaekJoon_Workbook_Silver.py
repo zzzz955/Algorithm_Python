@@ -2481,4 +2481,33 @@ def q27964():
             if name not in dic.keys():
                 dic[name] = 1
     print('yummy' if sum(dic.values()) >= 4 else 'sad')
-q27964()
+
+
+def q25497():
+    # 기술 연계마스터 임스
+    n = int(input())
+    skills = input()
+    result = 0
+    l_count = 0
+    s_count = 0
+    for skill in skills:
+        if skill == 'L':
+            l_count += 1
+        elif skill == 'S':
+            s_count += 1
+        elif skill == 'R':
+            if l_count:
+                l_count -= 1
+                result += 1
+            else:
+                break
+        elif skill == 'K':
+            if s_count:
+                s_count -= 1
+                result += 1
+            else:
+                break
+        else:
+            result += 1
+    print(result)
+q25497()
