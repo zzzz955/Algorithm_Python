@@ -2530,4 +2530,22 @@ def q25631():
                 dic[key] -= 1
                 break
     print(sum(dic.values()))'''
-q25631()
+
+
+def q9733():
+    # 꿀벌
+    import sys
+
+    lines = sys.stdin.readlines()
+    length = 0
+    dic = {'Re':0,'Pt':0,'Cc':0,'Ea':0,'Tb':0,'Cm':0,'Ex':0}
+    for line in lines:
+        lst = line.split()
+        for work in lst:
+            if work in dic.keys():
+                dic[work] += 1
+            length += 1
+    for key, val in dic.items():
+        print(f'{key} {val} {(val / length):.2f}')
+    print(f'Total {length} 1.00')
+q9733()
