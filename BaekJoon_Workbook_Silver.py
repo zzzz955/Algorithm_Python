@@ -2468,4 +2468,17 @@ def q23253():
         else:
             break
     print('Yes' if result else 'No')
-q23253()
+
+
+def q27964():
+    # 콰트로치즈피자
+    n = int(input())
+    lst = input().split()
+    dic = {}
+    for name in lst:
+        length = len(name)
+        if length >= 6 and name[length - 6:length] == 'Cheese':
+            if name not in dic.keys():
+                dic[name] = 1
+    print('yummy' if sum(dic.values()) >= 4 else 'sad')
+q27964()
