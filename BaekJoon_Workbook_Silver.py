@@ -2548,4 +2548,21 @@ def q9733():
     for key, val in dic.items():
         print(f'{key} {val} {(val / length):.2f}')
     print(f'Total {length} 1.00')
-q9733()
+
+
+def q25325():
+    # 학생 인기도 측정
+    n = int(input())
+    students = input().split()
+    dic = {}
+    for student in students:
+        dic[student] = 0
+    for _ in range(n):
+        lst = input().split()
+        for i in lst:
+            dic[i] += 1
+    keys = sorted(dic.items(), key=lambda x: x[0])
+    keys = sorted(keys, key=lambda x: x[1], reverse=True)
+    for name, num in keys:
+        print(name, num)
+q25325()
