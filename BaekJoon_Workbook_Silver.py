@@ -2510,4 +2510,24 @@ def q25497():
         else:
             result += 1
     print(result)
-q25497()
+
+
+def q25631():
+    # 마트료시카 합치기
+    n = int(input())
+    lst = list(map(int, input().split()))
+    lst.sort(reverse=True)
+    dic = {}
+    for num in lst:
+        if num in dic.keys():
+            dic[num] += 1
+        else:
+            dic[num] = 1
+    print(max(dic.values()))
+    '''for num in lst:
+        for key in dic.keys():
+            if dic[key] and num < key:
+                dic[key] -= 1
+                break
+    print(sum(dic.values()))'''
+q25631()
