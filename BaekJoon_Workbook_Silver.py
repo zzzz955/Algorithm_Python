@@ -2594,4 +2594,27 @@ def q26042():
             lst.append((count, lst[-1][1]))
     lst.sort(key=lambda x: (-x[0], x[1]))
     print(*lst[0])
-q26042()
+
+
+def q29723():
+    # 브실이의 입시전략
+    import sys
+
+    n, m, k = map(int, sys.stdin.readline().split())
+    dic = {}
+    for _ in range(n):
+        s, p = sys.stdin.readline().split()
+        dic[s] = int(p)
+    lst = []
+    for _ in range(k):
+        lst.append(sys.stdin.readline().rstrip())
+    point = 0
+    for subject in lst:
+        point += dic.pop(subject)
+    asc, desc = sorted(dic.values()), sorted(dic.values(), reverse=True)
+    min_point, max_point = point, point
+    for i in range(m - k):
+        min_point += asc[i]
+        max_point += desc[i]
+    print(min_point, max_point)
+q29723()
