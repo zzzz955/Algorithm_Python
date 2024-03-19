@@ -2617,4 +2617,26 @@ def q29723():
         min_point += asc[i]
         max_point += desc[i]
     print(min_point, max_point)
-q29723()
+
+
+def q25584():
+    # 근무 지옥에 빠진 푸앙이 (Large)
+    import sys
+
+    n = int(sys.stdin.readline().rstrip())
+    dic = {}
+    lst = [4, 6, 4, 10]
+    for _ in range(n):
+        for time in lst:
+            workers = sys.stdin.readline().split()
+            for worker in workers:
+                if worker != '-':
+                    if worker in dic.keys():
+                        dic[worker] += time
+                    else:
+                        dic[worker] = time
+    if dic:
+        print('Yes' if max(dic.values()) - min(dic.values()) <= 12 else 'No')
+    else:
+        print('Yes')
+q25584()
