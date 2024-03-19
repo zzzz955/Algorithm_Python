@@ -1220,4 +1220,29 @@ def q31562():
             print(result)
         else:
             print('!')
-q31562()
+
+
+def q9933():
+    # 민균이의 비밀번호
+    n = int(input())
+    dic = {}
+    for _ in range(n):
+        s = input()
+        lst = list(s)
+        lst.reverse()
+        reverse = ''
+        for char in lst:
+            reverse += char
+        dic[s] = reverse
+    result = ''
+    key, val = list(dic.keys()), list(dic.values())
+    for i in range(n):
+        if key[i] == val[i]:
+            result = key[i]
+            break
+        for j in range(i, n):
+            if key[i] == val[j]:
+                result = key[i]
+                break
+    print(len(result), result[len(result) // 2])
+q9933()
