@@ -2659,4 +2659,26 @@ def q10828():
             print(0 if lst else 1)
         if order[0] == 'top':
             print(lst[-1] if lst else -1)
-q10828()
+
+
+def q10845():
+    # 큐
+    import sys, queue
+    n = int(sys.stdin.readline())
+    que = queue.Queue()
+
+    for _ in range(n):
+        order = sys.stdin.readline().split()
+        if order[0] == 'push':
+            que.put(int(order[1]))
+        if order[0] == 'pop':
+            print(-1 if que.empty() else que.get())
+        if order[0] == 'size':
+            print(que.qsize())
+        if order[0] == 'empty':
+            print(1 if que.empty() else 0)
+        if order[0] == 'front':
+            print(-1 if que.empty() else que.queue[0])
+        if order[0] == 'back':
+            print(-1 if que.empty() else que.queue[-1])
+q10845()
