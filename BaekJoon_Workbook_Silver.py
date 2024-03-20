@@ -2681,4 +2681,30 @@ def q10845():
             print(-1 if que.empty() else que.queue[0])
         if order[0] == 'back':
             print(-1 if que.empty() else que.queue[-1])
-q10845()
+
+
+def q10866():
+    # 덱
+    import sys, collections
+    n = int(sys.stdin.readline())
+    deq = collections.deque()
+
+    for _ in range(n):
+        order = sys.stdin.readline().split()
+        if order[0] == 'push_front':
+            deq.appendleft(int(order[1]))
+        if order[0] == 'push_back':
+            deq.append(int(order[1]))
+        if order[0] == 'pop_front':
+            print(deq.popleft() if deq else -1)
+        if order[0] == 'pop_back':
+            print(deq.pop() if deq else -1)
+        if order[0] == 'size':
+            print(len(deq))
+        if order[0] == 'empty':
+            print(0 if deq else 1)
+        if order[0] == 'front':
+            print(deq[0] if deq else -1)
+        if order[0] == 'back':
+            print(deq[-1] if deq else -1)
+q10866()
