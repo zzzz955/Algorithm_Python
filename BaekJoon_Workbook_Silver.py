@@ -2788,4 +2788,19 @@ def q11652():
             dic[m] = 1
     result = sorted(dic.items(), key=lambda x: (-x[1], x[0]))
     print(result[0][0])
-q11652()
+
+
+def q2776():
+    # 암기왕
+    t = int(input())
+    for _ in range(t):
+        n = int(input())
+        note1 = list(map(int, input().split()))
+        m = int(input())
+        note2 = list(map(int, input().split()))
+        dic = {}
+        for num in note1:
+            dic[num] = 1
+        for num in note2:
+            print(dic[num] if num in dic.keys() else 0)
+q2776()
