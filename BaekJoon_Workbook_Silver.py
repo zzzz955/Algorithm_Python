@@ -2737,4 +2737,20 @@ def q17219():
     for _ in range(m):
         s = sys.stdin.readline().rstrip()
         print(dic[s])
-q17219()
+
+
+def q1302():
+    # 베스트셀러
+    import sys
+
+    n = int(sys.stdin.readline())
+    dic = {}
+    for _ in range(n):
+        book = sys.stdin.readline().rstrip()
+        if book in dic.keys():
+            dic[book] += 1
+        else:
+            dic[book] = 1
+    sorted_books = sorted(dic.items(), key=lambda x: (-x[1], x[0]))
+    print(sorted_books[0][0])
+q1302()
