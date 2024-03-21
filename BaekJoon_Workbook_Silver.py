@@ -2723,4 +2723,18 @@ def q1158():
             deq.append(deq.popleft())
         result.append(str(deq.pop()))
     print('<' + ', '.join(result) + '>')
-q1158()
+
+
+def q17219():
+    # 비밀번호 찾기
+    import sys
+
+    n, m = map(int, sys.stdin.readline().split())
+    dic = {}
+    for _ in range(n):
+        s, p = sys.stdin.readline().split()
+        dic[s] = p
+    for _ in range(m):
+        s = sys.stdin.readline().rstrip()
+        print(dic[s])
+q17219()
