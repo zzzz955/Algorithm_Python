@@ -2722,7 +2722,5 @@ def q1158():
         for _ in range(k):
             deq.append(deq.popleft())
         result.append(str(deq.pop()))
-    print('<', end='')
-    print(', '.join(result), end='')
-    print('>', end='')
+    print('<' + ', '.join(result) + '>')
 q1158()
