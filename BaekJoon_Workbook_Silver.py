@@ -2772,4 +2772,20 @@ def q3986():
         if not stack:
             result += 1
     print(result)
-q3986()
+
+
+def q11652():
+    # 카드
+    import sys
+
+    n = int(sys.stdin.readline())
+    dic = {}
+    for _ in range(n):
+        m = int(sys.stdin.readline())
+        if m in dic.keys():
+            dic[m] += 1
+        else:
+            dic[m] = 1
+    result = sorted(dic.items(), key=lambda x: (-x[1], x[0]))
+    print(result[0][0])
+q11652()
