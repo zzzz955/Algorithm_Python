@@ -2753,4 +2753,23 @@ def q1302():
             dic[book] = 1
     sorted_books = sorted(dic.items(), key=lambda x: (-x[1], x[0]))
     print(sorted_books[0][0])
-q1302()
+
+
+def q3986():
+    # 좋은 단어
+    n = int(input())
+    result = 0
+    for _ in range(n):
+        s = list(input())
+        stack = []
+        for i in s:
+            if not stack:
+                stack.append(i)
+            elif stack[-1] == i:
+                stack.pop()
+            else:
+                stack.append(i)
+        if not stack:
+            result += 1
+    print(result)
+q3986()
