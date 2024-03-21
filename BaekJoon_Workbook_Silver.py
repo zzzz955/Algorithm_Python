@@ -2707,4 +2707,22 @@ def q10866():
             print(deq[0] if deq else -1)
         if order[0] == 'back':
             print(deq[-1] if deq else -1)
-q10866()
+
+
+def q1158():
+    # 요세푸스 문제
+    import collections
+
+    n, k = map(int, input().split())
+    deq = collections.deque()
+    for i in range(1, n + 1):
+        deq.append(i)
+    result = []
+    while deq:
+        for _ in range(k):
+            deq.append(deq.popleft())
+        result.append(str(deq.pop()))
+    print('<', end='')
+    print(', '.join(result), end='')
+    print('>', end='')
+q1158()
