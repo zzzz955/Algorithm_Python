@@ -2844,4 +2844,16 @@ def q5568():
                             continue
                         dic[temp + lst[x]] = 1
     print(sum(dic.values()))
-q5568()
+
+
+def q1822():
+    # 차집합
+    n, m = map(int, input().split())
+    a = set(map(int, input().split()))
+    b = set(map(int, input().split()))
+    a -= b
+    print(len(a))
+    if a:
+        a = sorted(a)
+        print(*a)
+q1822()
