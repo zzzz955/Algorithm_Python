@@ -2803,4 +2803,45 @@ def q2776():
             dic[num] = 1
         for num in note2:
             print(dic[num] if num in dic.keys() else 0)
-q2776()
+
+
+def q5568():
+    # 카드 놓기
+    n = int(input())
+    k = int(input())
+    lst = []
+    for _ in range(n):
+        lst.append(input())
+    dic = {}
+    if k == 2:
+        for i in range(n):
+            temp = lst[i]
+            for j in range(n):
+                if i == j:
+                    continue
+                dic[temp + lst[j]] = 1
+    if k == 3:
+        for i in range(n):
+            for j in range(n):
+                if i == j:
+                    continue
+                temp = lst[i] + lst[j]
+                for z in range(n):
+                    if i == z or j == z:
+                        continue
+                    dic[temp + lst[z]] = 1
+    if k == 4:
+        for i in range(n):
+            for j in range(n):
+                if i == j:
+                    continue
+                for z in range(n):
+                    if i == z or j == z:
+                        continue
+                    temp = lst[i] + lst[j] + lst[z]
+                    for x in range(n):
+                        if i == x or j == x or z == x:
+                            continue
+                        dic[temp + lst[x]] = 1
+    print(sum(dic.values()))
+q5568()
