@@ -2897,4 +2897,19 @@ def q10546():
             dic[name] -= 1
     fail = sorted(dic.items(), key=lambda x: (-x[1]))
     print(fail[0][0])
-q10546()
+
+
+def q9322():
+    # 철벽 보안 알고리즘
+    t = int(input())
+    for _ in range(t):
+        n = int(input())
+        key1 = input().split()
+        key2 = input().split()
+        password = input().split()
+        for key in key1:
+            index = key2.index(key)
+            key2[index], key2[key1.index(key)] = key2[key1.index(key)], key2[index]
+            password[index], password[key1.index(key)] = password[key1.index(key)], password[index]
+        print(*password)
+q9322()
