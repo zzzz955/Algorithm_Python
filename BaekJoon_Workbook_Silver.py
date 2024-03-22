@@ -2856,4 +2856,25 @@ def q1822():
     if a:
         a = sorted(a)
         print(*a)
-q1822()
+
+
+def q15828():
+    # Router
+    import sys, queue
+
+    n = int(sys.stdin.readline())
+    que = queue.Queue()
+    while 1:
+        p = int(sys.stdin.readline())
+        if p == -1:
+            break
+        if p and que.qsize() < n:
+            que.put(p)
+        if p == 0:
+            que.get()
+    if que.empty():
+        print('empty')
+    else:
+        for _ in range(que.qsize()):
+            print(que.get(), end=' ')
+q15828()
