@@ -2877,4 +2877,24 @@ def q15828():
     else:
         for _ in range(que.qsize()):
             print(que.get(), end=' ')
-q15828()
+
+
+def q10546():
+    # 배부른 마라토너
+    import sys
+
+    n = int(sys.stdin.readline())
+    dic = {}
+    for _ in range(n):
+        name = sys.stdin.readline().rstrip()
+        if name in dic.keys():
+            dic[name] += 1
+        else:
+            dic[name] = 1
+    for _ in range(n - 1):
+        name = sys.stdin.readline().rstrip()
+        if name in dic.keys():
+            dic[name] -= 1
+    fail = sorted(dic.items(), key=lambda x: (-x[1]))
+    print(fail[0][0])
+q10546()
