@@ -2977,4 +2977,22 @@ def q16499():
         if s not in lst:
             lst.append(s)
     print(len(lst))
-q16499()
+
+
+def q11507():
+    # 카드셋트
+    s = input()
+    greska = False
+    dic = {'P': [], 'K': [], 'H': [], 'T': []}
+    for i in range(0, len(s), 3):
+        if s[i + 1:i + 3] in dic[s[i]]:
+            greska = True
+            break
+        else:
+            dic[s[i]].append(s[i + 1:i + 3])
+    if greska:
+        print('GRESKA')
+    else:
+        for val in dic.values():
+            print(13 - len(val), end=' ')
+q11507()
