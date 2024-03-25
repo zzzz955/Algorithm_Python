@@ -2995,4 +2995,18 @@ def q11507():
     else:
         for val in dic.values():
             print(13 - len(val), end=' ')
-q11507()
+
+
+def q1835():
+    # 카드
+    import collections
+
+    deq = collections.deque()
+    n = int(input())
+    deq.append(n)
+    for i in range(n - 1, 0, -1):
+        deq.appendleft(i)
+        for j in range(i):
+            deq.appendleft(deq.pop())
+    print(*deq)
+q1835()
