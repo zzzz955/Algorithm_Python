@@ -3065,4 +3065,30 @@ def q9575():
                     if chk:
                         dic[str(i + j + k)] = 1
         print(sum(dic.values()))
-q9575()
+
+
+def q14670():
+    # 병약한 영정
+    import sys
+
+    n = int(sys.stdin.readline())
+    dic = {}
+    for _ in range(n):
+        me, mn = map(int, sys.stdin.readline().split())
+        dic[me] = mn
+    r = int(sys.stdin.readline())
+    for _ in range(r):
+        lst = list(map(int, sys.stdin.readline().split()))
+        result = []
+        chk = True
+        for i in range(1, len(lst)):
+            if lst[i] in dic:
+                result.append(dic[lst[i]])
+            else:
+                chk = False
+                break
+        if chk:
+            print(*result)
+        else:
+            print('YOU DIED')
+q14670()
