@@ -2934,4 +2934,33 @@ def q1544():
         else:
             dic[s] = 1
     print(len(dic))
-q1544()
+
+
+def q20551():
+    # Sort 마스터 배지훈의 후계자
+    import sys
+
+    def devine(l, c):
+        left, right = 0, len(l) - 1
+
+        while left <= right:
+            mid = (left + right) // 2
+            if l[mid] == c and l[mid - 1] != c:
+                return mid
+            elif l[mid] == c and l[mid - 1] == c and mid == 0:
+                return mid
+            elif l[mid] < c:
+                left = mid + 1
+            else:
+                right = mid - 1
+        return -1
+
+    n, m = map(int, sys.stdin.readline().split())
+    lst = []
+    for _ in range(n):
+        lst.append(int(sys.stdin.readline()))
+    lst.sort()
+    for _ in range(m):
+        num = int(sys.stdin.readline())
+        print(devine(lst, num))
+q20551()
