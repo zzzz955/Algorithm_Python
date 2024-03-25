@@ -2963,4 +2963,18 @@ def q20551():
     for _ in range(m):
         num = int(sys.stdin.readline())
         print(devine(lst, num))
-q20551()
+
+
+def q16499():
+    # 동일한 단어 그룹화하기
+    import sys
+
+    n = int(sys.stdin.readline())
+    lst = []
+    for _ in range(n):
+        s = list(sys.stdin.readline().rstrip())
+        s.sort()
+        if s not in lst:
+            lst.append(s)
+    print(len(lst))
+q16499()
