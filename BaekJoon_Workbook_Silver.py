@@ -2912,4 +2912,26 @@ def q9322():
             key2[index], key2[key1.index(key)] = key2[key1.index(key)], key2[index]
             password[index], password[key1.index(key)] = password[key1.index(key)], password[index]
         print(*password)
-q9322()
+
+
+def q1544():
+    # 사이클 단어
+    import sys
+
+    n = int(sys.stdin.readline())
+    dic = {}
+    for _ in range(n):
+        s = sys.stdin.readline().rstrip()
+        correct = False
+        for _ in range(len(s)):
+            if s in dic.keys():
+                correct = True
+                break
+            else:
+                s = s[1:] + s[0]
+        if correct:
+            dic[s] += 1
+        else:
+            dic[s] = 1
+    print(len(dic))
+q1544()
