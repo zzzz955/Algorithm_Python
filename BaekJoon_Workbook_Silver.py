@@ -3036,4 +3036,33 @@ def q2358():
         if val:
             result += 1
     print(result)
-q2358()
+
+
+def q9575():
+    # 행운의 수
+    import sys
+
+    t = int(sys.stdin.readline())
+    for _ in range(t):
+        an = int(sys.stdin.readline())
+        a = set(map(int, sys.stdin.readline().split()))
+        bn = int(sys.stdin.readline())
+        b = set(map(int, sys.stdin.readline().split()))
+        cn = int(sys.stdin.readline())
+        c = set(map(int, sys.stdin.readline().split()))
+        dic = {}
+        for i in a:
+            for j in b:
+                for k in c:
+                    chk = True
+                    result = set(str(i + j + k))
+                    for num in result:
+                        if num == '5' or num == '8':
+                            pass
+                        else:
+                            chk = False
+                            break
+                    if chk:
+                        dic[str(i + j + k)] = 1
+        print(sum(dic.values()))
+q9575()
