@@ -32,4 +32,26 @@ def q10986():
     for i in remainder:
         result += i * (i - 1) // 2
     print(result)
-q10986()
+
+
+def q27396():
+    # 문자열 변환과 쿼리
+    import sys
+
+    s, n = sys.stdin.readline().split()
+    s = list(s)
+    dic = {}
+    for _ in range(int(n)):
+        order = sys.stdin.readline().split()
+        if order[0] == '1':
+            dic[order[1]] = order[2]
+            for key, val in dic.items():
+                if val == order[1]:
+                    dic[key] = order[2]
+        else:
+            for i in range(len(s)):
+                if s[i] in dic:
+                    s[i] = dic[s[i]]
+            dic.clear()
+            print(''.join(s))
+q27396()

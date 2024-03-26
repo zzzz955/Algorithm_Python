@@ -3123,4 +3123,34 @@ def q29754():
             print(i)
     else:
         print(-1)
-q29754()
+
+
+def q19583():
+    # 싸이버개강총회
+    import sys
+
+    def time_cal(t):
+        h, m = t.split(':')
+        return int(h) * 60 + int(m)
+
+    s, e, q = sys.stdin.readline().split()
+    s = time_cal(s)
+    e = time_cal(e)
+    q = time_cal(q)
+    dic1 = {}
+    dic2 = {}
+    result = 0
+    while 1:
+        lst = sys.stdin.readline().split()
+        if not lst:
+            break
+        time = time_cal(lst[0])
+        if time <= s:
+            dic1[lst[1]] = 1
+        if e <= time <= q:
+            dic2[lst[1]] = 1
+    for key in dic1.keys():
+        if key in dic2.keys():
+            result += 1
+    print(result)
+q19583()
