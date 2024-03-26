@@ -3091,4 +3091,30 @@ def q14670():
             print(*result)
         else:
             print('YOU DIED')
-q14670()
+
+
+def q29754():
+    # 세상에는 많은 유튜버가 있고, 그중에서 버츄얼 유튜버도 존재한다(출력 초과로 재채점 필요)
+    import sys
+
+    n, m = map(int, (sys.stdin.readline().split()))
+    dic = {}
+    for _ in range(n):
+        name, cnt, st, et = sys.stdin.readline().split()
+        time = (int(et[:2]) * 60 + int(et[3:])) - (int(st[:2]) * 60 + int(st[3:]))
+        if name in dic:
+            dic[name][0] += 1
+            dic[name][1] += time
+        else:
+            dic[name] = [1, time]
+    result = []
+    for key, val in dic.items():
+        if val[0] >= 5 and val[1] >= 3600:
+            result.append(key)
+    result.sort()
+    if result:
+        for i in result:
+            print(i)
+    else:
+        print(-1)
+q29754()
