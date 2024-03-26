@@ -3094,26 +3094,32 @@ def q14670():
 
 
 def q29754():
-    # 세상에는 많은 유튜버가 있고, 그중에서 버츄얼 유튜버도 존재한다(출력 초과로 재채점 필요)
+    # 세상에는 많은 유튜버가 있고, 그중에서 버츄얼 유튜버도 존재한다(틀렸습니다로 재채점 필요)
     import sys
 
     n, m = map(int, (sys.stdin.readline().split()))
+    lst = []
     dic = {}
     for _ in range(n):
-        name, cnt, st, et = sys.stdin.readline().split()
+        name, day, st, et = sys.stdin.readline().split()
+        week = (int(day) - 1) // 7
         time = (int(et[:2]) * 60 + int(et[3:])) - (int(st[:2]) * 60 + int(st[3:]))
         if name in dic:
-            dic[name][0] += 1
-            dic[name][1] += time
+            dic[name][week][0] += 1
+            dic[name][week][1] += time
         else:
-            dic[name] = [1, time]
-    result = []
+            dic[name] = [[0, 0] for _ in range(m // 7)]
+            dic[name][week] = [1, time]
     for key, val in dic.items():
-        if val[0] >= 5 and val[1] >= 3600:
-            result.append(key)
-    result.sort()
-    if result:
-        for i in result:
+        chk = True
+        for i in val:
+            if i[0] < 5 or i[1] < 3600:
+                chk = False
+                break
+        if chk:
+            lst.append(key)
+    if lst:
+        for i in lst:
             print(i)
     else:
         print(-1)
