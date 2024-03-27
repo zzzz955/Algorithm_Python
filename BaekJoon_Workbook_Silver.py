@@ -3173,4 +3173,18 @@ def q14911():
     for i in result:
         print(*i)
     print(len(result))
-q14911()
+
+
+def q28446():
+    # 볼링공 찾아주기
+    import sys
+
+    m = int(sys.stdin.readline())
+    dic = {}
+    for _ in range(m):
+        order = list(map(int, sys.stdin.readline().split()))
+        if order[0] == 1:
+            dic[order[2]] = order[1]
+        else:
+            print(dic[order[1]])
+q28446()
