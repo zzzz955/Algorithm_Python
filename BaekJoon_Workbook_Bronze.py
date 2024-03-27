@@ -1245,4 +1245,31 @@ def q9933():
                 result = key[i]
                 break
     print(len(result), result[len(result) // 2])
-q9933()
+
+
+def q1009():
+    # 분산처리
+    import sys
+
+    t = int(sys.stdin.readline())
+    for _ in range(t):
+        a, b = map(int, sys.stdin.readline().split())
+        a = a % 10
+
+        if a == 0:
+            print(10)
+        elif a == 1 or a == 5 or a == 6:
+            print(a)
+        elif a == 4 or a == 9:
+            b = b % 2
+            if b == 1:
+                print(a)
+            else:
+                print((a * a) % 10)
+        else:
+            b = b % 4
+            if b == 0:
+                print((a ** 4) % 10 % 10 % 10)
+            else:
+                print((a ** b) % 10 % 10 % 10)
+q1009()
