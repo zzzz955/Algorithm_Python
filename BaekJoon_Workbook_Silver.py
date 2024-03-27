@@ -3153,4 +3153,24 @@ def q19583():
         if key in dic2.keys():
             result += 1
     print(result)
-q19583()
+
+
+def q14911():
+    # 궁합 쌍 찾기(틀렸습니다로 재채점 필요)
+    nums = set(map(int, input().split()))
+    n = int(input())
+    dic = set()
+    for i in nums:
+        if i >= n:
+            break
+        for j in nums:
+            if i + j == n:
+                if i > j:
+                    dic.add((j, i))
+                else:
+                    dic.add((i, j))
+    result = sorted(dic, key=lambda x: (x[0], x[1]))
+    for i in result:
+        print(*i)
+    print(len(result))
+q14911()
