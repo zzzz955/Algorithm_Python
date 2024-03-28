@@ -3208,4 +3208,24 @@ def q26596():
                 chk = True
                 break
     print('Delicious!' if chk else 'Not Delicious...')
-q26596()
+
+
+def q29721():
+    # 변형 체스 놀이 : 다바바(Dabbaba)
+    import sys
+
+    n, k = map(int, sys.stdin.readline().split())
+    dic1 = set()
+    dic2 = set()
+    for _ in range(k):
+        x, y = map(int, sys.stdin.readline().split())
+        dic2.add((x, y))
+        for i in range(-2, 5, 4):
+            if 0 < x + i <= n:
+                dic1.add((x + i, y))
+        for i in range(-2, 5, 4):
+            if 0 < y + i <= n:
+                dic1.add((x, y + i))
+    result = dic1 - dic2
+    print(len(result))
+q29721()
