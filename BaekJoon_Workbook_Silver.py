@@ -3228,4 +3228,37 @@ def q29721():
                 dic1.add((x, y + i))
     result = dic1 - dic2
     print(len(result))
-q29721()
+
+
+def q4881():
+    # 자리수의 제곱
+    import sys
+
+    def p(n):
+        lst = [n]
+        while lst.count(lst[-1]) < 2:
+            num = lst[-1]
+            new = 0
+            for i in str(num):
+                new += int(i) ** 2
+            lst.append(new)
+        return lst
+
+    def c(list1, list2):
+        result = []
+        for i in list1:
+            if i in list2:
+                result.append(list1.index(i) + list2.index(i) + 2)
+        for i in list2:
+            if i in list1:
+                result.append(list1.index(i) + list2.index(i) + 2)
+        return min(result) if result else 0
+
+    while 1:
+        a, b = map(int, sys.stdin.readline().split())
+        if a == b == 0:
+            break
+        lst_a = p(a)
+        lst_b = p(b)
+        print(a, b, c(lst_a, lst_b))
+q4881()
