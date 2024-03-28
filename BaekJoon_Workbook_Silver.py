@@ -3187,4 +3187,25 @@ def q28446():
             dic[order[2]] = order[1]
         else:
             print(dic[order[1]])
-q28446()
+
+
+def q26596():
+    # 황금 칵테일(틀렸습니다로 재채점 필요)
+    import sys
+
+    n = int(sys.stdin.readline())
+    dic = {}
+    for _ in range(n):
+        name, qt = sys.stdin.readline().split()
+        if name in dic:
+            dic[name] += int(qt)
+        else:
+            dic[name] = int(qt)
+    chk = False
+    for val1 in dic.values():
+        for val2 in dic.values():
+            if int(val1 * 1.618) == val2 and val1 != val2:
+                chk = True
+                break
+    print('Delicious!' if chk else 'Not Delicious...')
+q26596()
