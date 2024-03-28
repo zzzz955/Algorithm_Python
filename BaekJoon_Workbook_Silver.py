@@ -3285,4 +3285,36 @@ def q26043():
     print(*sorted(a)) if a else print('None')
     print(*sorted(b)) if b else print('None')
     print(*sorted(c)) if c else print('None')
-q26043()
+
+
+def q25329():
+    # 학생별 통화 요금 계산
+    import sys, math
+
+    def time_cal(time):
+        h, m = map(int, time.split(':'))
+        total = h * 60 + m
+        return total
+
+    def price_cal(minutes):
+        default = 10
+        additional = 0
+        if minutes > 100:
+            additional += math.ceil((minutes - 100) / 50) * 3
+        return default + additional
+
+    n = int(sys.stdin.readline())
+    dic = {}
+    for _ in range(n):
+        t, s = sys.stdin.readline().split()
+        if s in dic:
+            dic[s] += time_cal(t)
+        else:
+            dic[s] = time_cal(t)
+    result = []
+    for key, val in dic.items():
+        result.append((key, price_cal(val)))
+    result = sorted(result, key= lambda x: (-x[1], x[0]))
+    for i in result:
+        print(*i)
+q25329()
