@@ -3317,4 +3317,28 @@ def q25329():
     result = sorted(result, key= lambda x: (-x[1], x[0]))
     for i in result:
         print(*i)
-q25329()
+
+
+def q14402():
+    # 야근
+    import sys
+
+    q = int(sys.stdin.readline())
+    dic = {}
+    for _ in range(q):
+        n, w = sys.stdin.readline().split()
+        if n in dic and dic[n]:
+            if w == '+':
+                dic[n].append(w)
+            else:
+                if dic[n][-1] == '+':
+                    dic[n].pop()
+                else:
+                    dic[n].append(w)
+        else:
+            dic[n] = [w]
+    result = 0
+    for val in dic.values():
+        result += len(val)
+    print(result)
+q14402()
