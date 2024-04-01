@@ -1272,4 +1272,23 @@ def q1009():
                 print((a ** 4) % 10 % 10 % 10)
             else:
                 print((a ** b) % 10 % 10 % 10)
-q1009()
+
+
+def q14720():
+    # 우유 축제
+    n = int(input())
+    lst = list(map(int, input().split()))
+    result = 0
+    chk = 0
+    for num in lst:
+        if chk == 0 and num == 0:
+            chk = 1
+            result += 1
+        if chk == 1 and num == 1:
+            chk = 2
+            result += 1
+        if chk == 2 and num == 2:
+            chk = 0
+            result += 1
+    print(result)
+q14720()
