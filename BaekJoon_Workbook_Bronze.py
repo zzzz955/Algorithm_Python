@@ -1291,4 +1291,14 @@ def q14720():
             chk = 0
             result += 1
     print(result)
-q14720()
+
+
+def q11034():
+    # 캥거루 세마리2
+    while 1:
+        try:
+            a, b, c = map(int, input().split())
+            print(max(b - a - 1, c - b - 1))
+        except:
+            break
+q11034()
