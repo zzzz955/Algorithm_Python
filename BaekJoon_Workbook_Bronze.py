@@ -1443,4 +1443,20 @@ def q21313():
     else:
         result.append(2)
     print(*result)
-q21313()
+
+
+def q28062():
+    # 준석이의 사탕 사기
+    n = int(input())
+    lst = list(map(int, input().split()))
+    lst.sort()
+    result = sum(lst)
+    if result % 2:
+        for i in lst:
+            if (result - i) % 2:
+                continue
+            else:
+                result -= i
+                break
+    print(0 if result % 2 else result)
+q28062()
