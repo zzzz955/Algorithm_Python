@@ -1459,4 +1459,26 @@ def q28062():
                 result -= i
                 break
     print(0 if result % 2 else result)
-q28062()
+
+
+def q14471():
+    # 포인트 카드
+    n, m = map(int, input().split())
+    lst = []
+    for _ in range(m):
+        a, b = map(int, input().split())
+        lst.append([a, b])
+    lst = sorted(lst, key=lambda x: -x[0])
+    prize = 0
+    price = 0
+    for i in lst:
+        if prize >= m - 1:
+            break
+        if i[0] >= n:
+            prize += 1
+            continue
+        else:
+            price += n - i[0]
+            prize += 1
+    print(price)
+q14471()
