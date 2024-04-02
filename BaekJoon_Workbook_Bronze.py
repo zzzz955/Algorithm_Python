@@ -1399,4 +1399,32 @@ def q22864():
             if tired < 0:
                 tired = 0
     print(result)
-q22864()
+
+
+def q18238():
+    # ZOAC 2
+    import collections
+    deq = collections.deque()
+
+    s = input()
+    for i in range(26):
+        deq.append(chr(i + 65))
+    result = 0
+    for char in s:
+        temp = 0
+        for i in range(26):
+            if char == deq[i]:
+                temp += i
+                break
+            if char == deq[-i]:
+                temp += -i
+                break
+        if temp < 0:
+            for _ in range(abs(temp)):
+                deq.appendleft(deq.pop())
+        else:
+            for _ in range(temp):
+                deq.append(deq.popleft())
+        result += abs(temp)
+    print(result)
+q18238()
