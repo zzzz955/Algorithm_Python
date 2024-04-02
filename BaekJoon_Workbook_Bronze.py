@@ -1481,4 +1481,33 @@ def q14471():
             price += n - i[0]
             prize += 1
     print(price)
-q14471()
+
+
+def q28323():
+    # 불안정한 수열
+    n = int(input())
+    lst = list(map(int, input().split()))
+    mod0 = []
+    mod1 = []
+    for i in lst:
+        if not mod0 and not i % 2:
+            mod0.append(i)
+        if mod0:
+            if mod0[-1] % 2 and not i % 2:
+                mod0.append(i)
+            elif not mod0[-1] % 2 and i % 2:
+                mod0.append(i)
+            else:
+                continue
+    for i in lst:
+        if not mod1 and i % 2:
+            mod1.append(i)
+        if mod1:
+            if mod1[-1] % 2 and not i % 2:
+                mod1.append(i)
+            elif not mod1[-1] % 2 and i % 2:
+                mod1.append(i)
+            else:
+                continue
+    print(max(len(mod0), len(mod1)))
+q28323()
