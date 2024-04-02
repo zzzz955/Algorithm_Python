@@ -1531,4 +1531,23 @@ def q30700():
             if result[-1] == 'A' and char == 'K':
                 result += char
     print(len(result))
-q30700()
+
+
+def q30019():
+    # 강의실 예약 시스템
+    import sys
+
+    n, m = map(int, input().split())
+    dic = {}
+    for _ in range(m):
+        k, s, e = map(int, sys.stdin.readline().split())
+        if k not in dic:
+            dic[k] = (s, e)
+            print('YES')
+        else:
+            if s >= dic[k][1]:
+                dic[k] = (s, e)
+                print('YES')
+            else:
+                print('NO')
+q30019()
