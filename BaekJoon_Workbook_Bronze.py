@@ -1427,4 +1427,20 @@ def q18238():
                 deq.append(deq.popleft())
         result += abs(temp)
     print(result)
-q18238()
+
+
+def q21313():
+    # 문어
+    n = int(input())
+    result = [1, 2]
+    for i in range(2, n - 1):
+        if result[-1] == 2:
+            result.append(1)
+        else:
+            result.append(2)
+    if n % 2:
+        result.append(3)
+    else:
+        result.append(2)
+    print(*result)
+q21313()
