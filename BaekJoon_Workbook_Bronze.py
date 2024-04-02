@@ -1510,4 +1510,25 @@ def q28323():
             else:
                 continue
     print(max(len(mod0), len(mod1)))
-q28323()
+
+
+def q30700():
+    # KOREA 문자열 만들기
+    s = input()
+    result = ''
+    for char in s:
+        if not result and char == 'K':
+            result += char
+        if result:
+            if result[-1] == 'K' and char == 'O':
+                result += char
+            if result[-1] == 'O' and char == 'R':
+                result += char
+            if result[-1] == 'R' and char == 'E':
+                result += char
+            if result[-1] == 'E' and char == 'A':
+                result += char
+            if result[-1] == 'A' and char == 'K':
+                result += char
+    print(len(result))
+q30700()
