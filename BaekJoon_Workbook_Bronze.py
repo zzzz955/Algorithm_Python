@@ -1312,4 +1312,17 @@ def q28014():
         if lst[i] >= lst[i - 1]:
             result += 1
     print(result)
-q28014()
+
+
+def q30018():
+    # 타슈
+    n = int(input())
+    lst1 = list(map(int, input().split()))
+    lst2 = list(map(int, input().split()))
+    result = 0
+    for i in range(n):
+        chk = lst1[i] - lst2[i]
+        if chk > 0:
+            result += chk
+    print(result)
+q30018()
