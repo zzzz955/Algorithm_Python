@@ -1375,4 +1375,12 @@ def q2864():
                 temp += char
         max_lst[i] = temp
     print(int(min_lst[0]) + int(min_lst[1]), int(max_lst[0]) + int(max_lst[1]))
-q2864()
+
+
+def q14487():
+    # 욱제는 효도쟁이야!!
+    n = int(input())
+    lst = list(map(int, input().split()))
+    lst.remove(max(lst))
+    print(sum(lst))
+q14487()
