@@ -1301,4 +1301,15 @@ def q11034():
             print(max(b - a - 1, c - b - 1))
         except:
             break
-q11034()
+
+
+def q28014():
+    # 첨탑 밀어서 부수기
+    n = int(input())
+    lst = list(map(int, input().split()))
+    result = 1
+    for i in range(1, n):
+        if lst[i] >= lst[i - 1]:
+            result += 1
+    print(result)
+q28014()
