@@ -1352,4 +1352,27 @@ def q5585():
             n -= 1
             result += 1
     print(result)
-q5585()
+
+
+def q2864():
+    # 5와 6의 차이
+    a, b = input().split()
+    min_lst = [a, b]
+    max_lst = [a, b]
+    for i in range(2):
+        temp = ''
+        for char in min_lst[i]:
+            if char == '6':
+                temp += '5'
+            else:
+                temp += char
+        min_lst[i] = temp
+        temp = ''
+        for char in max_lst[i]:
+            if char == '5':
+                temp += '6'
+            else:
+                temp += char
+        max_lst[i] = temp
+    print(int(min_lst[0]) + int(min_lst[1]), int(max_lst[0]) + int(max_lst[1]))
+q2864()
