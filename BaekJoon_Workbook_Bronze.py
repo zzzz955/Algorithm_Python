@@ -1646,4 +1646,24 @@ def q25400():
             remove += 1
             index += 1
     print(remove)
-q25400()
+
+
+def q15881():
+    # Pen Pineapple Apple Pen
+    n = int(input())
+    s = input()
+    chk = 'pPAp'
+    index = 0
+    result = 0
+    for i in range(n):
+        if s[i] == chk[index]:
+            index += 1
+        elif s[i] == 'p':
+            index = 1
+        else:
+            index = 0
+        if index == 4:
+            result += 1
+            index = 0
+    print(result)
+q15881()
