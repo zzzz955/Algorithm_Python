@@ -1588,4 +1588,21 @@ def q2810():
         except:
             break
     print(result if result < n else n)
-q2810()
+
+
+def q14659():
+    # 한조서열정리하고옴ㅋㅋ
+    n = int(input())
+    lst = list(map(int, input().split()))
+    result = 0
+    max_val = 0
+    temp = 0
+    for i in lst:
+        if i > max_val:
+            max_val = i
+            temp = 0
+        else:
+            temp += 1
+        result = max(result, temp)
+    print(result)
+q14659()
