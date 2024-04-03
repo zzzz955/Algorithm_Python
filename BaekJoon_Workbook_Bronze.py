@@ -1605,4 +1605,28 @@ def q14659():
             temp += 1
         result = max(result, temp)
     print(result)
-q14659()
+
+
+def q17224():
+    # APC는 왜 서브태스크 대회가 되었을까?
+    n, l, k = map(int, input().split())
+    lst = []
+    for _ in range(n):
+        s1, s2 = map(int, input().split())
+        lst.append((s1, s2))
+    lst = sorted(lst, key=lambda x: (x[1], x[0]))
+    solved = 0
+    point = 0
+    for i in lst:
+        if solved >= k:
+            break
+        if i[1] <= l:
+            point += 140
+            solved += 1
+        elif i[0] <= l:
+            point += 100
+            solved += 1
+        else:
+            continue
+    print(point)
+q17224()
