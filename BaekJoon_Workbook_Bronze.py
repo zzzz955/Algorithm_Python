@@ -1666,4 +1666,17 @@ def q15881():
             result += 1
             index = 0
     print(result)
-q15881()
+
+
+def q27961():
+    # 고양이는 많을수록 좋다
+    n = int(input())
+    default = 0
+    result = 0
+    while 1:
+        if default >= n:
+            break
+        default = max(default + 1, default * 2)
+        result += 1
+    print(result)
+q27961()
