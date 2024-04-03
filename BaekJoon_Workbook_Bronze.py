@@ -1550,4 +1550,23 @@ def q30019():
                 print('YES')
             else:
                 print('NO')
-q30019()
+
+
+def q4796():
+    # 캠핑
+    case = 1
+    while 1:
+        l, p, v = map(int, input().split())
+        result = 0
+
+        if l == p == v == 0:
+            break
+        while v > 0:
+            if v > l:
+                result += l
+            else:
+                result += v
+            v -= p
+        print(f'Case {case}: {result}')
+        case += 1
+q4796()
