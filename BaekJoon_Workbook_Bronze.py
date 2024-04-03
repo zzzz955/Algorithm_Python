@@ -1629,4 +1629,21 @@ def q17224():
         else:
             continue
     print(point)
-q17224()
+
+
+def q25400():
+    # 제자리
+    n = int(input())
+    lst = list(map(int, input().split()))
+    remove = 0
+    index = 0
+    num = 1
+    while index < len(lst):
+        if lst[index] == num:
+            index += 1
+            num += 1
+        else:
+            remove += 1
+            index += 1
+    print(remove)
+q25400()
