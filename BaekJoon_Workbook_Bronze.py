@@ -1569,4 +1569,23 @@ def q4796():
             v -= p
         print(f'Case {case}: {result}')
         case += 1
-q4796()
+
+
+def q2810():
+    # 컵홀더
+    n = int(input())
+    s = list(input())
+    result = 1
+    index = 0
+    while 1:
+        try:
+            if s[index] == 'S':
+                result += 1
+            if s[index] == 'L':
+                result += 1
+                s[index + 1] = ''
+            index += 1
+        except:
+            break
+    print(result if result < n else n)
+q2810()
