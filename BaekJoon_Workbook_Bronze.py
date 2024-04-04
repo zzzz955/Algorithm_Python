@@ -1687,4 +1687,28 @@ def q25176():
     for i in range(1, int(input()) + 1):
         result *= i
     print(result)
-q25176()
+
+
+def q27930():
+    # 당신은 운명을 믿나요?
+    s = input()
+    korea = ''
+    yonsei = ''
+    chk1 = 'KOREA'
+    chk2 = 'YONSEI'
+    index1 = 0
+    index2 = 0
+    for char in s:
+        if korea == 'KOREA':
+            print('KOREA')
+            break
+        if yonsei == 'YONSEI':
+            print('YONSEI')
+            break
+        if char == chk1[index1]:
+            korea += char
+            index1 += 1
+        if char == chk2[index2]:
+            yonsei += char
+            index2 += 1
+q27930()
