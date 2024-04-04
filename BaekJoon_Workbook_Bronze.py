@@ -1679,4 +1679,12 @@ def q27961():
         default = max(default + 1, default * 2)
         result += 1
     print(result)
-q27961()
+
+
+def q25176():
+    # 청정수열 (Easy)
+    result = 1
+    for i in range(1, int(input()) + 1):
+        result *= i
+    print(result)
+q25176()
