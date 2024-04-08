@@ -1711,4 +1711,14 @@ def q27930():
         if char == chk2[index2]:
             yonsei += char
             index2 += 1
-q27930()
+
+
+def q19564():
+    # 반복
+    s = input()
+    result = 1
+    for i in range(len(s) - 1):
+        if s[i] >= s[i + 1]:
+            result += 1
+    print(result)
+q19564()
