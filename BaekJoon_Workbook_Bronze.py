@@ -1721,4 +1721,21 @@ def q19564():
         if s[i] >= s[i + 1]:
             result += 1
     print(result)
-q19564()
+
+
+def q15786():
+    # Send me the money
+    n, m = map(int, input().split())
+    s = input()
+    for _ in range(m):
+        p = input()
+        index = 0
+        chk = False
+        for char in p:
+            if char == s[index]:
+                index += 1
+            if index == len(s):
+                chk = True
+                break
+        print('true' if chk else 'false')
+q15786()
