@@ -1738,4 +1738,21 @@ def q15786():
                 chk = True
                 break
         print('true' if chk else 'false')
-q15786()
+
+
+def q28063():
+    # 동전 복사
+    n = int(input())
+    x, y = map(int, input().split())
+    if n == 1:
+        print(0)
+    elif n == 2:
+        print(2)
+    else:
+        if (x == 1 and y == 1) or (x == 1 and y == n) or (x == n and y == 1) or (x == n and y == n):
+            print(2)
+        elif (x == 1 and y < n) or (x < n and y == n) or (x < n and y == 1) or (x == n and y < n):
+            print(3)
+        else:
+            print(4)
+q28063()
