@@ -1794,4 +1794,30 @@ def q30236():
                 current += 1
                 result.append(current)
         print(result[-1])
-q30236()
+
+
+def q9329():
+    # 패스트 푸드 상금
+    import sys
+
+    t = int(sys.stdin.readline())
+    for _ in range(t):
+        n, m = map(int, sys.stdin.readline().split())
+        lst = []
+        for _ in range(n):
+            temp = list(map(int, sys.stdin.readline().split()))
+            dic = {}
+            for j in range(1, temp[0] + 1):
+                dic[temp[j]] = 0
+            lst.append([dic, temp[-1]])
+        stickers = list(map(int, sys.stdin.readline().split()))
+        for i in range(1, m + 1):
+            for j in lst:
+                if i in j[0]:
+                    j[0][i] += stickers[i - 1]
+                    break
+        result = 0
+        for i in lst:
+            result += min(i[0].values()) * i[1]
+        print(result)
+q9329()
