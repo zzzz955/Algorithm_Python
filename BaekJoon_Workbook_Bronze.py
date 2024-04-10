@@ -1774,4 +1774,24 @@ def q31067():
             chk = False
             break
     print(result if chk else -1)
-q31067()
+
+
+def q30236():
+    # 증가 수열
+    import sys
+
+    t = int(sys.stdin.readline())
+    for _ in range(t):
+        n = int(sys.stdin.readline())
+        lst = list(map(int, sys.stdin.readline().split()))
+        result = []
+        current = 0
+        for i in range(n):
+            current += 1
+            if lst[i] != current:
+                result.append(current)
+            else:
+                current += 1
+                result.append(current)
+        print(result[-1])
+q30236()
