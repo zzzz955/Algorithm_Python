@@ -1755,4 +1755,23 @@ def q28063():
             print(3)
         else:
             print(4)
-q28063()
+
+
+def q31067():
+    # 다오의 경주 대회
+    n, k = map(int, input().split())
+    lst = list(map(int, input().split()))
+    result = 0
+    chk = True
+    for i in range(n - 1):
+        if lst[i] < lst[i + 1]:
+            continue
+        elif lst[i] < lst[i + 1] + k:
+            result += 1
+            lst[i + 1] += k
+            continue
+        else:
+            chk = False
+            break
+    print(result if chk else -1)
+q31067()
