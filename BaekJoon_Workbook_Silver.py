@@ -3358,4 +3358,22 @@ def q1439():
         if i:
             result1 += 1
     print(min(result0, result1))
-q1439()
+
+
+def q1343():
+    # 폴리오미노
+    s = input().split('.')
+    for i in range(len(s)):
+        if s[i] == '':
+            s[i] = '.'
+        elif len(s[i]) % 4 == 0:
+            s[i] = 'A' * len(s[i]) + '.'
+        elif len(s[i]) % 2 == 0:
+            s[i] = 'A' * (len(s[i]) // 4) * 4 + 'B' * 2 + '.'
+        else:
+            print(-1)
+            return
+    s[-1] = s[-1][:-1]
+    print(''.join(s))
+q1343()
+
