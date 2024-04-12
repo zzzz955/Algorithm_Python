@@ -3341,4 +3341,21 @@ def q14402():
     for val in dic.values():
         result += len(val)
     print(result)
-q14402()
+
+
+def q1439():
+    # 뒤집기
+    s = input()
+    if len(set(s)) == 1:
+        print(0)
+        return
+    start0, start1 = s.split('0'), s.split('1')
+    result0, result1 = 0, 0
+    for i in start0:
+        if i:
+            result0 += 1
+    for i in start1:
+        if i:
+            result1 += 1
+    print(min(result0, result1))
+q1439()
