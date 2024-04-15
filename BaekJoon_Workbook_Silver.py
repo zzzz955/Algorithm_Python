@@ -3375,5 +3375,16 @@ def q1343():
             return
     s[-1] = s[-1][:-1]
     print(''.join(s))
-q1343()
+
+
+def q16435():
+    # 스네이크버드
+    n, l = map(int, input().split())
+    lst = list(map(int, input().split()))
+    lst.sort()
+    for i in range(n):
+        if lst[i] <= l:
+            l += 1
+    print(l)
+q16435()
 
