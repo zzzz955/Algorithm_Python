@@ -3412,6 +3412,18 @@ def q9237():
         max_val = max(i, max_val - 1)
         day += 1
     print(max_val + day)
-q9237()
 
 
+def q3135():
+    # 라디오
+    a, b = map(int, input().split())
+    n = int(input())
+    lst = [int(input()) for _ in range(n)]
+    min_val = abs(a - b)
+    clicks = 0
+    for i in lst:
+        if min_val > abs(i - b):
+            min_val = abs(i - b)
+            clicks = 1
+    print(min_val + clicks)
+q3135()
