@@ -3386,5 +3386,19 @@ def q16435():
         if lst[i] <= l:
             l += 1
     print(l)
-q16435()
+
+
+def q15904():
+    # UCPC는 무엇의 약자일까?
+    s = input()
+    ans = 'UCPC'
+    index = 0
+    for i in s:
+        if index == 4:
+            break
+        if ans[index] == i:
+            index += 1
+    print('I love UCPC' if index == 4 else 'I hate UCPC')
+q15904()
+
 
