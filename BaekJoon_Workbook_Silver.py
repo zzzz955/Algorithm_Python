@@ -3399,6 +3399,19 @@ def q15904():
         if ans[index] == i:
             index += 1
     print('I love UCPC' if index == 4 else 'I hate UCPC')
-q15904()
+
+
+def q9237():
+    # 이장님 초대
+    n = int(input())
+    lst = list(map(int, input().split()))
+    lst.sort(reverse=True)
+    day = 1
+    max_val = 0
+    for i in lst:
+        max_val = max(i, max_val - 1)
+        day += 1
+    print(max_val + day)
+q9237()
 
 
