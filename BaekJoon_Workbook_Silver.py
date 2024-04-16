@@ -3426,4 +3426,23 @@ def q3135():
             min_val = abs(i - b)
             clicks = 1
     print(min_val + clicks)
-q3135()
+
+
+def q6550():
+    # 부분 문자열
+    while 1:
+        try:
+            s, t = input().split()
+            index = 0
+            ans = len(s)
+            chk = False
+            for char in t:
+                if char == s[index]:
+                    index += 1
+                if ans <= index:
+                    chk = True
+                    break
+            print('Yes' if chk else 'No')
+        except:
+            break
+q6550()
