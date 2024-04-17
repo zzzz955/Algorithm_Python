@@ -3445,4 +3445,21 @@ def q6550():
             print('Yes' if chk else 'No')
         except:
             break
-q6550()
+
+
+def q1817():
+    # 짐 챙기는 숌
+    n, m = map(int, input().split())
+    try:
+        lst = list(map(int, input().split()))
+        result = 1
+        temp = 0
+        for i in lst:
+            temp += i
+            if temp > m:
+                result += 1
+                temp = i
+        print(result)
+    except:
+        print(0)
+q1817()
