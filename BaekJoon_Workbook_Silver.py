@@ -3503,4 +3503,17 @@ def q15720():
         side[i] = int(side[i] * 0.9)
         drink[i] = int(drink[i] * 0.9)
     print(sum(burger) + sum(side) + sum(drink))
-q15720()
+
+
+def q16208():
+    # 귀찮음
+    n = int(input())
+    lst = list(map(int, input().split()))
+    length = sum(lst)
+    lst.sort()
+    result = 0
+    for i in lst:
+        length -= i
+        result += length * i
+    print(result)
+q16208()
