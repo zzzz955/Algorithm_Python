@@ -3462,4 +3462,27 @@ def q1817():
         print(result)
     except:
         print(0)
-q1817()
+
+
+def q11256():
+    # 사탕
+    import sys
+
+    t = int(sys.stdin.readline())
+    for _ in range(t):
+        j, n = map(int, sys.stdin.readline().split())
+        lst = []
+        result = 0
+        for _ in range(n):
+            r, c = map(int, sys.stdin.readline().split())
+            lst.append(r * c)
+        lst.sort(reverse=True)
+        for i in lst:
+            if j <= i:
+                result += 1
+                break
+            else:
+                j -= i
+                result += 1
+        print(result)
+q11256()
