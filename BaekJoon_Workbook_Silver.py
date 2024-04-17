@@ -3516,4 +3516,22 @@ def q16208():
         length -= i
         result += length * i
     print(result)
-q16208()
+
+
+def q2891():
+    # 카약과 강풍
+    n, s, r = map(int, input().split())
+    slst = set(map(int, input().split()))
+    rlst = set(map(int, input().split()))
+    slst, rlst = slst - rlst, rlst - slst
+    result = 0
+    for i in slst:
+        if i - 1 in rlst:
+            rlst.remove(i - 1)
+        elif i + 1 in rlst:
+            rlst.remove(i + 1)
+        else:
+            result += 1
+    print(result)
+q2891()
+
