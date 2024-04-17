@@ -3485,4 +3485,22 @@ def q11256():
                 j -= i
                 result += 1
         print(result)
-q11256()
+
+
+def q15720():
+    # 카우버거
+    b, c, d = map(int, input().split())
+    burger = list(map(int, input().split()))
+    side = list(map(int, input().split()))
+    drink = list(map(int, input().split()))
+    index = min(b, c, d)
+    print(sum(burger) + sum(side) + sum(drink))
+    burger.sort(reverse=True)
+    side.sort(reverse=True)
+    drink.sort(reverse=True)
+    for i in range(index):
+        burger[i] = int(burger[i] * 0.9)
+        side[i] = int(side[i] * 0.9)
+        drink[i] = int(drink[i] * 0.9)
+    print(sum(burger) + sum(side) + sum(drink))
+q15720()
