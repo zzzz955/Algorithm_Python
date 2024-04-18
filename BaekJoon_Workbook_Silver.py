@@ -3640,4 +3640,16 @@ def q28464():
         s += lst.pop()
     p = sum(lst)
     print(s, p)
-q28464()
+
+
+def q25707():
+    # 백준 25707번 파이썬 팔찌 만들기
+    n = int(input())
+    lst = sorted(list(map(int, input().split())))
+    result = 0
+    for i in range(n - 1):
+        result += lst[i + 1] - lst[i]
+    result += lst[-1] - lst[0]
+    print(result)
+q25707()
+
