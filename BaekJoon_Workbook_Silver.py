@@ -3629,5 +3629,15 @@ def q12034():
                 lst.remove(int(i * (4/3)))
                 result.append(str(i))
         print(f'Case #{case}: {" ".join(result)}')
-q12034()
 
+
+def q28464():
+    # 백준 28464번 파이썬 Potato
+    n = int(input())
+    lst = sorted(list(map(int, input().split())), reverse=True)
+    s, p = 0, 0
+    for _ in range(n // 2):
+        s += lst.pop()
+    p = sum(lst)
+    print(s, p)
+q28464()
