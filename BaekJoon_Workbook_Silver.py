@@ -3533,5 +3533,25 @@ def q2891():
         else:
             result += 1
     print(result)
-q2891()
+
+
+def q2057():
+    # 팩토리얼 분해
+    n = int(input())
+    if n == 0:
+        print('NO')
+        return
+    dp = [0 for _ in range(21)]
+    dp[0], dp[1] = 1, 1
+    for i in range(2, 21):
+        temp = 1
+        for j in range(1, i + 1):
+            temp *= j
+        dp[i] = temp
+    dp.sort(reverse=True)
+    for i in range(21):
+        if n - dp[i] >= 0:
+            n -= dp[i]
+    print('YES' if n == 0 else 'NO')
+q2057()
 
