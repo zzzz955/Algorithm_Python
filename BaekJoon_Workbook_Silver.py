@@ -3613,5 +3613,21 @@ def q29615():
             dic.remove(i)
         index += 1
     print(len(dic))
-q29615()
+
+
+def q12034():
+    # 백준 12034번 파이썬 김인천씨의 식료품가게 (Large)
+    t = int(input())
+    case = 0
+    for _ in range(t):
+        case += 1
+        n = int(input())
+        lst = list(map(int, input().split()))
+        result = []
+        for i in lst:
+            if int(i * (4/3)) in lst:
+                lst.remove(int(i * (4/3)))
+                result.append(str(i))
+        print(f'Case #{case}: {" ".join(result)}')
+q12034()
 
