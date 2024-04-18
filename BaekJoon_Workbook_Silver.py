@@ -3553,5 +3553,18 @@ def q2057():
         if n - dp[i] >= 0:
             n -= dp[i]
     print('YES' if n == 0 else 'NO')
-q2057()
+
+
+def q14655():
+    # 욱제는 도박쟁이야!!
+    n = int(input())
+    lst1 = list(map(int, input().split()))
+    lst2 = list(map(int, input().split()))
+    max_val, min_val = 0, 0
+    for i in lst1:
+        max_val += abs(i)
+    for i in lst2:
+        min_val += abs(i)
+    print(max_val + min_val)
+q14655()
 
