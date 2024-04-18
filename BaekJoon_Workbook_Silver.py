@@ -3586,6 +3586,17 @@ def q25496():
 def q30457():
     # 백준 파이썬 단체줄넘기
     n = int(input())
-    lst = list(map(int, input.split()))
-
+    lst = list(map(int, input().split()))
+    temp1 = [0]
+    temp2 = [0]
+    lst.sort(reverse=True)
+    for _ in range(n):
+        if lst[-1] > temp1[-1]:
+            temp1.append(lst.pop())
+        elif lst[-1] > temp2[-1]:
+            temp2.append(lst.pop())
+        else:
+            lst.pop()
+    print(len(temp1) + len(temp2) - 2)
+q30457()
 
