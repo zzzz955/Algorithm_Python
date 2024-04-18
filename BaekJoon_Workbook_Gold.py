@@ -1,5 +1,5 @@
 def q12348():
-    # 백준 파이썬 분해합2
+    # 백준 12348번 파이썬 분해합2
     n = int(input())
     if n in [2, 4, 6, 8]:
         print(n // 2)
@@ -20,7 +20,7 @@ def q12348():
 
 
 def q10986():
-    # 백준 파이썬 나머지 합
+    # 백준 10986번 파이썬 나머지 합
     n, m = map(int, input().split())
     lst = list(map(int, input().split()))
     sum_val = 0
@@ -35,7 +35,7 @@ def q10986():
 
 
 def q27396():
-    # 백준 파이썬 문자열 변환과 쿼리
+    # 백준 27396번 파이썬 문자열 변환과 쿼리
     import sys
 
     s, n = sys.stdin.readline().split()

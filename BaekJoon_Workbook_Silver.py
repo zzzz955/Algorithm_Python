@@ -1,5 +1,5 @@
 def q1010():
-    # 백준 파이썬 다리 놓기
+    # 백준 1010번 파이썬 다리 놓기
     t = int(input())
     result = []
     for _ in range(t):
@@ -19,7 +19,7 @@ def q1010():
 
 
 def q1002():
-    # 백준 파이썬 터렛
+    # 백준 1002번 파이썬 터렛
     import math
     t = int(input())
     for _ in range(t):
@@ -36,7 +36,7 @@ def q1002():
 
 
 def q1769():
-    # 백준 파이썬 3의 배수
+    # 백준 1769번 파이썬 3의 배수
     x = input()
     changes = 0
     length = len(x)
@@ -62,7 +62,7 @@ def q1769():
 
 
 def q1417():
-    # 백준 파이썬 국회의원 선거
+    # 백준 1417번 파이썬 국회의원 선거
     t = int(input())
     lst = []
     buy = 0
@@ -78,7 +78,7 @@ def q1417():
 
 
 def q2828():
-    # 백준 파이썬 사과 담기 게임
+    # 백준 2828번 파이썬 사과 담기 게임
     n, m = map(int, input().split())
     j = int(input())
     location = []
@@ -97,7 +97,7 @@ def q2828():
 
 
 def q1713():
-    # 백준 파이썬 후보 추천하기
+    # 백준 1713번 파이썬 후보 추천하기
     n = int(input())
     v = int(input())
     s = list(map(int, input().split()))
@@ -122,7 +122,7 @@ def q1713():
 
 
 def q1251():
-    # 백준 파이썬 단어 나누기
+    # 백준 1251번 파이썬 단어 나누기
     s = list(input())
     temp = []
     result = []
@@ -143,7 +143,7 @@ def q1251():
 
 
 def q2564():
-    # 백준 파이썬 경비원
+    # 백준 2564번 파이썬 경비원
     x, y = map(int, input().split())
     c = int(input())
     shop_pos = []
@@ -188,7 +188,7 @@ def q2564():
 
 
 def q4659():
-    # 백준 파이썬 비밀번호 발음하기
+    # 백준 4659번 파이썬 비밀번호 발음하기
     test_case = []
     result = []
     moeum = ['a', 'e', 'i', 'o', 'u']
@@ -225,7 +225,7 @@ def q4659():
 
 
 def q1205():
-    # 백준 파이썬 등수 구하기
+    # 백준 1205번 파이썬 등수 구하기
     n, new_point, p = map(int, input().split())
     if n > 0:
         current_rank = list(map(int, input().split()))
@@ -245,7 +245,7 @@ def q1205():
 
 
 def q5671():
-    # 백준 파이썬 호텔 방 번호
+    # 백준 5671번 파이썬 호텔 방 번호
     while 1:
         try:
             s, l = map(int, input().split())
@@ -263,7 +263,7 @@ def q5671():
 
 
 def q2839():
-    # 백준 파이썬 설탕 배달
+    # 백준 2839번 파이썬 설탕 배달
     n = int(input())
     d5 = n // 5
     if n == 3:
@@ -292,7 +292,7 @@ def q2839():
 
 
 def q9095():
-    # 백준 파이썬 1, 2, 3 더하기
+    # 백준 9095번 파이썬 1, 2, 3 더하기
     t = int(input())
     result = []
     dp = [0] * 11
@@ -307,7 +307,7 @@ def q9095():
 
 
 def q1003():
-    # 백준 파이썬 피보나치 함수
+    # 백준 1003번 파이썬 피보나치 함수
     t = int(input())
     result = []
     for _ in range(t):
@@ -327,7 +327,7 @@ def q1003():
 
 
 def q1929():
-    # 백준 파이썬 소수 구하기
+    # 백준 1929번 파이썬 소수 구하기
     import sys
     m, n = map(int, sys.stdin.readline().split())
     dp = [1] * (n + 1)
@@ -350,7 +350,7 @@ def q1929():
 
 
 def q11723():
-    # 백준 파이썬 집합
+    # 백준 11723번 파이썬 집합
     import sys
     m = int(sys.stdin.readline())
     dp = [0] * 21
@@ -380,7 +380,7 @@ def q11723():
 
 
 def q9655():
-    # 백준 파이썬 돌 게임
+    # 백준 9655번 파이썬 돌 게임
     n = int(input())
     if n % 2 == 0:
         print('CY')
@@ -389,7 +389,7 @@ def q9655():
 
 
 def q10431():
-    # 백준 파이썬 줄세우기
+    # 백준 10431번 파이썬 줄세우기
     p = int(input())
     result = []
     for _ in range(p):
@@ -407,7 +407,7 @@ def q10431():
 
 
 def q8979():
-    # 백준 파이썬 올림픽
+    # 백준 8979번 파이썬 올림픽
     n, k = map(int, input().split())
     dic = {}
     val = []
@@ -420,7 +420,7 @@ def q8979():
 
 
 def q7568():
-    # 백준 파이썬 덩치
+    # 백준 7568번 파이썬 덩치
     n = int(input())
     lst = []
     for _ in range(n):
@@ -434,7 +434,7 @@ def q7568():
 
 
 def q25757():
-    # 백준 파이썬 임스와 함께하는 미니게임
+    # 백준 25757번 파이썬 임스와 함께하는 미니게임
     n, y = input().split()
     players = []
     for _ in range(int(n)):
@@ -449,7 +449,7 @@ def q25757():
 
 
 def q20125():
-    # 백준 파이썬 쿠키의 신체 측정
+    # 백준 20125번 파이썬 쿠키의 신체 측정
     n = int(input())
     lst = []
     heart = []
@@ -492,7 +492,7 @@ def q20125():
 
 
 def q1244():
-    # 백준 파이썬 스위치 켜고 끄기
+    # 백준 1244번 파이썬 스위치 켜고 끄기
     n = int(input())
     s = list(map(int, input().split()))
     dp = [0] * (n + 1)
@@ -543,7 +543,7 @@ def q1244():
 
 
 def q9017():
-    # 백준 파이썬 크로스 컨트리(재채점 필요)
+    # 백준 9017번 파이썬 크로스 컨트리(재채점 필요)
     t = int(input())
     case = []
     result = []
@@ -590,7 +590,7 @@ def q9017():
 
 
 def q17266():
-    # 백준 파이썬 어두운 굴다리
+    # 백준 17266번 파이썬 어두운 굴다리
     import math
     n = int(input())
     m = int(input())
@@ -605,7 +605,7 @@ def q17266():
 
 
 def q2164():
-    # 백준 파이썬 카드2
+    # 백준 2164번 파이썬 카드2
     import sys
     n = int(sys.stdin.readline())
     index = 0
@@ -618,7 +618,7 @@ def q2164():
 
 
 def q13305():
-    # 백준 파이썬 주유소
+    # 백준 13305번 파이썬 주유소
     n = int(input())
     dis = list(map(int, input().split()))
     pri = list(map(int, input().split()))
@@ -633,7 +633,7 @@ def q13305():
 
 
 def q20920():
-    # 백준 파이썬 영단어 암기는 괴로워
+    # 백준 20920번 파이썬 영단어 암기는 괴로워
     import sys
     from collections import Counter
     n, m = map(int, sys.stdin.readline().split())
@@ -651,7 +651,7 @@ def q20920():
 
 
 def q2512():
-    # 백준 파이썬 예산
+    # 백준 2512번 파이썬 예산
     n = int(input())
     lst = list(map(int, input().split()))
     m = int(input())
@@ -665,7 +665,7 @@ def q2512():
 
 
 def q21921():
-    # 백준 파이썬 블로그
+    # 백준 21921번 파이썬 블로그
     import sys
     m, x = map(int, sys.stdin.readline().split())
     lst = list(map(int, sys.stdin.readline().split()))
@@ -692,7 +692,7 @@ def q21921():
 
 
 def q1515():
-    # 백준 파이썬 수 이어 쓰기
+    # 백준 1515번 파이썬 수 이어 쓰기
     nums = input()
     i = 0
     while 1:
@@ -708,7 +708,7 @@ def q1515():
 
 
 def q19941():
-    # 백준 파이썬 햄버거 분배
+    # 백준 19941번 파이썬 햄버거 분배
     import sys
     n, k = map(int, sys.stdin.readline().split())
     hp = sys.stdin.readline()
@@ -735,7 +735,7 @@ def q19941():
 
 
 def q17484():
-    # 백준 파이썬 진우의 달 여행 (틀림, dfs 공부 후 재채점 필요)
+    # 백준 17484번 파이썬 진우의 달 여행 (틀림, dfs 공부 후 재채점 필요)
     import sys
     import copy
 
@@ -769,7 +769,7 @@ def q17484():
 
 
 def q2607():
-    # 백준 파이썬 비슷한 단어
+    # 백준 2607번 파이썬 비슷한 단어
     n = int(input())
     lst = []
     for _ in range(n):
@@ -791,7 +791,7 @@ def q2607():
 
 
 def q3758():
-    # 백준 파이썬 KCPC
+    # 백준 3758번 파이썬 KCPC
     import sys
     import collections
 
@@ -833,7 +833,7 @@ def q3758():
 
 
 def q20310():
-    # 백준 파이썬 타노스
+    # 백준 20310번 파이썬 타노스
     s = list(input())
     count0, count1 = s.count('0') // 2, s.count('1') // 2
     index = 1
@@ -856,7 +856,7 @@ def q20310():
 
 
 def q19637():
-    # 백준 파이썬 IF문 좀 대신 써줘
+    # 백준 19637번 파이썬 IF문 좀 대신 써줘
     import sys
 
     n, m = map(int, sys.stdin.readline().split())
@@ -883,7 +883,7 @@ def q19637():
 
 
 def q22233():
-    # 백준 파이썬 가희와 키워드
+    # 백준 22233번 파이썬 가희와 키워드
     import sys
 
     n, m = map(int, sys.stdin.readline().split())
@@ -902,7 +902,7 @@ def q22233():
 
 
 def q1927():
-    # 백준 파이썬 최소 힙
+    # 백준 1927번 파이썬 최소 힙
     import sys
     import heapq
 
@@ -920,7 +920,7 @@ def q1927():
 
 
 def q20006():
-    # 백준 파이썬 랭킹전 대기열
+    # 백준 20006번 파이썬 랭킹전 대기열
     p, m = map(int, input().split())
     room = []
 
@@ -950,7 +950,7 @@ def q20006():
 
 
 def q11501():
-    # 백준 파이썬 주식
+    # 백준 11501번 파이썬 주식
     import sys
 
     t = int(sys.stdin.readline())
@@ -972,7 +972,7 @@ def q11501():
 
 
 def q1406():
-    # 백준 파이썬 에디터
+    # 백준 1406번 파이썬 에디터
     import sys
 
     left = list(sys.stdin.readline().strip())
@@ -992,7 +992,7 @@ def q1406():
 
 
 def q2304():
-    # 백준 파이썬 창고 다각형
+    # 백준 2304번 파이썬 창고 다각형
     n = int(input())
     lst = []
     area = 0
@@ -1021,7 +1021,7 @@ def q2304():
 
 
 def q2075():
-    # 백준 파이썬 N번째 큰 수
+    # 백준 2075번 파이썬 N번째 큰 수
     import heapq
     lst = []
 
@@ -1040,7 +1040,7 @@ def q2075():
 
 
 def q1138():
-    # 백준 파이썬 한 줄로 서기
+    # 백준 1138번 파이썬 한 줄로 서기
     n = int(input())
     order = list(map(int, input().split()))
     lst = []
@@ -1051,7 +1051,7 @@ def q1138():
 
 
 def q2941():
-    # 백준 파이썬 크로아티아 알파벳
+    # 백준 2941번 파이썬 크로아티아 알파벳
     s = input()
     lst = ['c=', 'c-', 'dz=', 'd-', 'lj', 'nj', 's=', 'z=']
     for word in lst:
@@ -1060,7 +1060,7 @@ def q2941():
 
 
 def q1316():
-    # 백준 파이썬 그룹 단어 체커
+    # 백준 1316번 파이썬 그룹 단어 체커
     t = int(input())
     result = 0
     for _ in range(t):
@@ -1081,7 +1081,7 @@ def q1316():
 
 
 def q25206():
-    # 백준 파이썬 너의 평점은
+    # 백준 25206번 파이썬 너의 평점은
     table = {'A+': 4.5, 'A0': 4.0, 'B+': 3.5, 'B0': 3.0, 'C+': 2.5, 'C0': 2.0, 'D+': 1.5, 'D0': 1.0, 'F': 0.0}
     table_points = 0
     points = 0
@@ -1096,7 +1096,7 @@ def q25206():
 
 
 def q2563():
-    # 백준 파이썬 색종이
+    # 백준 2563번 파이썬 색종이
     dp = [[0] * 100 for _ in range(100)]
     result = 0
     t = int(input())
@@ -1117,7 +1117,7 @@ def q2563():
 
 
 def q1193():
-    # 백준 파이썬 분수찾기
+    # 백준 1193번 파이썬 분수찾기
     x = int(input())
     dp = [0] * 4500
     dp[1] = 1
@@ -1138,7 +1138,7 @@ def q1193():
 
 
 def q24313():
-    # 백준 파이썬 알고리즘 수업 - 점근적 표기 1
+    # 백준 24313번 파이썬 알고리즘 수업 - 점근적 표기 1
     a1, a2 = map(int, input().split())
     c = int(input())
     n0 = int(input())
@@ -1149,7 +1149,7 @@ def q24313():
 
 
 def q1018():
-    # 백준 파이썬 체스판 다시 칠하기
+    # 백준 1018번 파이썬 체스판 다시 칠하기
     n, m = map(int, input().split())
     lst = []
     result = []
@@ -1176,7 +1176,7 @@ def q1018():
 
 
 def q1436():
-    # 백준 파이썬 영화감독 숌
+    # 백준 1436번 파이썬 영화감독 숌
     n = int(input())
     find = 666
     count = 0
@@ -1190,7 +1190,7 @@ def q1436():
 
 
 def q2751():
-    # 백준 파이썬 수 정렬하기 2
+    # 백준 2751번 파이썬 수 정렬하기 2
     import sys
 
     n = int(sys.stdin.readline())
@@ -1203,7 +1203,7 @@ def q2751():
 
 
 def q1427():
-    # 백준 파이썬 소트인사이드
+    # 백준 1427번 파이썬 소트인사이드
     n = list(input())
     n.sort(reverse=True)
     result = ''
@@ -1213,7 +1213,7 @@ def q1427():
 
 
 def q11650():
-    # 백준 파이썬 좌표 정렬하기
+    # 백준 11650번 파이썬 좌표 정렬하기
     n = int(input())
     xy = []
     for _ in range(n):
@@ -1225,7 +1225,7 @@ def q11650():
 
 
 def q11651():
-    # 백준 파이썬 좌표 정렬하기 2
+    # 백준 11651번 파이썬 좌표 정렬하기 2
     n = int(input())
     xy = []
     for _ in range(n):
@@ -1237,7 +1237,7 @@ def q11651():
 
 
 def q1181():
-    # 백준 파이썬 단어 정렬
+    # 백준 1181번 파이썬 단어 정렬
     n = int(input())
     lst = []
     for _ in range(n):
@@ -1250,7 +1250,7 @@ def q1181():
 
 
 def q10814():
-    # 백준 파이썬 나이순 정렬
+    # 백준 10814번 파이썬 나이순 정렬
     n = int(input())
     lst = []
     for _ in range(n):
@@ -1262,7 +1262,7 @@ def q10814():
 
 
 def q18870():
-    # 백준 파이썬 좌표 압축
+    # 백준 18870번 파이썬 좌표 압축
     n = int(input())
     lst = list(map(int, input().split()))
     temp = sorted(set(lst))
@@ -1274,7 +1274,7 @@ def q18870():
 
 
 def q10815():
-    # 백준 파이썬 숫자 카드
+    # 백준 10815번 파이썬 숫자 카드
     n = int(input())
     lst1 = list(map(int, input().split()))
     m = int(input())
@@ -1290,7 +1290,7 @@ def q10815():
 
 
 def q14425():
-    # 백준 파이썬 문자열 집합
+    # 백준 14425번 파이썬 문자열 집합
     n, m = map(int, input().split())
     lst = []
     for _ in range(n):
@@ -1306,7 +1306,7 @@ def q14425():
 
 
 def q7785():
-    # 백준 파이썬 회사에 있는 사람
+    # 백준 7785번 파이썬 회사에 있는 사람
     n = int(input())
     dic = {}
     for _ in range(n):
@@ -1321,7 +1321,7 @@ def q7785():
 
 
 def q1620():
-    # 백준 파이썬 나는야 포켓몬 마스터 이다솜
+    # 백준 1620번 파이썬 나는야 포켓몬 마스터 이다솜
     import sys
 
     n, m = map(int, sys.stdin.readline().split())
@@ -1340,7 +1340,7 @@ def q1620():
 
 
 def q10816():
-    # 백준 파이썬 숫자 카드 2
+    # 백준 10816번 파이썬 숫자 카드 2
     n = int(input())
     lst = list(map(int, input().split()))
     dic = {}
@@ -1359,7 +1359,7 @@ def q10816():
 
 
 def q1764():
-    # 백준 파이썬 듣보잡
+    # 백준 1764번 파이썬 듣보잡
     import sys
 
     n, m = map(int, sys.stdin.readline().split())
@@ -1382,7 +1382,7 @@ def q1764():
 
 
 def q1269():
-    # 백준 파이썬 대칭 차집합
+    # 백준 1269번 파이썬 대칭 차집합
     import sys
 
     n, m = map(int, sys.stdin.readline().split())
@@ -1400,7 +1400,7 @@ def q1269():
 
 
 def q11478():
-    # 백준 파이썬 서로 다른 부분 문자열의 개수
+    # 백준 11478번 파이썬 서로 다른 부분 문자열의 개수
     s = input()
     lst = []
     length = len(s)
@@ -1418,7 +1418,7 @@ def q11478():
 
 
 def q13241():
-    # 백준 파이썬 최소공배수
+    # 백준 13241번 파이썬 최소공배수
     import math
 
     a, b = map(int, input().split())
@@ -1427,7 +1427,7 @@ def q13241():
 
 
 def q1735():
-    # 백준 파이썬 분수 합
+    # 백준 1735번 파이썬 분수 합
     import math
 
     a1, b1 = map(int, input().split())
@@ -1439,7 +1439,7 @@ def q1735():
 
 
 def q2485():
-    # 백준 파이썬 가로수
+    # 백준 2485번 파이썬 가로수
     import math, sys
 
     n = int(input())
@@ -1456,7 +1456,7 @@ def q2485():
 
 
 def q4134():
-    # 백준 파이썬 다음 소수
+    # 백준 4134번 파이썬 다음 소수
     t = int(input())
 
     def find(x):
@@ -1479,7 +1479,7 @@ def q4134():
 
 
 def q4948():
-    # 백준 파이썬 베르트랑 공준
+    # 백준 4948번 파이썬 베르트랑 공준
     while 1:
         n = int(input())
         if n == 0:
@@ -1496,7 +1496,7 @@ def q4948():
 
 
 def q17103():
-    # 백준 파이썬 골드바흐 파티션
+    # 백준 17103번 파이썬 골드바흐 파티션
 
     t = int(input())
     limit = 1000000
@@ -1516,7 +1516,7 @@ def q17103():
 
 
 def q13909():
-    # 백준 파이썬 창문 닫기
+    # 백준 13909번 파이썬 창문 닫기
     n = int(input())
     result = 0
     for _ in range(1, int(n ** 0.5) + 1):
@@ -1525,7 +1525,7 @@ def q13909():
 
 
 def q28278():
-    # 백준 파이썬 스택 2
+    # 백준 28278번 파이썬 스택 2
     import sys
 
     t = int(input())
@@ -1554,7 +1554,7 @@ def q28278():
 
 
 def q10773():
-    # 백준 파이썬 제로
+    # 백준 10773번 파이썬 제로
     k = int(input())
     lst = []
     for _ in range(k):
@@ -1567,7 +1567,7 @@ def q10773():
 
 
 def q9012():
-    # 백준 파이썬 괄호
+    # 백준 9012번 파이썬 괄호
     t = int(input())
     for _ in range(t):
         s = input()
@@ -1586,7 +1586,7 @@ def q9012():
 
 
 def q4949():
-    # 백준 파이썬 균형잡힌 세상
+    # 백준 4949번 파이썬 균형잡힌 세상
     while 1:
         s = input()
         if s == '.':
@@ -1618,7 +1618,7 @@ def q4949():
 
 
 def q12789():
-    # 백준 파이썬 도키도키 간식드리미
+    # 백준 12789번 파이썬 도키도키 간식드리미
     n = int(input())
     lst = list(map(int, input().split()))
     stack = []
@@ -1649,7 +1649,7 @@ def q12789():
 
 
 def q18258():
-    # 백준 파이썬 큐 2
+    # 백준 18258번 파이썬 큐 2
     import collections as q, sys
 
     n = int(input())
@@ -1683,7 +1683,7 @@ def q18258():
 
 
 def q11866():
-    # 백준 파이썬 요세푸스 문제 0
+    # 백준 11866번 파이썬 요세푸스 문제 0
     from collections import deque
 
     n, k = map(int, input().split())
@@ -1700,7 +1700,7 @@ def q11866():
 
 
 def q28279():
-    # 백준 파이썬 덱 2
+    # 백준 28279번 파이썬 덱 2
     import collections, sys
 
     n = int(input())
@@ -1741,7 +1741,7 @@ def q28279():
 
 
 def q2346():
-    # 백준 파이썬 풍선 터뜨리기
+    # 백준 2346번 파이썬 풍선 터뜨리기
     import collections
     n = int(input())
     lst = list(map(int, input().split()))
@@ -1763,7 +1763,7 @@ def q2346():
 
 
 def q24511():
-    # 백준 파이썬 queuestack
+    # 백준 24511번 파이썬 queuestack
     from collections import deque
 
     n = int(input())
@@ -1784,7 +1784,7 @@ def q24511():
 
 
 def q25192():
-    # 백준 파이썬 인사성 밝은 곰곰이
+    # 백준 25192번 파이썬 인사성 밝은 곰곰이
     n = int(input())
     dic = {}
     result = 0
@@ -1800,7 +1800,7 @@ def q25192():
 
 
 def q26069():
-    # 백준 파이썬 붙임성 좋은 총총이
+    # 백준 26069번 파이썬 붙임성 좋은 총총이
     n = int(input())
     dic = {'ChongChong': 1}
     for _ in range(n):
@@ -1817,7 +1817,7 @@ def q26069():
 
 
 def q2108():
-    # 백준 파이썬 통계학
+    # 백준 2108번 파이썬 통계학
     import sys
 
     n = int(input())
@@ -1846,7 +1846,7 @@ def q2108():
 
 
 def q4779():
-    # 백준 파이썬 칸토어 집합
+    # 백준 4779번 파이썬 칸토어 집합
     def cantor(start, depth):
         if depth == 1:
             return
@@ -1866,7 +1866,7 @@ def q4779():
 
 
 def q15649():
-    # 백준 파이썬 N과 M (1)
+    # 백준 15649번 파이썬 N과 M (1)
     n, m = map(int, input().split())
 
     def result(N, M, lst=[]):
@@ -1884,7 +1884,7 @@ def q15649():
 
 
 def q15650():
-    # 백준 파이썬 N과 M (2)
+    # 백준 15650번 파이썬 N과 M (2)
     n, m = map(int, input().split())
 
     def result(N, M, lst=[], start=1):
@@ -1902,7 +1902,7 @@ def q15650():
 
 
 def q15651():
-    # 백준 파이썬 N과 M (3)
+    # 백준 15651번 파이썬 N과 M (3)
     n, m = map(int, input().split())
 
     def result(N, M, lst=[]):
@@ -1919,7 +1919,7 @@ def q15651():
 
 
 def q15652():
-    # 백준 파이썬 N과 M (4)
+    # 백준 15652번 파이썬 N과 M (4)
     n, m = map(int, input().split())
 
     def result(N, M, lst=[], start=1):
@@ -1936,7 +1936,7 @@ def q15652():
 
 
 def q2579():
-    # 백준 파이썬 계단 오르기
+    # 백준 2579번 파이썬 계단 오르기
     n = int(input())
     lst = [0] * 301
     for i in range(1, n + 1):
@@ -1951,7 +1951,7 @@ def q2579():
 
 
 def q11659():
-    # 백준 파이썬 구간 합 구하기 4
+    # 백준 11659번 파이썬 구간 합 구하기 4
     import sys
 
     n, m = map(int, input().split())
@@ -1966,7 +1966,7 @@ def q11659():
 
 
 def q2559():
-    # 백준 파이썬 수열
+    # 백준 2559번 파이썬 수열
     n, m = map(int, input().split())
     lst = list(map(int, input().split()))
     result = -10000000
@@ -1982,7 +1982,7 @@ def q2559():
 
 
 def q16139():
-    # 백준 파이썬 인간-컴퓨터 상호작용
+    # 백준 16139번 파이썬 인간-컴퓨터 상호작용
     import sys
 
     s = input()
@@ -2001,7 +2001,7 @@ def q16139():
 
 
 def q11047():
-    # 백준 파이썬 동전 0
+    # 백준 11047번 파이썬 동전 0
     n, k = map(int, input().split())
     lst = []
     for _ in range(n):
@@ -2015,7 +2015,7 @@ def q11047():
 
 
 def q1931():
-    # 백준 파이썬 회의실 배정
+    # 백준 1931번 파이썬 회의실 배정
     import sys
 
     n = int(input())
@@ -2034,7 +2034,7 @@ def q1931():
 
 
 def q11399():
-    # 백준 파이썬 ATM
+    # 백준 11399번 파이썬 ATM
     n = int(input())
     lst = list(map(int, input().split()))
     lst.sort()
@@ -2047,7 +2047,7 @@ def q11399():
 
 
 def q1541():
-    # 백준 파이썬 잃어버린 괄호
+    # 백준 1541번 파이썬 잃어버린 괄호
     s = input()
     s += '+'
     lst = []
@@ -2074,7 +2074,7 @@ def q1541():
 
 
 def q1920():
-    # 백준 파이썬 수 찾기
+    # 백준 1920번 파이썬 수 찾기
     n = int(input())
     lst1 = list(map(int, input().split()))
     m = int(input())
@@ -2102,7 +2102,7 @@ def q1920():
 
 
 def q1654():
-    # 백준 파이썬 랜선 자르기
+    # 백준 1654번 파이썬 랜선 자르기
     import sys
 
     k, n = map(int, input().split())
@@ -2123,7 +2123,7 @@ def q1654():
 
 
 def q2805():
-    # 백준 파이썬 나무 자르기
+    # 백준 2805번 파이썬 나무 자르기
     n, m = map(int, input().split())
     lst = list(map(int, input().split()))
     start, end = 1, max(lst)
@@ -2141,7 +2141,7 @@ def q2805():
 
 
 def q11660():
-    # 백준 파이썬 구간 합 구하기 5
+    # 백준 11660번 파이썬 구간 합 구하기 5
     import sys
 
     n, m = map(int, input().split())
@@ -2156,7 +2156,7 @@ def q11660():
 
 
 def q14916():
-    # 백준 파이썬 거스름돈
+    # 백준 14916번 파이썬 거스름돈
     n = int(input())
     result = 0
     if n // 5:
@@ -2176,7 +2176,7 @@ def q14916():
 
 
 def q9625():
-    # 백준 파이썬 BABBA
+    # 백준 9625번 파이썬 BABBA
     k = int(input())
     dp = [0] * 46
     dp[1] = 1
@@ -2186,7 +2186,7 @@ def q9625():
 
 
 def q10826():
-    # 백준 파이썬 피보나치 수 4
+    # 백준 10826번 파이썬 피보나치 수 4
     n = int(input())
     dp = [0] * 10001
     dp[1] = 1
@@ -2196,7 +2196,7 @@ def q10826():
 
 
 def q13301():
-    # 백준 파이썬 타일 장식물
+    # 백준 13301번 파이썬 타일 장식물
     n = int(input())
     dp = [1] * (n + 1)
     dp[1] = 1
@@ -2209,7 +2209,7 @@ def q13301():
 
 
 def q16395():
-    # 백준 파이썬 파스칼의 삼각형
+    # 백준 16395번 파이썬 파스칼의 삼각형
     n, k = map(int, input().split())
     nf = 1
     kf = 1
@@ -2224,7 +2224,7 @@ def q16395():
 
 
 def q15312():
-    # 백준 파이썬 이름 궁합
+    # 백준 15312번 파이썬 이름 궁합
     a = input()
     b = input()
     name = []
@@ -2246,7 +2246,7 @@ def q15312():
 
 
 def q14606():
-    # 백준 파이썬 피자 (Small)
+    # 백준 14606번 파이썬 피자 (Small)
     n = int(input())
 
     dp = [0] * (n + 1)
@@ -2257,13 +2257,13 @@ def q14606():
 
 
 def q14607():
-    # 백준 파이썬 피자 (Large)
+    # 백준 14607번 파이썬 피자 (Large)
     n = int(input())
     print(n * (n - 1) // 2)
 
 
 def q9656():
-    # 백준 파이썬 돌 게임 2
+    # 백준 9656번 파이썬 돌 게임 2
     n = int(input())
     if n % 2 == 1:
         print('CY')
@@ -2272,7 +2272,7 @@ def q9656():
 
 
 def q19947():
-    # 백준 파이썬 투자의 귀재 배주형
+    # 백준 19947번 파이썬 투자의 귀재 배주형
     h, y = map(int, input().split())
     while y:
         if y % 5:
@@ -2290,7 +2290,7 @@ def q19947():
 
 
 def q25644():
-    # 백준 파이썬 최대 상승
+    # 백준 25644번 파이썬 최대 상승
     n = int(input())
     lst = list(map(int, input().split()))
     lst.reverse()
@@ -2303,7 +2303,7 @@ def q25644():
 
 
 def q2491():
-    # 백준 파이썬 수열
+    # 백준 2491번 파이썬 수열
     n = int(input())
     lst = list(map(int, input().split()))
     dp1 = [1] * (n + 1)
@@ -2321,7 +2321,7 @@ def q2491():
 
 
 def q2670():
-    # 백준 파이썬 연속부분최대곱
+    # 백준 2670번 파이썬 연속부분최대곱
     import sys
 
     n = int(input())
@@ -2334,7 +2334,7 @@ def q2670():
 
 
 def q10211():
-    # 백준 파이썬 Maximum Subarray
+    # 백준 10211번 파이썬 Maximum Subarray
     t = int(input())
     for _ in range(t):
         n = int(input())
@@ -2349,7 +2349,7 @@ def q10211():
 
 
 def q13699():
-    # 백준 파이썬 점화식
+    # 백준 13699번 파이썬 점화식
     n = int(input())
     dp = [0] * (n + 1)
     dp[0] = 1
@@ -2360,7 +2360,7 @@ def q13699():
 
 
 def q15624():
-    # 백준 파이썬 피보나치 수 7
+    # 백준 15624번 파이썬 피보나치 수 7
     n = int(input())
     dp = [0] * 1000001
     dp[1] = 1
@@ -2370,7 +2370,7 @@ def q15624():
 
 
 def q14495():
-    # 백준 파이썬 피보나치 비스무리한 수열
+    # 백준 14495번 파이썬 피보나치 비스무리한 수열
     n = int(input())
     dp = [0] * 117
     dp[1] = dp[2] = dp[3] = 1
@@ -2380,7 +2380,7 @@ def q14495():
 
 
 def q15489():
-    # 백준 파이썬 파스칼 삼각형
+    # 백준 15489번 파이썬 파스칼 삼각형
     r, c, w = map(int, input().split())
     dp = [[1] * 31 for _ in range(31)]
     for i in range(1, 31):
@@ -2394,7 +2394,7 @@ def q15489():
 
 
 def q25214():
-    # 백준 파이썬 크림 파스타
+    # 백준 25214번 파이썬 크림 파스타
     n = int(input())
     lst = list(map(int, input().split()))
     dp = [0] * (n + 1)
@@ -2407,7 +2407,7 @@ def q25214():
 
 
 def q24417():
-    # 백준 파이썬 알고리즘 수업 - 피보나치 수 2
+    # 백준 24417번 파이썬 알고리즘 수업 - 피보나치 수 2
     n = int(input())
     x, y = 1, 1
     for i in range(n - 2):
@@ -2416,7 +2416,7 @@ def q24417():
 
 
 def q2161():
-    # 백준 파이썬 카드1
+    # 백준 2161번 파이썬 카드1
     import collections
 
     n = int(input())
@@ -2430,7 +2430,7 @@ def q2161():
 
 
 def q4158():
-    # 백준 파이썬 CD
+    # 백준 4158번 파이썬 CD
     import sys
 
     while 1:
@@ -2452,7 +2452,7 @@ def q4158():
 
 
 def q23253():
-    # 백준 파이썬 자료구조는 정말 최고야
+    # 백준 23253번 파이썬 자료구조는 정말 최고야
     import sys
 
     n, m = map(int, sys.stdin.readline().split())
@@ -2471,7 +2471,7 @@ def q23253():
 
 
 def q27964():
-    # 백준 파이썬 콰트로치즈피자
+    # 백준 27964번 파이썬 콰트로치즈피자
     n = int(input())
     lst = input().split()
     dic = {}
@@ -2484,7 +2484,7 @@ def q27964():
 
 
 def q25497():
-    # 백준 파이썬 기술 연계마스터 임스
+    # 백준 25497번 파이썬 기술 연계마스터 임스
     n = int(input())
     skills = input()
     result = 0
@@ -2513,7 +2513,7 @@ def q25497():
 
 
 def q25631():
-    # 백준 파이썬 마트료시카 합치기
+    # 백준 25631번 파이썬 마트료시카 합치기
     n = int(input())
     lst = list(map(int, input().split()))
     lst.sort(reverse=True)
@@ -2533,7 +2533,7 @@ def q25631():
 
 
 def q9733():
-    # 백준 파이썬 꿀벌
+    # 백준 9733번 파이썬 꿀벌
     import sys
 
     lines = sys.stdin.readlines()
@@ -2551,7 +2551,7 @@ def q9733():
 
 
 def q25325():
-    # 백준 파이썬 학생 인기도 측정
+    # 백준 25325번 파이썬 학생 인기도 측정
     n = int(input())
     students = input().split()
     dic = {}
@@ -2568,7 +2568,7 @@ def q25325():
 
 
 def q28445():
-    # 백준 파이썬 알록달록 앵무새
+    # 백준 28445번 파이썬 알록달록 앵무새
     dad = input().split()
     mom = input().split()
     colors = sorted(set(dad + mom))
@@ -2578,7 +2578,7 @@ def q28445():
 
 
 def q26042():
-    # 백준 파이썬 식당 입구 대기 줄
+    # 백준 26042번 파이썬 식당 입구 대기 줄
     import sys
 
     n = int(sys.stdin.readline())
@@ -2597,7 +2597,7 @@ def q26042():
 
 
 def q29723():
-    # 백준 파이썬 브실이의 입시전략
+    # 백준 29723번 파이썬 브실이의 입시전략
     import sys
 
     n, m, k = map(int, sys.stdin.readline().split())
@@ -2620,7 +2620,7 @@ def q29723():
 
 
 def q25584():
-    # 백준 파이썬 근무 지옥에 빠진 푸앙이 (Large)
+    # 백준 25584번 파이썬 근무 지옥에 빠진 푸앙이 (Large)
     import sys
 
     n = int(sys.stdin.readline().rstrip())
@@ -2642,7 +2642,7 @@ def q25584():
 
 
 def q10828():
-    # 백준 파이썬 스택
+    # 백준 10828번 파이썬 스택
     import sys
 
     n = int(sys.stdin.readline())
@@ -2662,7 +2662,7 @@ def q10828():
 
 
 def q10845():
-    # 백준 파이썬 큐
+    # 백준 10845번 파이썬 큐
     import sys, queue
     n = int(sys.stdin.readline())
     que = queue.Queue()
@@ -2684,7 +2684,7 @@ def q10845():
 
 
 def q10866():
-    # 백준 파이썬 덱
+    # 백준 10866번 파이썬 덱
     import sys, collections
     n = int(sys.stdin.readline())
     deq = collections.deque()
@@ -2710,7 +2710,7 @@ def q10866():
 
 
 def q1158():
-    # 백준 파이썬 요세푸스 문제
+    # 백준 1158번 파이썬 요세푸스 문제
     import collections
 
     n, k = map(int, input().split())
@@ -2726,7 +2726,7 @@ def q1158():
 
 
 def q17219():
-    # 백준 파이썬 비밀번호 찾기
+    # 백준 17219번 파이썬 비밀번호 찾기
     import sys
 
     n, m = map(int, sys.stdin.readline().split())
@@ -2740,7 +2740,7 @@ def q17219():
 
 
 def q1302():
-    # 백준 파이썬 베스트셀러
+    # 백준 1302번 파이썬 베스트셀러
     import sys
 
     n = int(sys.stdin.readline())
@@ -2756,7 +2756,7 @@ def q1302():
 
 
 def q3986():
-    # 백준 파이썬 좋은 단어
+    # 백준 3986번 파이썬 좋은 단어
     n = int(input())
     result = 0
     for _ in range(n):
@@ -2775,7 +2775,7 @@ def q3986():
 
 
 def q11652():
-    # 백준 파이썬 카드
+    # 백준 11652번 파이썬 카드
     import sys
 
     n = int(sys.stdin.readline())
@@ -2791,7 +2791,7 @@ def q11652():
 
 
 def q2776():
-    # 백준 파이썬 암기왕
+    # 백준 2776번 파이썬 암기왕
     t = int(input())
     for _ in range(t):
         n = int(input())
@@ -2806,7 +2806,7 @@ def q2776():
 
 
 def q5568():
-    # 백준 파이썬 카드 놓기
+    # 백준 5568번 파이썬 카드 놓기
     n = int(input())
     k = int(input())
     lst = []
@@ -2847,7 +2847,7 @@ def q5568():
 
 
 def q1822():
-    # 백준 파이썬 차집합
+    # 백준 1822번 파이썬 차집합
     n, m = map(int, input().split())
     a = set(map(int, input().split()))
     b = set(map(int, input().split()))
@@ -2859,7 +2859,7 @@ def q1822():
 
 
 def q15828():
-    # 백준 파이썬 Router
+    # 백준 15828번 파이썬 Router
     import sys, queue
 
     n = int(sys.stdin.readline())
@@ -2880,7 +2880,7 @@ def q15828():
 
 
 def q10546():
-    # 백준 파이썬 배부른 마라토너
+    # 백준 10546번 파이썬 배부른 마라토너
     import sys
 
     n = int(sys.stdin.readline())
@@ -2900,7 +2900,7 @@ def q10546():
 
 
 def q9322():
-    # 백준 파이썬 철벽 보안 알고리즘
+    # 백준 9322번 파이썬 철벽 보안 알고리즘
     t = int(input())
     for _ in range(t):
         n = int(input())
@@ -2915,7 +2915,7 @@ def q9322():
 
 
 def q1544():
-    # 백준 파이썬 사이클 단어
+    # 백준 1544번 파이썬 사이클 단어
     import sys
 
     n = int(sys.stdin.readline())
@@ -2937,7 +2937,7 @@ def q1544():
 
 
 def q20551():
-    # 백준 파이썬 Sort 마스터 배지훈의 후계자
+    # 백준 20551번 파이썬 Sort 마스터 배지훈의 후계자
     import sys
 
     def devine(l, c):
@@ -2966,7 +2966,7 @@ def q20551():
 
 
 def q16499():
-    # 백준 파이썬 동일한 단어 그룹화하기
+    # 백준 16499번 파이썬 동일한 단어 그룹화하기
     import sys
 
     n = int(sys.stdin.readline())
@@ -2980,7 +2980,7 @@ def q16499():
 
 
 def q11507():
-    # 백준 파이썬 카드셋트
+    # 백준 11507번 파이썬 카드셋트
     s = input()
     greska = False
     dic = {'P': [], 'K': [], 'H': [], 'T': []}
@@ -2998,7 +2998,7 @@ def q11507():
 
 
 def q1835():
-    # 백준 파이썬 카드
+    # 백준 1835번 파이썬 카드
     import collections
 
     deq = collections.deque()
@@ -3012,7 +3012,7 @@ def q1835():
 
 
 def q2358():
-    # 백준 파이썬 평행선
+    # 백준 2358번 파이썬 평행선
     import sys
 
     n = int(sys.stdin.readline())
@@ -3039,7 +3039,7 @@ def q2358():
 
 
 def q9575():
-    # 백준 파이썬 행운의 수
+    # 백준 9575번 파이썬 행운의 수
     import sys
 
     t = int(sys.stdin.readline())
@@ -3068,7 +3068,7 @@ def q9575():
 
 
 def q14670():
-    # 백준 파이썬 병약한 영정
+    # 백준 14670번 파이썬 병약한 영정
     import sys
 
     n = int(sys.stdin.readline())
@@ -3094,7 +3094,7 @@ def q14670():
 
 
 def q29754():
-    # 백준 파이썬 세상에는 많은 유튜버가 있고, 그중에서 버츄얼 유튜버도 존재한다(틀렸습니다로 재채점 필요)
+    # 백준 29754번 파이썬 세상에는 많은 유튜버가 있고, 그중에서 버츄얼 유튜버도 존재한다(틀렸습니다로 재채점 필요)
     import sys
 
     n, m = map(int, (sys.stdin.readline().split()))
@@ -3126,7 +3126,7 @@ def q29754():
 
 
 def q19583():
-    # 백준 파이썬 싸이버개강총회
+    # 백준 19583번 파이썬 싸이버개강총회
     import sys
 
     def time_cal(t):
@@ -3156,7 +3156,7 @@ def q19583():
 
 
 def q14911():
-    # 백준 파이썬 궁합 쌍 찾기(틀렸습니다로 재채점 필요)
+    # 백준 14911번 파이썬 궁합 쌍 찾기(틀렸습니다로 재채점 필요)
     nums = set(map(int, input().split()))
     n = int(input())
     dic = set()
@@ -3176,7 +3176,7 @@ def q14911():
 
 
 def q28446():
-    # 백준 파이썬 볼링공 찾아주기
+    # 백준 28446번 파이썬 볼링공 찾아주기
     import sys
 
     m = int(sys.stdin.readline())
@@ -3190,7 +3190,7 @@ def q28446():
 
 
 def q26596():
-    # 백준 파이썬 황금 칵테일(틀렸습니다로 재채점 필요)
+    # 백준 26596번 파이썬 황금 칵테일(틀렸습니다로 재채점 필요)
     import sys
 
     n = int(sys.stdin.readline())
@@ -3211,7 +3211,7 @@ def q26596():
 
 
 def q29721():
-    # 백준 파이썬 변형 체스 놀이 : 다바바(Dabbaba)
+    # 백준 29721번 파이썬 변형 체스 놀이 : 다바바(Dabbaba)
     import sys
 
     n, k = map(int, sys.stdin.readline().split())
@@ -3231,7 +3231,7 @@ def q29721():
 
 
 def q4881():
-    # 백준 파이썬 자리수의 제곱
+    # 백준 4881번 파이썬 자리수의 제곱
     import sys
 
     def p(n):
@@ -3264,7 +3264,7 @@ def q4881():
 
 
 def q26043():
-    # 백준 파이썬 식당 메뉴
+    # 백준 26043번 파이썬 식당 메뉴
     import sys, queue
 
     n = int(sys.stdin.readline())
@@ -3288,7 +3288,7 @@ def q26043():
 
 
 def q25329():
-    # 백준 파이썬 학생별 통화 요금 계산
+    # 백준 25329번 파이썬 학생별 통화 요금 계산
     import sys, math
 
     def time_cal(time):
@@ -3320,7 +3320,7 @@ def q25329():
 
 
 def q14402():
-    # 백준 파이썬 야근
+    # 백준 14402번 파이썬 야근
     import sys
 
     q = int(sys.stdin.readline())
@@ -3344,7 +3344,7 @@ def q14402():
 
 
 def q1439():
-    # 백준 파이썬 뒤집기
+    # 백준 1439번 파이썬 뒤집기
     s = input()
     if len(set(s)) == 1:
         print(0)
@@ -3361,7 +3361,7 @@ def q1439():
 
 
 def q1343():
-    # 백준 파이썬 폴리오미노
+    # 백준 1343번 파이썬 폴리오미노
     s = input().split('.')
     for i in range(len(s)):
         if s[i] == '':
@@ -3378,7 +3378,7 @@ def q1343():
 
 
 def q16435():
-    # 백준 파이썬 스네이크버드
+    # 백준 16435번 파이썬 스네이크버드
     n, l = map(int, input().split())
     lst = list(map(int, input().split()))
     lst.sort()
@@ -3389,7 +3389,7 @@ def q16435():
 
 
 def q15904():
-    # 백준 파이썬 UCPC는 무엇의 약자일까?
+    # 백준 15904번 파이썬 UCPC는 무엇의 약자일까?
     s = input()
     ans = 'UCPC'
     index = 0
@@ -3402,7 +3402,7 @@ def q15904():
 
 
 def q9237():
-    # 백준 파이썬 이장님 초대
+    # 백준 9237번 파이썬 이장님 초대
     n = int(input())
     lst = list(map(int, input().split()))
     lst.sort(reverse=True)
@@ -3415,7 +3415,7 @@ def q9237():
 
 
 def q3135():
-    # 백준 파이썬 라디오
+    # 백준 3135번 파이썬 라디오
     a, b = map(int, input().split())
     n = int(input())
     lst = [int(input()) for _ in range(n)]
@@ -3429,7 +3429,7 @@ def q3135():
 
 
 def q6550():
-    # 백준 파이썬 부분 문자열
+    # 백준 6550번 파이썬 부분 문자열
     while 1:
         try:
             s, t = input().split()
@@ -3448,7 +3448,7 @@ def q6550():
 
 
 def q1817():
-    # 백준 파이썬 짐 챙기는 숌
+    # 백준 1817번 파이썬 짐 챙기는 숌
     n, m = map(int, input().split())
     try:
         lst = list(map(int, input().split()))
@@ -3465,7 +3465,7 @@ def q1817():
 
 
 def q11256():
-    # 백준 파이썬 사탕
+    # 백준 11256번 파이썬 사탕
     import sys
 
     t = int(sys.stdin.readline())
@@ -3488,7 +3488,7 @@ def q11256():
 
 
 def q15720():
-    # 백준 파이썬 카우버거
+    # 백준 15720번 파이썬 카우버거
     b, c, d = map(int, input().split())
     burger = list(map(int, input().split()))
     side = list(map(int, input().split()))
@@ -3506,7 +3506,7 @@ def q15720():
 
 
 def q16208():
-    # 백준 파이썬 귀찮음
+    # 백준 16208번 파이썬 귀찮음
     n = int(input())
     lst = list(map(int, input().split()))
     length = sum(lst)
@@ -3519,7 +3519,7 @@ def q16208():
 
 
 def q2891():
-    # 백준 파이썬 카약과 강풍
+    # 백준 2891번 파이썬 카약과 강풍
     n, s, r = map(int, input().split())
     slst = set(map(int, input().split()))
     rlst = set(map(int, input().split()))
@@ -3536,7 +3536,7 @@ def q2891():
 
 
 def q2057():
-    # 백준 파이썬 팩토리얼 분해
+    # 백준 2057번 파이썬 팩토리얼 분해
     n = int(input())
     if n == 0:
         print('NO')
@@ -3556,7 +3556,7 @@ def q2057():
 
 
 def q14655():
-    # 백준 파이썬 욱제는 도박쟁이야!!
+    # 백준 14655번 파이썬 욱제는 도박쟁이야!!
     n = int(input())
     lst1 = list(map(int, input().split()))
     lst2 = list(map(int, input().split()))
@@ -3569,7 +3569,7 @@ def q14655():
 
 
 def q25496():
-    # 백준 파이썬 장신구 명장 임스
+    # 백준 25496번 파이썬 장신구 명장 임스
     p, n = map(int, input().split())
     lst = list(map(int, input().split()))
     lst.sort()
@@ -3584,7 +3584,7 @@ def q25496():
 
 
 def q30457():
-    # 백준 파이썬 단체줄넘기
+    # 백준 30457번 파이썬 단체줄넘기
     n = int(input())
     lst = list(map(int, input().split()))
     temp1 = [0]
