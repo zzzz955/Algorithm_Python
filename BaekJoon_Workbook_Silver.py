@@ -3598,5 +3598,20 @@ def q30457():
         else:
             lst.pop()
     print(len(temp1) + len(temp2) - 2)
-q30457()
+
+
+def q29615():
+    # 백준 29615번 파이썬 알파빌과 베타빌
+    n, m = map(int, input().split())
+    lst = list(map(int, input().split()))
+    dic = set(map(int, input().split()))
+    index = 0
+    for i in lst:
+        if index == m:
+            break
+        if i in dic:
+            dic.remove(i)
+        index += 1
+    print(len(dic))
+q29615()
 
