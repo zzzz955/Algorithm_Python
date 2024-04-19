@@ -3651,5 +3651,24 @@ def q25707():
         result += lst[i + 1] - lst[i]
     result += lst[-1] - lst[0]
     print(result)
-q25707()
 
+
+def q27940():
+    # 백준 27940번 파이썬 가지 산사태
+    import sys
+
+    n, m, k = map(int, sys.stdin.readline().split())
+    result = 0
+    index = 0
+    chk = False
+    for _ in range(m):
+        index += 1
+        t, r = map(int, sys.stdin.readline().split())
+        result += r
+        if result > k:
+            print(index, 1)
+            chk = True
+            break
+    if not chk:
+        print(-1)
+q27940()
