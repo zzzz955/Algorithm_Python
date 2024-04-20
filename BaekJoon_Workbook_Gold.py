@@ -101,4 +101,22 @@ def q13904():
             result += -w
             break
     print(result)
-q13904()
+
+
+def q2879():
+    # 백준 2879번 파이썬 코딩은 예쁘게
+    n = int(input())
+    lst1 = list(map(int, input().split()))
+    lst2 = list(map(int, input().split()))
+    temp = []
+    for i in range(n):
+        temp.append(lst1[i] - lst2[i])
+    dp = [0] * n
+    dp[0] = abs(temp[0])
+    for i in range(1, n):
+        if temp[i] * temp[i - 1] > 0:
+            dp[i] = dp[i - 1] + max(0, abs(temp[i]) - abs(temp[i - 1]))
+        else:
+            dp[i] = dp[i - 1] + abs(temp[i])
+    print(dp[n - 1])
+q2879()
