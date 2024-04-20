@@ -75,5 +75,30 @@ def q1715():
             result += a + b
             heapq.heappush(lst, a + b)
         print(result)
-q1715()
 
+
+def q13904():
+    # 백준 13904번 파이썬 과제
+    import sys, heapq
+
+    n = int(sys.stdin.readline())
+    lst = []
+    day = 0
+    for _ in range(n):
+        d, w = map(int, sys.stdin.readline().split())
+        lst.append((-w, d))
+        if d > day:
+            day = d
+    heapq.heapify(lst)
+    chk = [0] * (day + 1)
+    result = 0
+    while lst:
+        w, d = heapq.heappop(lst)
+        for i in range(d, 0, -1):
+            if chk[i]:
+                continue
+            chk[i] = 1
+            result += -w
+            break
+    print(result)
+q13904()
