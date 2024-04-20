@@ -3709,4 +3709,17 @@ def q23028():
             chk = True
             break
     print('Nice' if chk else 'Nae ga wae')
-q23028()
+
+
+def q28136():
+    # 백준 28136번 파이썬 원, 탁!
+    n = int(input())
+    lst = list(map(int, input().split()))
+    result = 0
+    for i in range(n - 1):
+        if lst[i] >= lst[i + 1]:
+            result += 1
+    if lst[0] <= lst[-1]:
+        result += 1
+    print(result)
+q28136()
