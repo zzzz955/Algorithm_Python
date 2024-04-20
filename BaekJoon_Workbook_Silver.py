@@ -2538,7 +2538,7 @@ def q9733():
 
     lines = sys.stdin.readlines()
     length = 0
-    dic = {'Re':0,'Pt':0,'Cc':0,'Ea':0,'Tb':0,'Cm':0,'Ex':0}
+    dic = {'Re': 0, 'Pt': 0, 'Cc': 0, 'Ea': 0, 'Tb': 0, 'Cm': 0, 'Ex': 0}
     for line in lines:
         lst = line.split()
         for work in lst:
@@ -3314,7 +3314,7 @@ def q25329():
     result = []
     for key, val in dic.items():
         result.append((key, price_cal(val)))
-    result = sorted(result, key= lambda x: (-x[1], x[0]))
+    result = sorted(result, key=lambda x: (-x[1], x[0]))
     for i in result:
         print(*i)
 
@@ -3625,8 +3625,8 @@ def q12034():
         lst = list(map(int, input().split()))
         result = []
         for i in lst:
-            if int(i * (4/3)) in lst:
-                lst.remove(int(i * (4/3)))
+            if int(i * (4 / 3)) in lst:
+                lst.remove(int(i * (4 / 3)))
                 result.append(str(i))
         print(f'Case #{case}: {" ".join(result)}')
 
@@ -3687,4 +3687,26 @@ def q12033():
                 lst.remove(int(i * (4 / 3)))
                 result.append(str(i))
         print(f'Case #{case}: {" ".join(result)}')
-q12033()
+
+
+def q23028():
+    # 백준 23028번 파이썬 5학년은 다니기 싫어요
+    n, a, b = map(int, input().split())
+    lst = []
+    chk = False
+    for _ in range(10):
+        x, y = map(int, input().split())
+        lst.append((x, y))
+    for i in range(8 - n):
+        can = 6
+        if a < 66:
+            a += lst[i][0] * 3
+            b += lst[i][0] * 3
+            can -= lst[i][0]
+        if can:
+            b += min(can, lst[i][1]) * 3
+        if a >= 66 and b >= 130:
+            chk = True
+            break
+    print('Nice' if chk else 'Nae ga wae')
+q23028()
