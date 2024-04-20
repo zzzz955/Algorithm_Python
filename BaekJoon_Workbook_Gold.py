@@ -54,4 +54,26 @@ def q27396():
                     s[i] = dic[s[i]]
             dic.clear()
             print(''.join(s))
-q27396()
+
+
+def q1715():
+    # 백준 1715번 파이썬 카드 정렬하기
+    import sys, heapq
+
+    n = int(sys.stdin.readline())
+    lst = []
+    for _ in range(n):
+        heapq.heappush(lst, int(sys.stdin.readline()))
+    if len(lst) == 1:
+        print(0)
+        return
+    else:
+        result = 0
+        while len(lst) > 1:
+            a = heapq.heappop(lst)
+            b = heapq.heappop(lst)
+            result += a + b
+            heapq.heappush(lst, a + b)
+        print(result)
+q1715()
+
