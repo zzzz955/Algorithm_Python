@@ -119,4 +119,25 @@ def q2879():
         else:
             dp[i] = dp[i - 1] + abs(temp[i])
     print(dp[n - 1])
-q2879()
+
+
+def q8980():
+    # 백준 8980번 파이썬 택배
+    import sys
+
+    n, c = map(int, sys.stdin.readline().split())
+    m = int(sys.stdin.readline())
+    lst = [list(map(int, sys.stdin.readline().split())) for _ in range(m)]
+    lst.sort(key=lambda x: x[1])
+    result = 0
+    limit = [c] * (n + 1)
+    for i in range(m):
+        temp = c
+        for j in range(lst[i][0], lst[i][1]):
+            temp = min(temp, limit[j])
+        temp = min(temp, lst[i][2])
+        for k in range(lst[i][0], lst[i][1]):
+            limit[k] -= temp
+        result += temp
+    print(result)
+q8980()
