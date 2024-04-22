@@ -3779,6 +3779,21 @@ def q11497():
         for i in range(n - 1):
             result = max(result, abs(deq[i] - deq[i + 1]))
         print(result)
-q11497()
 
 
+def q1105():
+    # 백준 1105번 파이썬 팔
+    l, r = input().split()
+    if len(l) != len(r) or not l.count('8') or not r.count('8'):
+        print(0)
+        return
+    else:
+        result = 0
+        for i in range(len(l)):
+            if l[i] == r[i]:
+                if l[i] == '8':
+                    result += 1
+            else:
+                break
+        print(result)
+q1105()
