@@ -3740,4 +3740,19 @@ def q1946():
                 top = i[1]
                 result += 1
         print(result)
-q1946()
+
+
+def q15903():
+    # 백준 15903번 파이썬 카드 합체 놀이
+    import heapq
+
+    n, m = map(int, input().split())
+    lst = list(map(int, input().split()))
+    heapq.heapify(lst)
+    for i in range(m):
+        a, b = heapq.heappop(lst), heapq.heappop(lst)
+        a, b = a + b, a + b
+        heapq.heappush(lst, a)
+        heapq.heappush(lst, b)
+    print(sum(lst))
+q15903()
