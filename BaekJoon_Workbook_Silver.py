@@ -3755,4 +3755,30 @@ def q15903():
         heapq.heappush(lst, a)
         heapq.heappush(lst, b)
     print(sum(lst))
-q15903()
+
+
+def q11497():
+    # 백준 11497번 파이썬 통나무 건너뛰기
+    import sys, collections
+
+    t = int(sys.stdin.readline())
+    for _ in range(t):
+        n = int(sys.stdin.readline())
+        lst = list(map(int, sys.stdin.readline().split()))
+        lst.sort(reverse=True)
+        deq = collections.deque()
+        chk = True
+        for i in lst:
+            if chk:
+                deq.appendleft(i)
+                chk = False
+            else:
+                deq.append(i)
+                chk = True
+        result = 0
+        for i in range(n - 1):
+            result = max(result, abs(deq[i] - deq[i + 1]))
+        print(result)
+q11497()
+
+
