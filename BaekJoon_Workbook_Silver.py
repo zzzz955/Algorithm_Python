@@ -3796,4 +3796,20 @@ def q1105():
             else:
                 break
         print(result)
-q1105()
+
+
+def q1676():
+    # 백준 1676번 파이썬 팩토리얼 0의 개수
+    n = int(input())
+    dp = [1] * (n + 1)
+    for i in range(1, n + 1):
+        dp[i] = dp[i - 1] * i
+    s = str(dp[n])[::-1]
+    result = 0
+    for char in s:
+        if char == '0':
+            result += 1
+        else:
+            break
+    print(result)
+q1676()
