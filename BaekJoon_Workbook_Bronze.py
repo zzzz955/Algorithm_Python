@@ -1851,4 +1851,13 @@ def q27951():
                 result += 'D'
     print('YES')
     print(result)
-q27951()
+
+
+def q1259():
+    # 백준 1259번 파이썬 팰린드롬수
+    while 1:
+        s = input()
+        if s == '0':
+            break
+        print('yes' if s == s[::-1] else 'no')
+q1259()
