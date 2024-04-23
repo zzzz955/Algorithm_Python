@@ -3812,4 +3812,28 @@ def q1676():
         else:
             break
     print(result)
-q1676()
+
+
+def q1874():
+    # 백준 1874번 파이썬 스택 수열
+    import sys
+
+    n = int(sys.stdin.readline())
+    lst = [int(sys.stdin.readline()) for _ in range(n)]
+    stack = [0]
+    op = []
+    num = 1
+    for i in lst:
+        while num <= i:
+            stack.append(num)
+            op.append('+')
+            num += 1
+        if stack[-1] == i:
+            stack.pop()
+            op.append('-')
+        else:
+            print('NO')
+            return
+    for i in op:
+        print(i)
+q1874()
