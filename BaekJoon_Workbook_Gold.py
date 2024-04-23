@@ -140,4 +140,16 @@ def q8980():
             limit[k] -= temp
         result += temp
     print(result)
-q8980()
+
+
+def q12904():
+    # 백준 12904번 파이썬 A와 B
+    s = input()
+    t = input()
+    for i in range(len(t) - len(s)):
+        if t[-1] == 'A':
+            t = t[:-1]
+        else:
+            t = t[:-1][::-1]
+    print(1 if s == t else 0)
+q12904()
