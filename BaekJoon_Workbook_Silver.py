@@ -3878,5 +3878,28 @@ def q18110():
     if rd:
         lst = lst[rd:-rd]
     print(int(sum(lst) / len(lst) + 0.5))
-q18110()
 
+
+def q18111():
+    # 백준 18111번 파이썬 마인크래프트
+    import sys
+
+    n, m, b = map(int, sys.stdin.readline().split())
+    lst = []
+    for _ in range(n):
+        lst.extend(map(int, sys.stdin.readline().split()))
+    sec = [0 for i in range(257)]
+    h = 0
+    for i in range(257):
+        block = b
+        for j in lst:
+            if j <= i:
+                sec[i] += i - j
+                block -= i - j
+            else:
+                sec[i] += 2 * (j - i)
+                block += j - i
+        if block >= 0 and sec[i] <= sec[h]:
+            h = i
+    print(sec[h], h)
+q18111()
