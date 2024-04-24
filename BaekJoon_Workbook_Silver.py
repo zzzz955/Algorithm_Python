@@ -3836,4 +3836,31 @@ def q1874():
             return
     for i in op:
         print(i)
-q1874()
+
+
+def q1966():
+    # 백준 1966번 파이썬 프린터 큐
+    import collections
+
+    t = int(input())
+    for _ in range(t):
+        n, m = map(int, input().split())
+        prio = collections.deque(list(map(int, input().split())))
+        deq = collections.deque([i for i in range(n)])
+        want = deq[m]
+        result = 0
+        max_prio = max(list(prio))
+        while 1:
+            if prio[0] == max_prio:
+                result += 1
+                prio.popleft()
+                chk = deq.popleft()
+                if chk == want:
+                    break
+                max_prio = max(list(prio))
+            else:
+                prio.append(prio.popleft())
+                deq.append(deq.popleft())
+        print(result)
+q1966()
+
