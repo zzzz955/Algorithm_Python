@@ -1860,4 +1860,14 @@ def q1259():
         if s == '0':
             break
         print('yes' if s == s[::-1] else 'no')
-q1259()
+
+
+def q4153():
+    # 백준 4153번 파이썬 직각삼각형
+    while 1:
+        a, b, c = map(int, input().split())
+        if a == b == c == 0:
+            break
+        lst = sorted([a, b, c])
+        print('right' if lst[0] ** 2 + lst[1] ** 2 == lst[2] ** 2 else 'wrong')
+q4153()
