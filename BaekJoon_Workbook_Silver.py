@@ -3862,5 +3862,21 @@ def q1966():
                 prio.append(prio.popleft())
                 deq.append(deq.popleft())
         print(result)
-q1966()
+
+
+def q18110():
+    # 백준 18110번 파이썬 solved.ac
+    import sys
+
+    n = int(sys.stdin.readline())
+    if n == 0:
+        print(0)
+        return
+    lst = [int(sys.stdin.readline()) for _ in range(n)]
+    rd = int(len(lst) * 15 / 100 + 0.5)
+    lst.sort()
+    if rd:
+        lst = lst[rd:-rd]
+    print(int(sum(lst) / len(lst) + 0.5))
+q18110()
 
