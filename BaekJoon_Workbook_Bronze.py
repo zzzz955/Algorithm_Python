@@ -1870,4 +1870,18 @@ def q4153():
             break
         lst = sorted([a, b, c])
         print('right' if lst[0] ** 2 + lst[1] ** 2 == lst[2] ** 2 else 'wrong')
-q4153()
+
+
+def q15829():
+    # 백준 15829번 파이썬 Hashing
+    l = int(input())
+    s = input()
+    result = 0
+
+    def do_hash(string, i):
+        return (ord(string) - 96) * (31 ** i)
+
+    for i in range(l):
+        result += do_hash(s[i], i)
+    print(result % 1234567891)
+q15829()
