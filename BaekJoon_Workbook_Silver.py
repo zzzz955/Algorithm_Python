@@ -3942,5 +3942,15 @@ def q9375():
         for i in dic.values():
             result *= len(i)
         print(result - 1)
-q9375()
+
+
+def q11726():
+    # 백준 11726번 파이썬 2×n 타일링
+    n = int(input())
+    dp = [0 for _ in range(n + 1)]
+    dp[0], dp[1] = 1, 1
+    for i in range(2, n + 1):
+        dp[i] = (dp[i - 1] + dp[i - 2]) % 10007
+    print(dp[n])
+q11726()
 
