@@ -3923,4 +3923,24 @@ def q2606():
 
     dfs(1)
     print(sum(visited) - 1)
-q2606()
+
+
+def q9375():
+    # 백준 9375번 파이썬 패션왕 신해빈
+    t = int(input())
+    for _ in range(t):
+        n = int(input())
+        dic = {}
+        for _ in range(n):
+            a, b = input().split()
+            if b in dic:
+                dic[b].append(a)
+            else:
+                dic[b] = ['']
+                dic[b].append(a)
+        result = 1
+        for i in dic.values():
+            result *= len(i)
+        print(result - 1)
+q9375()
+
