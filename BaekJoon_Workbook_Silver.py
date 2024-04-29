@@ -3962,5 +3962,23 @@ def q11727():
     for i in range(2, n + 1):
         dp[i] = (dp[i - 1] + 2 * (dp[i - 2])) % 10007
     print(dp[n])
-q11727()
 
+
+def q17626():
+    # 백준 17626번 파이썬 Four Squares
+    n = int(input())
+    dp = [0 if i ** 0.5 % 1 else 1 for i in range(n + 1)]
+    result = 4
+    for i in range(int(n ** 0.5), 0, -1):
+        if dp[n]:
+            result = 1
+            break
+        elif dp[n - i ** 2]:
+            result = 2
+            break
+        else:
+            for j in range(int((n - i ** 2) ** 0.5), 0, -1):
+                if dp[(n - i ** 2) - j ** 2]:
+                    result = 3
+    print(result)
+q17626()
