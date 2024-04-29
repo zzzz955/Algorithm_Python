@@ -3952,5 +3952,15 @@ def q11726():
     for i in range(2, n + 1):
         dp[i] = (dp[i - 1] + dp[i - 2]) % 10007
     print(dp[n])
-q11726()
+
+
+def q11727():
+    # 백준 11727번 파이썬 2×n 타일링 2
+    n = int(input())
+    dp = [0 for _ in range(n + 1)]
+    dp[0], dp[1] = 1, 1
+    for i in range(2, n + 1):
+        dp[i] = (dp[i - 1] + 2 * (dp[i - 2])) % 10007
+    print(dp[n])
+q11727()
 
