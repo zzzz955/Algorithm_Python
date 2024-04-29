@@ -3981,4 +3981,21 @@ def q17626():
                 if dp[(n - i ** 2) - j ** 2]:
                     result = 3
     print(result)
-q17626()
+
+
+def q11279():
+    # 백준 11279번 파이썬 최대 힙
+    import sys, heapq
+
+    n = int(sys.stdin.readline())
+    lst = []
+    for _ in range(n):
+        x = int(sys.stdin.readline())
+        if x:
+            heapq.heappush(lst, -x)
+        else:
+            if lst:
+                print(-heapq.heappop(lst))
+            else:
+                print(0)
+q11279()
