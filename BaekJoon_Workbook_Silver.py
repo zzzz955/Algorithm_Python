@@ -4017,5 +4017,29 @@ def q5525():
             index += 1
             current = 0
     print(result)
-q5525()
+
+
+def q11286():
+    # 백준 11286번 파이썬 절댓값 힙
+    import sys, heapq
+
+    n = int(sys.stdin.readline())
+    lst = []
+    for _ in range(n):
+        x = int(sys.stdin.readline())
+        if x != 0:
+            if x < 0:
+                heapq.heappush(lst, (-x, 0))
+            else:
+                heapq.heappush(lst, (x, 1))
+        else:
+            if lst:
+                ans = heapq.heappop(lst)
+                if ans[1]:
+                    print(ans[0])
+                else:
+                    print(-ans[0])
+            else:
+                print(0)
+q11286()
 
