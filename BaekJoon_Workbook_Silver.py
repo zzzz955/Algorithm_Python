@@ -3998,4 +3998,24 @@ def q11279():
                 print(-heapq.heappop(lst))
             else:
                 print(0)
-q11279()
+
+
+def q5525():
+    # 백준 5525번 파이썬 IOIOI
+    n = int(input())
+    m = int(input())
+    s = input()
+    result, index, current = 0, 0, 0
+    while index < m - 2:
+        if s[index:index + 3] == 'IOI':
+            index += 2
+            current += 1
+            if current == n:
+                current -= 1
+                result += 1
+        else:
+            index += 1
+            current = 0
+    print(result)
+q5525()
+
