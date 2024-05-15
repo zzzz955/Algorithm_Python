@@ -4059,6 +4059,26 @@ def q30088():
         last += num
         result.append(last)
     print(sum(result))
-q30088()
 
+
+def q28470():
+    # 백준 28470번 파이썬 슥~빡! 빡~슥!
+    from math import floor
+
+    n = int(input())
+    att = list(map(int, input().split()))
+    avi = list(map(int, input().split()))
+    k = list(map(float, input().split()))
+    result = 0
+    for i in range(n):
+        at = floor(att[i] * (k[i] * 10)) // 10
+        av = floor(avi[i] * (k[i] * 10)) // 10
+        if k[i] >= 1:
+            result += at
+            result -= avi[i]
+        else:
+            result += att[i]
+            result -= av
+    print(result)
+q28470()
 
