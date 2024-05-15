@@ -4041,5 +4041,24 @@ def q11286():
                     print(-ans[0])
             else:
                 print(0)
-q11286()
+
+
+def q30088():
+    # 백준 30088번 파이썬 공포의 면담실
+    import sys
+
+    n = int(sys.stdin.readline())
+    dic = {}
+    for i in range(n):
+        lst = list(map(int, sys.stdin.readline().split()))
+        dic[i] = sum(lst[1:])
+    sort = sorted(dic.values())
+    result = []
+    last = 0
+    for num in sort:
+        last += num
+        result.append(last)
+    print(sum(result))
+q30088()
+
 
