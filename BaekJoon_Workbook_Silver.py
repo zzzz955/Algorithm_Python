@@ -4080,5 +4080,49 @@ def q28470():
             result += att[i]
             result -= av
     print(result)
-q28470()
 
+
+def q29812():
+    # 백준 29812번 파이썬 아니 이게 왜 안 돼
+    n = int(input())
+    s = input()
+    d, m = map(int, input().split())
+    cnt_h = cnt_y = cnt_u = 0
+    energy = 0
+    cnt = 0
+    for char in s:
+        if char == 'H':
+            cnt_h += 1
+            if cnt == 1:
+                cnt = 0
+                energy += d
+            if cnt > 1:
+                energy += min(d + m, cnt * d)
+                cnt = 0
+        elif char == 'Y':
+            cnt_y += 1
+            if cnt == 1:
+                cnt = 0
+                energy += d
+            if cnt > 1:
+                energy += min(d + m, cnt * d)
+                cnt = 0
+        elif char == 'U':
+            cnt_u += 1
+            if cnt == 1:
+                cnt = 0
+                energy += d
+            if cnt > 1:
+                energy += min(d + m, cnt * d)
+                cnt = 0
+        else:
+            cnt += 1
+    if cnt == 1:
+        cnt = 0
+        energy += d
+    if cnt > 1:
+        energy += min(d + m, cnt * d)
+    max_val = min(cnt_h, cnt_y, cnt_u)
+    print(energy if energy else 'Nalmeok')
+    print(max_val if max_val else 'I love HanYang University')
+q29812()
