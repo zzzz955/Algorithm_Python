@@ -4138,4 +4138,23 @@ def q1026():
     for i in range(n):
         result += a[i] * b[i]
     print(result)
-q1026()
+
+
+def q2217():
+    # 백준 2217번 파이썬 로프
+    import sys
+
+    n = int(sys.stdin.readline())
+    lst = []
+    for _ in range(n):
+        lst.append(int(sys.stdin.readline()))
+    lst.sort(reverse=True)
+    max_val = lst[0]
+    cnt = 1
+    for i in range(1, n):
+        cnt += 1
+        temp = max(max_val, lst[i] * cnt)
+        if temp > max_val:
+            max_val = temp
+    print(max_val)
+q2217()
