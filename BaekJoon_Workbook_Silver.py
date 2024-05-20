@@ -4125,4 +4125,17 @@ def q29812():
     max_val = min(cnt_h, cnt_y, cnt_u)
     print(energy if energy else 'Nalmeok')
     print(max_val if max_val else 'I love HanYang University')
-q29812()
+
+
+def q1026():
+    # 백준 1026번 파이썬 보물
+    n = int(input())
+    a = list(map(int, input().split()))
+    b = list(map(int, input().split()))
+    a.sort()
+    b.sort(reverse=True)
+    result = 0
+    for i in range(n):
+        result += a[i] * b[i]
+    print(result)
+q1026()
