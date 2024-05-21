@@ -4157,4 +4157,16 @@ def q2217():
         if temp > max_val:
             max_val = temp
     print(max_val)
-q2217()
+
+
+def q10610():
+    # 백준 10610번 파이썬 30
+    n = sorted(list(input()), reverse=True)
+    if n[-1] != '0':
+        print(-1)
+    else:
+        result = 0
+        for i in n:
+            result += int(i)
+        print(-1 if result % 3 else ''.join(n))
+q10610()
