@@ -4169,4 +4169,32 @@ def q10610():
         for i in n:
             result += int(i)
         print(-1 if result % 3 else ''.join(n))
-q10610()
+
+
+def q1049():
+    # 백준 1049번 파이썬 기타줄
+    n, m = map(int, input().split())
+    mp = 1000
+    mo = 1000
+    for _ in range(m):
+        p, o = map(int, input().split())
+        mp = min(p, mp)
+        mo = min(o, mo)
+    price = 0
+    while n > 0:
+        if n >= 6:
+            if mp < mo * 6:
+                price += mp
+                n -= 6
+            else:
+                price += mo * 6
+                n -= 6
+        else:
+            if mp < mo * n:
+                price += mp
+                n = 0
+            else:
+                price += mo * n
+                n = 0
+    print(price)
+q1049()
