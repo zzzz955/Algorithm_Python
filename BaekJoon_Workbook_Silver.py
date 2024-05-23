@@ -4197,4 +4197,20 @@ def q1049():
                 price += mo * n
                 n = 0
     print(price)
-q1049()
+
+
+def q2847():
+    # 백준 2847번 파이썬 게임을 만든 동준이
+    n = int(input())
+    lst = []
+    for _ in range(n):
+        lst.append(int(input()))
+    lst.reverse()
+    result = 0
+    for i in range(1, n):
+        if lst[i] >= lst[i - 1]:
+            temp = lst[i - 1] - 1
+            result += lst[i] - temp
+            lst[i] = temp
+    print(result)
+q2847()
