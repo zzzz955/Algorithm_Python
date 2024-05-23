@@ -4213,4 +4213,32 @@ def q2847():
             result += lst[i] - temp
             lst[i] = temp
     print(result)
-q2847()
+
+
+def q1969():
+    # 백준 1969번 파이썬 DNA
+    n, m = map(int, input().split())
+    lst = []
+    word = ''
+    for _ in range(n):
+        lst.append(input())
+    for i in range(m):
+        acgt = [0, 0, 0, 0]
+        for j in lst:
+            if j[i] == 'A': acgt[0] += 1
+            if j[i] == 'C': acgt[1] += 1
+            if j[i] == 'G': acgt[2] += 1
+            if j[i] == 'T': acgt[3] += 1
+        max_val = max(acgt)
+        if acgt[0] == max_val: word += 'A'
+        elif acgt[1] == max_val: word += 'C'
+        elif acgt[2] == max_val: word += 'G'
+        else: word += 'T'
+    print(word)
+    cnt = 0
+    for i in lst:
+        for j in range(m):
+            if i[j] != word[j]:
+                cnt += 1
+    print(cnt)
+q1969()
