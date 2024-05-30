@@ -4241,4 +4241,19 @@ def q1969():
             if i[j] != word[j]:
                 cnt += 1
     print(cnt)
-q1969()
+
+
+def q1758():
+    # 백준 1758번 파이썬 알바생 강호
+    n = int(input())
+    lst = []
+    for _ in range(n):
+        lst.append(int(input()))
+    lst.sort(reverse=True)
+    result = 0
+    for i in range(n):
+        t = lst[i] - i
+        if t > 0:
+            result += t
+    print(result)
+q1758()
