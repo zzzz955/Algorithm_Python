@@ -4339,4 +4339,15 @@ def q1246():
         if index == 0:
             index = lst[min(n, m)]
     print(index, mv)
-q1246()
+
+
+def q20044():
+    # 백준 20044번 파이썬 Project Teams
+    n = int(input())
+    lst = list(map(int, input().split()))
+    lst.sort()
+    mv = 200000
+    for i in range(n):
+        mv = min(mv, lst[i] + lst[-i - 1])
+    print(mv)
+q20044()
