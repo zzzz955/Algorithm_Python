@@ -4350,4 +4350,28 @@ def q20044():
     for i in range(n):
         mv = min(mv, lst[i] + lst[-i - 1])
     print(mv)
-q20044()
+
+
+def q13413():
+    # 백준 13413번 파이썬 오셀로 재배치
+    t = int(input())
+    for _ in range(t):
+        n = int(input())
+        s1 = list(input())
+        s2 = list(input())
+        result = 0
+        wrong = 0
+        s1w = 0
+        s2w = 0
+        for i in range(n):
+            if s1[i] != s2[i]:
+                wrong += 1
+            if s1[i] == 'W':
+                s1w += 1
+            if s2[i] == 'W':
+                s2w += 1
+        wrong -= abs(s1w - s2w)
+        result += abs(s1w - s2w)
+        result += wrong // 2
+        print(result)
+q13413()
