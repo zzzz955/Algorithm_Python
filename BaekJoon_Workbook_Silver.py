@@ -4374,4 +4374,24 @@ def q13413():
         result += abs(s1w - s2w)
         result += wrong // 2
         print(result)
-q13413()
+
+
+def q3213():
+    # 백준 3213번 파이썬 피자
+    import math
+
+    n = int(input())
+    dic = {'1/2': 0, '1/4': 0, '3/4': 0}
+    result = 0
+    for _ in range(n):
+        dic[input()] += 1
+    result += math.ceil(dic['1/2'] / 2)
+    result += dic['3/4']
+    if dic['1/4'] > 0:
+        dic['1/4'] -= dic['3/4']
+    if dic['1/4'] > 0 and dic['1/2'] % 2:
+        dic['1/4'] -= 2
+    if dic['1/4'] > 0:
+        result += math.ceil(dic['1/4'] / 4)
+    print(result)
+q3213()
