@@ -4274,4 +4274,30 @@ def q11508():
     if n % 3 == 2:
         result += lst[n - 2] + lst[n - 1]
     print(result)
-q11508()
+
+
+def q19939():
+    # 백준 19939번 파이썬 박 터뜨리기
+    n, k = map(int, input().split())
+    dp = [i for i in range(1, k + 1)]
+    dp_sum = [1] * k
+    for i in range(1, k):
+        dp_sum[i] = dp_sum[i - 1] + dp[i]
+    if n < dp_sum[k - 1]:
+        print(-1)
+        return
+    else:
+        if n % k:
+            if k % 2:
+                print(k)
+            else:
+                if n % k == k // 2:
+                    print(k - 1)
+                else:
+                    print(k)
+        else:
+            if k % 2:
+                print(k - 1)
+            else:
+                print(k)
+q19939()
