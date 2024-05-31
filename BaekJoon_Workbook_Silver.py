@@ -4300,4 +4300,22 @@ def q19939():
                 print(k - 1)
             else:
                 print(k)
-q19939()
+
+
+def q14469():
+    # 백준 14469번 파이썬 소가 길을 건너간 이유 3
+    n = int(input())
+    lst = []
+    for _ in range(n):
+        lst.append(list(map(int, input().split())))
+    lst.sort()
+    result = 0
+    for i in range(n):
+        if result < lst[i][0]:
+            result = 0
+            result += lst[i][0] + lst[i][1]
+        else:
+            result += lst[i][1]
+    print(result)
+q14469()
+
