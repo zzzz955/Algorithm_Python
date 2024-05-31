@@ -4394,4 +4394,26 @@ def q3213():
     if dic['1/4'] > 0:
         result += math.ceil(dic['1/4'] / 4)
     print(result)
-q3213()
+
+
+def q25379():
+    # 백준 25379번 파이썬 피하자
+    n = int(input())
+    lst = list(map(int, input().split()))
+    result1 = 0
+    result2 = 0
+    temp = 0
+    for i in range(n):
+        if lst[i] % 2:
+            temp += 1
+        else:
+            result1 += temp
+    lst.reverse()
+    temp = 0
+    for i in range(n):
+        if lst[i] % 2:
+            temp += 1
+        else:
+            result2 += temp
+    print(min(result1, result2))
+q25379()
