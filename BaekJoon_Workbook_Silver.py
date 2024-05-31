@@ -4256,4 +4256,22 @@ def q1758():
         if t > 0:
             result += t
     print(result)
-q1758()
+
+
+def q11508():
+    # 백준 11508번 파이썬 2+1 세일
+    n = int(input())
+    lst = []
+    for _ in range(n):
+        lst.append(int(input()))
+    lst.sort(reverse=True)
+    result = 0
+    b = n // 3
+    for i in range(b):
+        result += lst[3 * i] + lst[3 * i + 1]
+    if n % 3 == 1:
+        result += lst[n - 1]
+    if n % 3 == 2:
+        result += lst[n - 2] + lst[n - 1]
+    print(result)
+q11508()
