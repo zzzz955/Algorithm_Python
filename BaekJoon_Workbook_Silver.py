@@ -4317,5 +4317,26 @@ def q14469():
         else:
             result += lst[i][1]
     print(result)
-q14469()
 
+
+def q1246():
+    # 백준 1246번 파이썬 온라인 판매
+    n, m = map(int, input().split())
+    lst = []
+    for _ in range(m):
+        lst.append(int(input()))
+    lst.sort(reverse=True)
+    mv = 0
+    index = 0
+    if n == 1 or m == 1:
+        print(lst[0], lst[0])
+        return
+    else:
+        for i in range(min(n, m)):
+            if mv < lst[i] * (i + 1):
+                mv = lst[i] * (i + 1)
+                index = lst[i]
+        if index == 0:
+            index = lst[min(n, m)]
+    print(index, mv)
+q1246()
