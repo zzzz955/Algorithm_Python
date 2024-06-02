@@ -4523,4 +4523,17 @@ def q12927():
                         lst[i + j * (i + 1)] = 'Y'
                 result += 1
         print(result if lst.count('Y') == 0 else -1)
-q12927()
+
+
+def q2865():
+    # 백준 2865번 파이썬 나는 위대한 슈퍼스타K
+    n, m, k = map(int, input().split())
+    dic = {}
+    for i in range(n):
+        dic[i + 1] = 0
+    for i in range(m):
+        point = input().split()
+        for j in range(0, 2 * n, 2):
+            dic[int(point[j])] = max(dic[int(point[j])], float(point[j + 1]))
+    print('%.1f' % sum(sorted(dic.values(), reverse=True)[:k]))
+q2865()
