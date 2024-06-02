@@ -4444,4 +4444,21 @@ def q17521():
     if coin:
         w += coin * lst[n - 1]
     print(w)
-q17521()
+
+
+def q28324():
+    # 백준 28324번 파이썬 스케이트 연습
+    n = int(input())
+    lst = list(map(int, input().split()))
+    lst.reverse()
+    speed = 0
+    result = 0
+    for i in range(n):
+        if lst[i] > speed:
+            speed += 1
+            result += speed
+        else:
+            result += lst[i]
+            speed = lst[i]
+    print(result)
+q28324()
