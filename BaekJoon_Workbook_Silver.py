@@ -4503,5 +4503,24 @@ def q12788():
         else:
             break
     print(result)
-q12788()
 
+
+def q12927():
+    # 백준 12927번 파이썬 배수 스위치
+    lst = list(input())
+    length = len(lst)
+    result = 0
+    if lst.count('Y') == 0:
+        print(0)
+        return
+    else:
+        for i in range(length):
+            if lst[i] == 'Y':
+                for j in range(length // (i + 1)):
+                    if lst[i + j * (i + 1)] == 'Y':
+                        lst[i + j * (i + 1)] = 'N'
+                    else:
+                        lst[i + j * (i + 1)] = 'Y'
+                result += 1
+        print(result if lst.count('Y') == 0 else -1)
+q12927()
