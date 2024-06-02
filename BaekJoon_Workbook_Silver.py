@@ -4416,4 +4416,15 @@ def q25379():
         else:
             result2 += temp
     print(min(result1, result2))
-q25379()
+
+
+def q20186():
+    # 백준 20186번 파이썬 수 고르기
+    n, k = map(int, input().split())
+    lst = list(map(int, input().split()))
+    lst.sort(reverse=True)
+    lst = lst[:k]
+    for i in range(k):
+        lst[i] = lst[i] - i
+    print(sum(lst))
+q20186()
