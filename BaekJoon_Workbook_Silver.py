@@ -4427,4 +4427,21 @@ def q20186():
     for i in range(k):
         lst[i] = lst[i] - i
     print(sum(lst))
-q20186()
+
+
+def q17521():
+    # 백준 17521번 파이썬 Byte Coin
+    n, w = map(int, input().split())
+    lst = [int(input()) for _ in range(n)]
+    coin = 0
+    for i in range(n - 1):
+        if lst[i] < lst[i + 1] and w // lst[i]:
+            coin += w // lst[i]
+            w %= lst[i]
+        elif lst[i] > lst[i + 1] and coin:
+            w += coin * lst[i]
+            coin = 0
+    if coin:
+        w += coin * lst[n - 1]
+    print(w)
+q17521()
