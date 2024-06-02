@@ -4483,4 +4483,25 @@ def q12782():
         result += abs(n1 - m1)
         result += wrong // 2
         print(result)
-q12782()
+
+
+def q12788():
+    # 백준 12788번 파이썬 제 2회 IUPC는 잘 개최될 수 있을까?
+    n = int(input())
+    m, k = map(int, input().split())
+    lst = list(map(int, input().split()))
+    lst.sort(reverse=True)
+    need = m * k
+    if need > sum(lst):
+        print('STRESS')
+        return
+    result = 0
+    while 1:
+        if need > 0:
+            need -= lst[result]
+            result += 1
+        else:
+            break
+    print(result)
+q12788()
+
