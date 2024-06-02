@@ -4461,4 +4461,26 @@ def q28324():
             result += lst[i]
             speed = lst[i]
     print(result)
-q28324()
+
+
+def q12782():
+    # 백준 12782번 파이썬 비트 우정지수
+    t = int(input())
+    for _ in range(t):
+        n, m = map(str, input().split())
+        result = 0
+        wrong = 0
+        n1 = 0
+        m1 = 0
+        for i in range(len(n)):
+            if n[i] != m[i]:
+                wrong += 1
+            if n[i] == '1':
+                n1 += 1
+            if m[i] == '1':
+                m1 += 1
+        wrong -= abs(n1 - m1)
+        result += abs(n1 - m1)
+        result += wrong // 2
+        print(result)
+q12782()
