@@ -4536,4 +4536,20 @@ def q2865():
         for j in range(0, 2 * n, 2):
             dic[int(point[j])] = max(dic[int(point[j])], float(point[j + 1]))
     print('%.1f' % sum(sorted(dic.values(), reverse=True)[:k]))
-q2865()
+
+
+def q17262():
+    # 백준 17262번 파이썬 팬덤이 넘쳐흘러
+    import sys
+
+    n = int(sys.stdin.readline())
+    lst = []
+    for _ in range(n):
+        s, e = map(int, sys.stdin.readline().split())
+        lst.append((s, e))
+    lst.sort(reverse=True)
+    max_s = lst[0][0]
+    lst.sort(key=lambda x: (x[1]))
+    min_e = lst[0][1]
+    print(max(0, max_s - min_e))
+q17262()
