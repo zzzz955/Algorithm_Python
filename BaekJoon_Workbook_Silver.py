@@ -4552,4 +4552,22 @@ def q17262():
     lst.sort(key=lambda x: (x[1]))
     min_e = lst[0][1]
     print(max(0, max_s - min_e))
-q17262()
+
+
+def q22993():
+    # 백준 22993번 파이썬 서든어택 3
+    n = int(input())
+    lst = list(map(int, input().split()))
+    if n == 1:
+        print('Yes')
+        return
+    p = lst.pop(0)
+    lst.sort()
+    max_val = max(lst)
+    for i in range(n - 1):
+        if p > lst[i]:
+            p += lst[i]
+        else:
+            break
+    print('Yes' if p > max_val else 'No')
+q22993()
