@@ -4603,4 +4603,16 @@ def q20937():
         else:
             dic[i] = 1
     print(max(dic.values()))
-q20937()
+
+
+def q16162():
+    # 백준 16162번 파이썬 가희와 3단 고음
+    n, a, d = map(int, input().split())
+    lst = list(map(int, input().split()))
+    result = 0
+    for i in range(n):
+        if lst[i] == a:
+            result += 1
+            a += d
+    print(result)
+q16162()
