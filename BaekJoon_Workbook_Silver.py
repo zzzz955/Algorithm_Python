@@ -4577,4 +4577,17 @@ def q20363():
     x, y = map(int, input().split())
     lst = sorted([x, y])
     print(lst[1] + int(lst[0] / 10) + lst[0])
-q20363()
+
+
+def q24498():
+    # 백준 24498번 파이썬 blobnom
+    n = int(input())
+    lst = list(map(int, input().split()))
+    result = 0
+    if n < 3:
+        print(max(lst))
+    else:
+        for i in range(1, n - 1):
+            result = max(result, lst[i] + min(lst[i - 1], lst[i + 1]))
+        print(max(result, lst[0], lst[-1]))
+q24498()
