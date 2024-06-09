@@ -4570,4 +4570,11 @@ def q22993():
         else:
             break
     print('Yes' if p > max_val else 'No')
-q22993()
+
+
+def q20363():
+    # 백준 20363번 파이썬 당근 키우기
+    x, y = map(int, input().split())
+    lst = sorted([x, y])
+    print(lst[1] + int(lst[0] / 10) + lst[0])
+q20363()
