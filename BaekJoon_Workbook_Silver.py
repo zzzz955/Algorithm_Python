@@ -4590,4 +4590,17 @@ def q24498():
         for i in range(1, n - 1):
             result = max(result, lst[i] + min(lst[i - 1], lst[i + 1]))
         print(max(result, lst[0], lst[-1]))
-q24498()
+
+
+def q20937():
+    # 백준 20937번 파이썬 떡국
+    n = int(input())
+    lst = list(map(int, input().split()))
+    dic = {}
+    for i in lst:
+        if i in dic:
+            dic[i] += 1
+        else:
+            dic[i] = 1
+    print(max(dic.values()))
+q20937()
