@@ -4661,4 +4661,31 @@ def q26099():
     if val5 < 0:
         val5 = 0
     print(val5 + val3 if val5 * 5 + val3 * 3 == n else -1)
-q26099()
+
+
+def q25943():
+    # 백준 25943번 파이썬 양팔저울
+    n = int(input())
+    lst = list(map(int, input().split()))
+    left = lst[0]
+    right = lst[1]
+    w = [100, 50, 20, 10, 5, 2, 1]
+    result = 0
+    for i in range(2, n):
+        if left == right:
+            left += lst[i]
+        else:
+            if left > right:
+                right += lst[i]
+            else:
+                left += lst[i]
+    if left > right:
+        right, left = left, right
+    for i in w:
+        if left == right:
+            break
+        else:
+            result += (right - left) // i
+            left += (right - left) // i * i
+    print(result)
+q25943()
