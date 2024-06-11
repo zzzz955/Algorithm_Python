@@ -4615,4 +4615,22 @@ def q16162():
             result += 1
             a += d
     print(result)
-q16162()
+
+
+def q27919():
+    # 백준 27919번 파이썬 UDPC 파티
+    v = input()
+    dic = {'U': 0, 'D': 0}
+    for i in v:
+        if i == 'U' or i == 'C':
+            dic['U'] += 1
+        else:
+            dic['D'] += 1
+    if dic['D']:
+        if dic['U'] > dic['D'] // 2 + dic['D'] % 2:
+            print('UDP')
+        else:
+            print('DP')
+    else:
+        print('U')
+q27919()
