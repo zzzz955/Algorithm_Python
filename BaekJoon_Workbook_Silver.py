@@ -4633,4 +4633,32 @@ def q27919():
             print('DP')
     else:
         print('U')
-q27919()
+
+
+def q26099():
+    # 백준 26099번 파이썬 설탕 배달 2
+    n = int(input())
+    val5 = n // 5
+    val3 = 0
+    mod = n % 5
+    if mod == 1:
+        if val5:
+            val5 -= 1
+            val3 += 2
+    if mod == 2:
+        if val5:
+            val5 -= 2
+            val3 += 4
+    if mod == 3:
+        if val5:
+            val3 += 1
+        else:
+            val3 += 1
+    if mod == 4:
+        if val5:
+            val5 -= 1
+            val3 += 3
+    if val5 < 0:
+        val5 = 0
+    print(val5 + val3 if val5 * 5 + val3 * 3 == n else -1)
+q26099()
