@@ -184,4 +184,23 @@ def q5430():
         if rev:
             deq.reverse()
         print('[' + ','.join(deq) + ']' if chk else 'error')
-q5430()
+
+
+def q1107():
+    # 백준 1107번 파이썬 리모컨
+    n = int(input())
+    m = int(input())
+    if m:
+        broken = set(map(int, input().split()))
+    else:
+        broken = {}
+    min_val = abs(100 - n)
+    for i in range(1000000):
+        s = str(i)
+        for j in s:
+            if int(j) in broken:
+                break
+        else:
+            min_val = min(min_val, abs(n - i) + len(s))
+    print(min_val)
+q1107()
