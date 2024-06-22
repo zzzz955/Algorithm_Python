@@ -203,4 +203,20 @@ def q1107():
         else:
             min_val = min(min_val, abs(n - i) + len(s))
     print(min_val)
-q1107()
+
+
+def q1727():
+    # 백준 1727번 파이썬 커플 만들기
+    n, m = map(int, input().split())
+    lst1 = sorted(list(map(int, input().split())))
+    lst2 = sorted(list(map(int, input().split())))
+    dp = [[0 for _ in range(m + 1)] for _ in range(n + 1)]
+    for i in range(1, n + 1):
+        for j in range(1, m + 1):
+            dp[i][j] = dp[i - 1][j - 1] + abs(lst1[i - 1] - lst2[j - 1])
+            if i > j:
+                dp[i][j] = min(dp[i][j], dp[i - 1][j])
+            if i < j:
+                dp[i][j] = min(dp[i][j], dp[i][j - 1])
+    print(dp[n][m])
+q1727()
