@@ -4688,4 +4688,15 @@ def q25943():
             result += (right - left) // i
             left += (right - left) // i * i
     print(result)
-q25943()
+
+
+def q9657():
+    # 백준 9657번 파이썬 돌 게임 3
+    n = int(input())
+    dp = [0 for _ in range(n + 1)]
+    for i in range(1, n + 1):
+        if i % 7 != 0 and i % 7 != 2:
+            dp[i] = 1
+    print('SK' if dp[n] else 'CY')
+q9657()
+
