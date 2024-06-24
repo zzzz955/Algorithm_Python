@@ -4709,5 +4709,28 @@ def q10825():
     lst.sort(key=lambda x: (-int(x[1]), int(x[2]), -int(x[3]), x[0]))
     for i in lst:
         print(i[0])
-q10825()
 
+
+def q2567():
+    # 백준 2567번 색종이 - 2 파이썬
+    n = int(input())
+    dp = [[0] * 101 for _ in range(101)]
+    result = 0
+    for _ in range(n):
+        x, y = map(int, input().split())
+        for i in range(x, x + 10):
+            for j in range(y, y + 10):
+                dp[i][j] = 1
+    for i in range(100):
+        for j in range(100):
+            if dp[i][j]:
+                if i == 0 or dp[i - 1][j] == 0:
+                    result += 1
+                if i == 99 or dp[i + 1][j] == 0:
+                    result += 1
+                if j == 0 or dp[i][j - 1] == 0:
+                    result += 1
+                if j == 99 or dp[i][j + 1] == 0:
+                    result += 1
+    print(result)
+q2567()
