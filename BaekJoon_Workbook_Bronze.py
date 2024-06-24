@@ -1884,4 +1884,22 @@ def q15829():
     for i in range(l):
         result += do_hash(s[i], i)
     print(result % 1234567891)
-q15829()
+
+
+def q2309():
+    # 백준 2309번 일곱 난쟁이 파이썬
+    lst = [int(input()) for _ in range(9)]
+    s = sum(lst)
+    for i in range(9):
+        flag = False
+        for j in range(i + 1, 9):
+            if s - (lst[i] + lst[j]) == 100:
+                a, b = lst[i], lst[j]
+                lst.remove(a)
+                lst.remove(b)
+                flag = True
+                break
+        if flag:
+            break
+    print(*sorted(lst))
+q2309()
