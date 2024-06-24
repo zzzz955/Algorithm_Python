@@ -1902,4 +1902,24 @@ def q2309():
         if flag:
             break
     print(*sorted(lst))
-q2309()
+
+
+def q10163():
+    # 백준 10163번 색종이 파이썬
+    n = int(input())
+    lst = [list(map(int, input().split())) for _ in range(n)]
+    lst.reverse()
+    result = []
+    dp = [[0] * 1001 for _ in range(1001)]
+    for i in lst:
+        width = 0
+        for j in range(i[0], i[0] + i[2]):
+            for k in range(i[1], i[1] + i[3]):
+                if dp[j][k] == 0:
+                    dp[j][k] = 1
+                    width += 1
+        result.append(width)
+    result.reverse()
+    for i in result:
+        print(i)
+q10163()
