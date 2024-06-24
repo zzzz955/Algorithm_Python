@@ -4698,5 +4698,16 @@ def q9657():
         if i % 7 != 0 and i % 7 != 2:
             dp[i] = 1
     print('SK' if dp[n] else 'CY')
-q9657()
+
+
+def q10825():
+    # 백준 10825번 파이썬 국영수
+    import sys
+
+    n = int(sys.stdin.readline())
+    lst = [sys.stdin.readline().split() for _ in range(n)]
+    lst.sort(key=lambda x: (-int(x[1]), int(x[2]), -int(x[3]), x[0]))
+    for i in lst:
+        print(i[0])
+q10825()
 
