@@ -1931,4 +1931,27 @@ def q8320():
     for i in range(2, 101):
         result += max(0, n // i - (i - 1))
     print(result)
-q8320()
+
+
+def q3985():
+    # 백준 3985번 롤 케이크 파이썬
+    l = int(input())
+    n = int(input())
+    dp = [0] * (l + 1)
+    large1, index1, large2, index2 = 0, 0, 0, 0
+    for i in range(1, n + 1):
+        p, k = map(int, input().split())
+        cnt = 0
+        if k - p > large1:
+            large1 = k - p
+            index1 = i
+        for j in range(p, k + 1):
+            if not dp[j]:
+                dp[j] = i
+                cnt += 1
+        if cnt > large2:
+            large2 = cnt
+            index2 = i
+    print(index1)
+    print(index2)
+q3985()
