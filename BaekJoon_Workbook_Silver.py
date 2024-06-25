@@ -4733,4 +4733,27 @@ def q2567():
                 if j == 99 or dp[i][j + 1] == 0:
                     result += 1
     print(result)
-q2567()
+
+
+def q2628():
+    # 백준 2628번 종이자르기 파이썬
+    x, y = map(int, input().split())
+    n = int(input())
+    width = [0, x]
+    height = [0, y]
+    for _ in range(n):
+        a, b = map(int, input().split())
+        if a == 0:
+            height.append(b)
+        else:
+            width.append(b)
+    width.sort()
+    height.sort()
+    max_width = 0
+    max_height = 0
+    for i in range(1, len(width)):
+        max_width = max(max_width, width[i] - width[i - 1])
+    for i in range(1, len(height)):
+        max_height = max(max_height, height[i] - height[i - 1])
+    print(max_width * max_height)
+q2628()
