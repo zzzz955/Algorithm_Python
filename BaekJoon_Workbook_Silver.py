@@ -4821,4 +4821,25 @@ def q2578():
             if chk >= 3:
                 print(cnt)
                 return
-q2578()
+
+
+def q10709():
+    # 백준 10709번 기상캐스터 파이썬
+    h, w = map(int, input().split())
+    lst = [list(input() + '.') for _ in range(h)]
+    result = [[-1] * w for _ in range(h)]
+    day = 0
+    while day < w:
+        for i in range(h):
+            for j in range(w):
+                if lst[i][j] == 'c' and result[i][j] == -1:
+                    result[i][j] = day
+        for i in range(h):
+            for j in range(w - 1, -1, -1):
+                if lst[i][j] == 'c':
+                    lst[i][j], lst[i][j + 1] = '.', 'c'
+        day += 1
+    for i in result:
+        print(*i)
+q10709()
+
