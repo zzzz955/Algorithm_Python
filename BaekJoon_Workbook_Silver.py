@@ -4841,5 +4841,24 @@ def q10709():
         day += 1
     for i in result:
         print(*i)
-q10709()
+
+
+def q2980():
+    # 백준 2980번 도로와 신호등 파이썬
+    n, l = map(int, input().split())
+    dp = [1] * (l + 1)
+    lst = [list(map(int, input().split())) for _ in range(n)]
+    time = 0
+    index = 1
+    while index <= l:
+        time += 1
+        for i in lst:
+            if time % (i[1] + i[2]) < i[1]:
+                dp[i[0]] = 0
+            else:
+                dp[i[0]] = 1
+        if dp[index] == 1:
+            index += 1
+    print(time)
+q2980()
 
