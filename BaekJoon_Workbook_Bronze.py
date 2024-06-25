@@ -1922,4 +1922,13 @@ def q10163():
     result.reverse()
     for i in result:
         print(i)
-q10163()
+
+
+def q8320():
+    # 백준 8320번 직사각형을 만드는 방법 파이썬
+    n = int(input())
+    result = n
+    for i in range(2, 101):
+        result += max(0, n // i - (i - 1))
+    print(result)
+q8320()
