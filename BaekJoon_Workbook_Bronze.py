@@ -1954,4 +1954,25 @@ def q3985():
             index2 = i
     print(index1)
     print(index2)
-q3985()
+
+
+def q13300():
+    # 백준 13300번 방 배정 파이썬
+    import math
+
+    n, k = map(int, input().split())
+    dic1 = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0}
+    dic2 = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0}
+    for _ in range(n):
+        s, y = map(int, input().split())
+        if s:
+            dic1[y] += 1
+        else:
+            dic2[y] += 1
+    result = 0
+    for val in dic1.values():
+        result += math.ceil(val / k)
+    for val in dic2.values():
+        result += math.ceil(val / k)
+    print(result)
+q13300()
