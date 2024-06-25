@@ -4784,4 +4784,41 @@ def q10157():
             x += direct[direct_index][0]
             y += direct[direct_index][1]
         index += 1
-q10157()
+
+
+def q2578():
+    # 백준 2578번 빙고 파이썬
+    def call_number(board, number):
+        for i in range(5):
+            for j in range(5):
+                if board[i][j] == number:
+                    board[i][j] = 0
+                    return
+
+    def check_bingo(board):
+        bingo_cnt = 0
+        for row in board:
+            if all(i == 0 for i in row):
+                bingo_cnt += 1
+        for col in range(5):
+            if all(board[row][col] == 0 for row in range(5)):
+                bingo_cnt += 1
+        if all(board[i][i] == 0 for i in range(5)):
+            bingo_cnt += 1
+        if all(board[i][4 - i] == 0 for i in range(5)):
+            bingo_cnt += 1
+        return bingo_cnt
+
+    lst1 = [list(map(int, input().split())) for _ in range(5)]
+    lst2 = [list(map(int, input().split())) for _ in range(5)]
+    cnt = 0
+
+    for i in range(5):
+        for j in range(5):
+            cnt += 1
+            call_number(lst1, lst2[i][j])
+            chk = check_bingo(lst1)
+            if chk >= 3:
+                print(cnt)
+                return
+q2578()
