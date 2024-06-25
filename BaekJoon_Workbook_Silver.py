@@ -4756,4 +4756,32 @@ def q2628():
     for i in range(1, len(height)):
         max_height = max(max_height, height[i] - height[i - 1])
     print(max_width * max_height)
-q2628()
+
+
+def q10157():
+    # 백준 10157번 자리배정 파이썬
+    c, r = map(int, input().split())
+    k = int(input())
+    if k > c * r:
+        print(0)
+        return
+    dp = [[0] * r for _ in range(c)]
+    direct = [(-1, 0), (0, 1), (1, 0), (0, -1)]
+    x, y = 0, 0
+    index = 1
+    direct_index = 1
+    while index <= c * r:
+        dp[x][y] = index
+        if k == index:
+            print(x + 1, y + 1)
+            return
+        next_x = x + direct[direct_index][0]
+        next_y = y + direct[direct_index][1]
+        if (0 <= next_x < c) and (0 <= next_y < r) and (dp[next_x][next_y] == 0):
+            x, y = next_x, next_y
+        else:
+            direct_index = (direct_index + 1) % 4
+            x += direct[direct_index][0]
+            y += direct[direct_index][1]
+        index += 1
+q10157()
