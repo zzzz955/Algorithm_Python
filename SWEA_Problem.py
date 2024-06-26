@@ -95,5 +95,22 @@ def q12712():
                 temp2 -= lst[j][k]
                 result = max(result, temp1, temp2)
         print(f'#{i} {result}')
-q12712()
+
+
+def q1486():
+    # SWEA 1486번 D4 장훈이의 높은 선반 파이썬
+    t = int(input())
+    for i in range(1, t + 1):
+        n, b = map(int, input().split())
+        lst = list(map(int, input().split()))
+        result = 200001
+        for j in range(2 ** n):
+            temp = 0
+            for k in range(n):
+                if j & (2 ** k):
+                    temp += lst[k]
+            if temp >= b:
+                result = min(result, temp)
+        print(f'#{i} {result - b}')
+q1486()
 
