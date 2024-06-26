@@ -69,4 +69,31 @@ def q1961():
         print(f'#{i}')
         for j in range(n):
             print(''.join(angle90[j * n:j * n + n]), ''.join(angle180[j * n:j * n + n]), ''.join(angle270[j * n:j * n + n]))
-q1961()
+
+
+def q12712():
+    # SWEA 12712번 D2 파리퇴치3 파이썬
+    t = int(input())
+    for i in range(1, t + 1):
+        n, m = map(int, input().split())
+        lst = [list(map(int, input().split())) for _ in range(n)]
+        result = 0
+        for j in range(n):
+            for k in range(n):
+                temp1 = 0
+                temp2 = 0
+                for l in range(-m + 1, m):
+                    if 0 <= j + l < n:
+                        temp1 += lst[j + l][k]
+                    if 0 <= k + l < n:
+                        temp1 += lst[j][k + l]
+                    if 0 <= j + l < n and 0 <= k + l < n:
+                        temp2 += lst[j + l][k + l]
+                    if 0 <= j - l < n and 0 <= k + l < n:
+                        temp2 += lst[j - l][k + l]
+                temp1 -= lst[j][k]
+                temp2 -= lst[j][k]
+                result = max(result, temp1, temp2)
+        print(f'#{i} {result}')
+q12712()
+
