@@ -14,5 +14,12 @@ def q2058():
     for i in n:
         result += int(i)
     print(result)
-q2058()
 
+
+def q2063():
+    # SWEA 2063번 D1 중간값 찾기 파이썬
+    n = int(input())
+    lst = list(map(int, input().split()))
+    lst.sort()
+    print(lst[n // 2])
+q2063()
