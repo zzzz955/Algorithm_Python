@@ -4860,5 +4860,19 @@ def q2980():
         if dp[index] == 1:
             index += 1
     print(time)
-q2980()
+
+
+def q2669():
+    # 백준 2669번 직사각형 네개의 합집합의 면적 구하기 파이썬
+    lst = [list(map(int, input().split())) for _ in range(4)]
+    dp = [[0] * 101 for _ in range(101)]
+    for a in lst:
+        for i in range(a[0], a[2]):
+            for j in range(a[1], a[3]):
+                dp[i][j] = 1
+    result = 0
+    for i in dp:
+        result += sum(i)
+    print(result)
+q2669()
 
