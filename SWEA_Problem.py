@@ -22,4 +22,24 @@ def q2063():
     lst = list(map(int, input().split()))
     lst.sort()
     print(lst[n // 2])
-q2063()
+
+
+def q1959():
+    # SWEA 1959번 D2 두 개의 숫자열 파이썬
+    t = int(input())
+    for i in range(1, t + 1):
+        n, m = map(int, input().split())
+        a = list(map(int, input().split()))
+        b = list(map(int, input().split()))
+        result = -2 ** 31
+        for j in range(abs(n - m) + 1):
+            temp = 0
+            if n - m <= 0:
+                for k in range(n):
+                    temp += a[k] * b[j + k]
+            else:
+                for k in range(m):
+                    temp += a[j + k] * b[k]
+            result = max(result, temp)
+        print(f"#{i} {result}")
+q1959()
