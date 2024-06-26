@@ -1975,4 +1975,27 @@ def q13300():
     for val in dic2.values():
         result += math.ceil(val / k)
     print(result)
-q13300()
+
+
+def q14696():
+    # 백준 14696번 딱지놀이 파이썬
+    n = int(input())
+    for _ in range(n):
+        a = {4: 0, 3: 0, 2: 0, 1: 0}
+        b = {4: 0, 3: 0, 2: 0, 1: 0}
+        lst1 = list(map(int, input().split()))
+        lst2 = list(map(int, input().split()))
+        for i in range(1, lst1[0] + 1):
+            a[lst1[i]] += 1
+        for i in range(1, lst2[0] + 1):
+            b[lst2[i]] += 1
+        winner = -1
+        for i in range(4, 0, -1):
+            if a[i] > b[i]:
+                winner = 0
+                break
+            if a[i] < b[i]:
+                winner = 1
+                break
+        print('A' if winner == 0 else 'B' if winner == 1 else 'D')
+q14696()
