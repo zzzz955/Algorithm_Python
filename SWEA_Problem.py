@@ -5,4 +5,14 @@ def q1936():
         print('A')
     else:
         print('B')
-q1936()
+
+
+def q2058():
+    # SWEA 2058번 D1 자릿수 더하기 파이썬
+    n = input()
+    result = 0
+    for i in n:
+        result += int(i)
+    print(result)
+q2058()
+
