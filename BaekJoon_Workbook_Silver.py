@@ -4874,5 +4874,33 @@ def q2669():
     for i in dp:
         result += sum(i)
     print(result)
-q2669()
+
+
+def q2477():
+    # 백준 2477번 참외밭 파이썬
+    k = int(input())
+    dist = []
+    length = []
+    for _ in range(6):
+        d, l = map(int, input().split())
+        dist.append(d)
+        length.append(l)
+
+    big_w, big_h = 0, 0
+    for i in range(6):
+        if dist[i] == 1 or dist[i] == 2:
+            big_w = max(big_w, length[i])
+        if dist[i] == 3 or dist[i] == 4:
+            big_h = max(big_h, length[i])
+
+    small_w, small_h = 0, 0
+    for i in range(6):
+        if dist[i] == 1 or dist[i] == 2:
+            if length[i] == big_w:
+                small_h = abs(length[(i + 1) % 6] - length[(i + 5) % 6])
+        if dist[i] == 3 or dist[i] == 4:
+            if length[i] == big_h:
+                small_w = abs(length[(i + 1) % 6] - length[(i + 5) % 6])
+    print(k * ((big_w * big_h) - (small_w * small_h)))
+q2477()
 
