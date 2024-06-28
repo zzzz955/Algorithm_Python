@@ -4919,5 +4919,24 @@ def q10158():
         y = 2 * r - y
 
     print(x, y)
-q10158()
+
+
+def q2527():
+    # 백준 2527번 직사각형 파이썬
+    for _ in range(4):
+        x1, y1, p1, q1, x2, y2, p2, q2 = map(int, input().split())
+        left = max(x1, x2)
+        right = min(p1, p2)
+        bottom = max(y1, y2)
+        top = min(q1, q2)
+        if left > right or bottom > top:
+            print('d')
+        elif left == right and bottom == top:
+            print('c')
+        elif left == right or bottom == top:
+            print('b')
+        else:
+            print('a')
+q2527()
+
 
