@@ -4937,6 +4937,28 @@ def q2527():
             print('b')
         else:
             print('a')
-q2527()
+
+
+def q1063():
+    # 백준 1063번 킹 파이썬
+    k, r, n = input().split()
+    dic = {'R': (1, 0), 'L': (-1, 0), 'B': (0, -1), 'T': (0, 1),
+           'RT': (1, 1), 'LT': (-1, 1), 'RB': (1, -1), 'LB': (-1, -1)}
+    k_pos = [(ord(k[0]) - 64), int(k[1])]
+    r_pos = [(ord(r[0]) - 64), int(r[1])]
+    for _ in range(int(n)):
+        d = input()
+        next_k_pos = [k_pos[0] + dic[d][0], k_pos[1] + dic[d][1]]
+        if next_k_pos == r_pos:
+            next_r_pos = [r_pos[0] + dic[d][0], r_pos[1] + dic[d][1]]
+            if 1 <= next_r_pos[0] <= 8 and 1 <= next_r_pos[1] <= 8:
+                k_pos = r_pos
+                r_pos = next_r_pos
+        elif 1 <= next_k_pos[0] <= 8 and 1 <= next_k_pos[1] <= 8:
+            k_pos = next_k_pos
+    print(chr(k_pos[0] + 64) + str(k_pos[1]))
+    print(chr(r_pos[0] + 64) + str(r_pos[1]))
+q1063()
+
 
 
