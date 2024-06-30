@@ -140,5 +140,43 @@ def q10965():
         result.append(f'#{i} {b}')
     for i in result:
         print(i)
-q10965()
+
+
+def q1206():
+    # SWEA 1206번 D3 [S/W 문제해결 기본] 1일차 - View 파이썬
+    for i in range(1, 11):
+        n = int(input())
+        lst = [0] * 2 + list(map(int, input().split())) + [0] * 2
+        result = 0
+        for j in range(2, len(lst) - 2):
+            temp = lst[j] - max(max(lst[j-2:j]), max(lst[j + 1:j + 3]))
+            if temp > 0:
+                result += temp
+        print(f'#{i} {result}')
+
+
+def q1208():
+    # SWEA 1208번 D3 [S/W 문제해결 기본] 1일차 - Flatten 파이썬
+    import heapq
+
+    for i in range(1, 11):
+        d = int(input())
+        lst1 = list(map(int, input().split()))
+        lst2 = [-j for j in lst1]
+
+        heapq.heapify(lst1)
+        heapq.heapify(lst2)
+
+        while d:
+            min_val = heapq.heappop(lst1)
+            max_val = -heapq.heappop(lst2)
+            if max_val - min_val <= 1:
+                print(max_val - min_val)
+                break
+            heapq.heappush(lst1, min_val + 1)
+            heapq.heappush(lst2, -(max_val - 1))
+            d -= 1
+        print(f'#{i} {-heapq.heappop(lst2) - heapq.heappop(lst1)}')
+q1208()
+
 
