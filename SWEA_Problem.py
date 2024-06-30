@@ -112,5 +112,33 @@ def q1486():
             if temp >= b:
                 result = min(result, temp)
         print(f'#{i} {result - b}')
-q1486()
+
+
+def q10965():
+    # SWEA 10965번 D3 제곱수 만들기 파이썬
+    t = int(input())
+    result = []
+    for i in range(1, t + 1):
+        a = int(input())
+        dic = {}
+
+        k = 2
+        while k ** 2 <= a:
+            while a % k == 0:
+                if k in dic:
+                    dic[k] += 1
+                else:
+                    dic[k] = 1
+                a //= k
+            k += 1
+        if a > 1:
+            dic[a] = 1
+        b = 1
+        for key, val in dic.items():
+            if val % 2:
+                b *= key
+        result.append(f'#{i} {b}')
+    for i in result:
+        print(i)
+q10965()
 
