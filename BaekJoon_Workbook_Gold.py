@@ -39,21 +39,17 @@ def q27396():
     import sys
 
     s, n = sys.stdin.readline().split()
-    s = list(s)
-    dic = {}
+    char_map = {chr(i): chr(i) for i in range(65, 123)}
     for _ in range(int(n)):
         order = sys.stdin.readline().split()
         if order[0] == '1':
-            dic[order[1]] = order[2]
-            for key, val in dic.items():
-                if val == order[1]:
-                    dic[key] = order[2]
+            for char in char_map:
+                if char_map[char] == order[1]:
+                    char_map[char] = order[2]
         else:
-            for i in range(len(s)):
-                if s[i] in dic:
-                    s[i] = dic[s[i]]
-            dic.clear()
-            print(''.join(s))
+            transformed_s = ''.join(char_map[char] for char in s)
+            print(transformed_s)
+q27396()
 
 
 def q1715():
@@ -238,4 +234,4 @@ def q1781():
         if len(stack) > i[0]:
             heapq.heappop(stack)
     print(sum(stack))
-q1781()
+
