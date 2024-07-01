@@ -177,6 +177,21 @@ def q1208():
             heapq.heappush(lst2, -(max_val - 1))
             d -= 1
         print(f'#{i} {-heapq.heappop(lst2) - heapq.heappop(lst1)}')
-q1208()
+
+
+def q2805():
+    # SWEA 2805번 D3 농작물 수확하기 파이썬
+    t = int(input())
+    for i in range(1, t + 1):
+        n = int(input())
+        lst = [list(map(int, *list(input().split()))) for _ in range(n)]
+        center = n // 2
+        result = 0
+        for j in range(center + 1):
+            result += sum(lst[j][center - j:center + j + 1])
+        for j in range(center):
+            result += sum(lst[-j - 1][center - j:center + j + 1])
+        print(f'#{i} {result}')
+q2805()
 
 
