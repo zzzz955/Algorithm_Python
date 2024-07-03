@@ -2274,19 +2274,15 @@ def q9656():
 def q19947():
     # 백준 19947번 파이썬 투자의 귀재 배주형
     h, y = map(int, input().split())
-    while y:
-        if y % 5:
-            if y // 3:
-                y -= 3
-                h *= 1.2
-            else:
-                y -= 1
-                h *= 1.05
-        else:
-            y -= 5
-            h *= 1.35
-        h = int(h)
-    print(h)
+    dp = [0 * i for i in range(11)]
+    dp[0] = h
+    dp[1] = int(h * 1.05)
+    dp[2] = int(dp[1] * 1.05)
+    dp[3] = int(h * 1.20)
+    dp[4] = int(dp[1] * 1.20)
+    for i in range(5, y + 1):
+        dp[i] = int(max(dp[i - 5] * 1.35, dp[i - 3] * 1.20, dp[i - 1] * 1.05))
+    print(dp[y])
 
 
 def q25644():
@@ -5005,7 +5001,7 @@ def q3085():
                     print(n)
                     return
     print(result)
-q3085()
+q19947()
 
 
 
