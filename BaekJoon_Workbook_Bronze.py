@@ -2033,4 +2033,15 @@ def q1110():
         else:
             n2 = n2 * 10 + n2
     print(result)
-q1110()
+
+
+def q2577():
+    # 백준 2577번 숫자의 개수 파이썬
+    lst = [int(input()) for _ in range(3)]
+    val = str(eval('*'.join(map(str, lst))))
+    dic = {str(i): 0 for i in range(10)}
+    for char in val:
+        dic[char] += 1
+    for val in dic.values():
+        print(val)
+q2577()
