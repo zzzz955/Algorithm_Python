@@ -2010,4 +2010,10 @@ def q2741():
     # 백준 2741번 N 찍기 파이썬
     for i in range(1, int(input()) + 1):
         print(i)
-q2741()
+
+
+def q2742():
+    # 백준 2742번 기찍 N 파이썬
+    for i in range(int(input()), 0, -1):
+        print(i)
+q2742()
