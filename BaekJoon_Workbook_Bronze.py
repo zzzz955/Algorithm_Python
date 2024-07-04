@@ -2016,4 +2016,21 @@ def q2742():
     # 백준 2742번 기찍 N 파이썬
     for i in range(int(input()), 0, -1):
         print(i)
-q2742()
+
+
+def q1110():
+    # 백준 1110번 더하기 사이클 파이썬
+    n = int(input())
+    if n // 10:
+        n2 = (n % 10 * 10) + ((n // 10 + n) % 10 % 10)
+    else:
+        n2 = n * 10 + n
+    result = 1
+    while n != n2:
+        result += 1
+        if n2 // 10:
+            n2 = (n2 % 10 * 10) + ((n2 // 10 + n2) % 10 % 10)
+        else:
+            n2 = n2 * 10 + n2
+    print(result)
+q1110()
