@@ -1998,4 +1998,10 @@ def q14696():
                 winner = 1
                 break
         print('A' if winner == 0 else 'B' if winner == 1 else 'D')
-q14696()
+
+
+def q10718():
+    # 백준 10718번 We love kriii 파이썬
+    print("강한친구 대한육군")
+    print("강한친구 대한육군")
+q10718()
