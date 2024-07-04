@@ -2004,4 +2004,10 @@ def q10718():
     # 백준 10718번 We love kriii 파이썬
     print("강한친구 대한육군")
     print("강한친구 대한육군")
-q10718()
+
+
+def q2741():
+    # 백준 2741번 N 찍기 파이썬
+    for i in range(1, int(input()) + 1):
+        print(i)
+q2741()
