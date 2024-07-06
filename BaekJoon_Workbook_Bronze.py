@@ -2120,4 +2120,13 @@ def q11721():
     for _ in range(length // 10 + 1):
         print(s[:10])
         s = s[10:]
-q11721()
+
+
+def q11719():
+    # 백준 11719번 그대로 출력하기 2 파이썬
+    while 1:
+        try:
+            print(input())
+        except:
+            break
+q11719()
