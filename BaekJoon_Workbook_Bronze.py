@@ -2064,4 +2064,11 @@ def q10250():
             front = h * 100
             back = n // h
         print(front + back)
-q10250()
+
+
+def q2441():
+    # 백준 2441번 별 찍기 - 4 파이썬
+    n = int(input())
+    for i in range(n):
+        print(' ' * i + '*' * (n - i))
+q2441()
