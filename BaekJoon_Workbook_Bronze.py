@@ -2138,4 +2138,23 @@ def q2446():
         print(' ' * i + '*' * (2 * n - (2 * i + 1)))
     for i in range(1, n):
         print(' ' * (n - (i + 1)) + '*' * (2 * i + 1))
-q2446()
+
+
+def q2747():
+    # 백준 2747번 피보나치 수 파이썬
+    n = int(input())
+    dp = [0] * 46
+    dp[1], dp[2] = 1, 1
+    for i in range(3, n + 1):
+        dp[i] = dp[i - 1] + dp[i - 2]
+    print(dp[n])
+
+
+def q10808():
+    # 백준 10808번 알파벳 개수 파이썬
+    s = input()
+    alpha = {chr(i): 0 for i in range(97, 123)}
+    for i in s:
+        alpha[i] += 1
+    print(*alpha.values())
+q10808()
