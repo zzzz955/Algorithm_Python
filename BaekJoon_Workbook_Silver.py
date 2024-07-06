@@ -5016,5 +5016,17 @@ def q4673():
     for i in range(1, 10000):
         if not dp[i]:
             print(i)
-q4673()
+
+
+def q1475():
+    # 백준 1475번 방 번호 파이썬
+    n = int(input())
+    dic = {i: 0 for i in range(10)}
+    while n:
+        dic[n % 10] += 1
+        n //= 10
+    if dic[6] + dic[9]:
+        dic[6], dic[9] = int((dic[6] + dic[9]) / 2 + 0.5), int((dic[9] + dic[6]) / 2 + 0.5)
+    print(max(dic.values()))
+q1475()
 
