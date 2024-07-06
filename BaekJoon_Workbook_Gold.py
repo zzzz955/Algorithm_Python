@@ -235,3 +235,34 @@ def q1781():
             heapq.heappop(stack)
     print(sum(stack))
 
+
+def q14503():
+    # 백준 14503번 로봇 청소기 파이썬
+    n, m = map(int, input().split())
+    r, c, d = map(int, input().split())
+    lst = [list(map(int, input().split())) for _ in range(n)]
+    dist = [(-1, 0), (0, 1), (1, 0), (0, -1)]
+    result = 0
+    cleaned = [[False] * m for _ in range(n)]
+
+    while 1:
+        if not cleaned[r][c]:
+            cleaned[r][c] = True
+            result += 1
+        cleaned_or_moved = False
+        for _ in range(4):
+            d = (d + 3) % 4
+            nr, nc = r + dist[d][0], c + dist[d][1]
+            if 0 <= nr < n and 0 <= nc < m and not cleaned[nr][nc] and lst[nr][nc] == 0:
+                r, c = nr, nc
+                cleaned_or_moved = True
+                break
+        if not cleaned_or_moved:
+            back = (d + 2) % 4
+            br, bc = r + dist[back][0], c + dist[back][1]
+            if 0 <= br < n and 0 <= bc < m and lst[br][bc] == 0:
+                r, c = br, bc
+            else:
+                break
+    print(result)
+q14503()
