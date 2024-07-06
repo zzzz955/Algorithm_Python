@@ -2111,4 +2111,13 @@ def q2442():
     n = int(input())
     for i in range(1, n + 1):
         print(' ' * (n - i) + '*' * (2 * i - 1))
-q2442()
+
+
+def q11721():
+    # 백준 11721번 열 개씩 끊어 출력하기 파이썬
+    s = input()
+    length = len(s)
+    for _ in range(length // 10 + 1):
+        print(s[:10])
+        s = s[10:]
+q11721()
