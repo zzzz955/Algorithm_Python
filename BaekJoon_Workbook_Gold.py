@@ -265,4 +265,42 @@ def q14503():
             else:
                 break
     print(result)
-q14503()
+
+
+def q3190():
+    # 백준 3190번 뱀 파이썬
+    import collections
+
+    n = int(input())
+    dp = [[0] * n for _ in range(n)]
+    k = int(input())
+    for _ in range(k):
+        x, y = map(int, input().split())
+        dp[x - 1][y - 1] = 1
+    l = int(input())
+    dist_change = [tuple(input().split()) for _ in range(l)]
+    dist_change_index = 0
+    dist = [(0, 1), (1, 0), (0, -1), (-1, 0)]
+    dist_index = 0
+    time = 0
+    snake = collections.deque([(0, 0)])
+    while 1:
+        time += 1
+        head = snake[-1]
+        nr, nc = head[0] + dist[dist_index][0], head[1] + dist[dist_index][1]
+        if 0 <= nr < n and 0 <= nc < n and (nr, nc) not in snake:
+            snake.append((nr, nc))
+        else:
+            break
+        if dp[nr][nc] == 1:
+            dp[nr][nc] = 0
+        else:
+            snake.popleft()
+        if dist_change_index < l and time == int(dist_change[dist_change_index][0]):
+            if dist_change[dist_change_index][1] == 'D':
+                dist_index = (dist_index + 1) % 4
+            else:
+                dist_index = (dist_index + 3) % 4
+            dist_change_index += 1
+    print(time)
+q3190()
