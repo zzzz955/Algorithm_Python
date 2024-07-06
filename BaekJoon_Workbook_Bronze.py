@@ -2214,4 +2214,16 @@ def q2744():
         else:
             ns += chr(temp + 32)
     print(ns)
-q2744()
+
+
+def q2455():
+    # 백준 2455번 지능형 기차 파이썬
+    cur = 0
+    max_val = 0
+    for _ in range(4):
+        o, i = map(int, input().split())
+        cur -= o
+        cur += i
+        max_val = max(max_val, cur)
+    print(max_val)
+q2455()
