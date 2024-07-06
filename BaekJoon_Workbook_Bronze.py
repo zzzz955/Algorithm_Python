@@ -2157,4 +2157,17 @@ def q10808():
     for i in s:
         alpha[i] += 1
     print(*alpha.values())
-q10808()
+
+
+def q2420():
+    # 백준 2420번 사파리월드 파이썬
+    n, m = map(int, input().split())
+    print(abs(n - m))
+
+
+def q2443():
+    # 백준 2443번 별 찍기 - 6 파이썬
+    n = int(input())
+    for i in range(n):
+        print(' ' * i + '*' * (2 * n - (2 * i + 1)))
+q2443()
