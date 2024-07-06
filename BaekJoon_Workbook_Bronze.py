@@ -2192,4 +2192,26 @@ def q2490():
         lst = list(map(int, input().split()))
         cnt = lst.count(0)
         print('A' if cnt == 1 else 'B' if cnt == 2 else 'C' if cnt == 3 else 'D' if cnt == 4 else 'E')
-q2490()
+
+
+def q2523():
+    # 백준 2523번 별 찍기 - 13 파이썬
+    n = int(input())
+    for i in range(1, n + 1):
+        print('*' * i)
+    for i in range(n - 1, 0, -1):
+        print('*' * i)
+
+
+def q2744():
+    # 백준 2744번 대소문자 바꾸기 파이썬
+    s = input()
+    ns = ''
+    for i in s:
+        temp = ord(i)
+        if temp >= 97:
+            ns += chr(temp - 32)
+        else:
+            ns += chr(temp + 32)
+    print(ns)
+q2744()
