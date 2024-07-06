@@ -2104,4 +2104,11 @@ def q1924():
     for i in range(1, x):
         y += months[i]
     print(weeks[y % 7])
-q1924()
+
+
+def q2442():
+    # 백준 2442번 별 찍기 - 5 파이썬
+    n = int(input())
+    for i in range(1, n + 1):
+        print(' ' * (n - i) + '*' * (2 * i - 1))
+q2442()
