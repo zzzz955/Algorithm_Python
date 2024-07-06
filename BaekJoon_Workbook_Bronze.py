@@ -2050,4 +2050,18 @@ def q2440():
     # 백준 2440번 별 찍기 - 3 파이썬
     for i in range(int(input()), 0, -1):
         print('*' * i)
-q2440()
+
+
+def q10250():
+    # 백준 10250번 ACM 호텔 파이썬
+    t = int(input())
+    for _ in range(t):
+        h, w, n = map(int, input().split())
+        if n % h:
+            front = n % h * 100
+            back = n // h + 1
+        else:
+            front = h * 100
+            back = n // h
+        print(front + back)
+q10250()
