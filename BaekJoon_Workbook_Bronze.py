@@ -2044,4 +2044,10 @@ def q2577():
         dic[char] += 1
     for val in dic.values():
         print(val)
-q2577()
+
+
+def q2440():
+    # 백준 2440번 별 찍기 - 3 파이썬
+    for i in range(int(input()), 0, -1):
+        print('*' * i)
+q2440()
