@@ -2093,4 +2093,15 @@ def q2475():
     for i in range(5):
         result += lst[i] ** 2
     print(result % 10)
-q2475()
+
+
+def q1924():
+    # 백준 1924번 2007년 파이썬
+    months = {1: 31, 2: 28, 3: 31, 4: 30, 5: 31, 6: 30,
+              7: 31, 8: 31, 9: 30, 10: 31, 11: 30, 12: 31}
+    weeks = {0: 'SUN', 1: 'MON', 2: 'TUE', 3: 'WED', 4: 'THU', 5: 'FRI', 6: 'SAT'}
+    x, y = map(int, input().split())
+    for i in range(1, x):
+        y += months[i]
+    print(weeks[y % 7])
+q1924()
