@@ -2184,4 +2184,12 @@ def q2445():
 def q2752():
     # 백준 2752번 세수정렬 파이썬
     print(*sorted(list(map(int, input().split()))))
-q2752()
+
+
+def q2490():
+    # 백준 2490번 윷놀이 파이썬
+    for _ in range(3):
+        lst = list(map(int, input().split()))
+        cnt = lst.count(0)
+        print('A' if cnt == 1 else 'B' if cnt == 2 else 'C' if cnt == 3 else 'D' if cnt == 4 else 'E')
+q2490()
