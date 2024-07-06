@@ -5041,4 +5041,32 @@ def q2167():
         for a in range(i - 1, x):
             result += sum(lst[a][j - 1:y])
         print(result)
-q2167()
+
+
+def q17413():
+    # 백준 17413번 단어 뒤집기 2 파이썬
+    s = input()
+    start = 0
+    lst = []
+    tag = False
+    for i in range(len(s)):
+        if s[i] == '<':
+            lst.append(s[start:i])
+            start = i
+            tag = True
+        if s[i] == '>':
+            lst.append(s[start:i + 1])
+            start = i + 1
+            tag = False
+        if s[i] == ' ' and tag == False:
+            lst.append(' ' + s[start:i])
+            start = i + 1
+    lst.append(s[start:])
+    result = ''
+    for i in lst:
+        if '<' in i:
+            result += i
+        else:
+            result += i[::-1]
+    print(result)
+q17413()
