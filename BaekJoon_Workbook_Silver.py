@@ -5028,5 +5028,17 @@ def q1475():
     if dic[6] + dic[9]:
         dic[6], dic[9] = int((dic[6] + dic[9]) / 2 + 0.5), int((dic[9] + dic[6]) / 2 + 0.5)
     print(max(dic.values()))
-q1475()
 
+
+def q2167():
+    # 백준 2167번 2차원 배열의 합 파이썬
+    n, m = map(int, input().split())
+    lst = [list(map(int, input().split())) for _ in range(n)]
+    k = int(input())
+    for _ in range(k):
+        i, j, x, y = map(int, input().split())
+        result = 0
+        for a in range(i - 1, x):
+            result += sum(lst[a][j - 1:y])
+        print(result)
+q2167()
