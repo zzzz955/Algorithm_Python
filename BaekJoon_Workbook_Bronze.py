@@ -2071,4 +2071,17 @@ def q2441():
     n = int(input())
     for i in range(n):
         print(' ' * i + '*' * (n - i))
-q2441()
+
+
+def q2920():
+    # 백준 2920번 음계 파이썬
+    lst = list(map(int, input().split()))
+    desc = [8, 7, 6, 5, 4, 3, 2, 1]
+    asc = [1, 2, 3, 4, 5, 6, 7, 8]
+    if lst == asc:
+        print('ascending')
+    elif lst == desc:
+        print('descending')
+    else:
+        print('mixed')
+q2920()
