@@ -2084,4 +2084,13 @@ def q2920():
         print('descending')
     else:
         print('mixed')
-q2920()
+
+
+def q2475():
+    # 백준 2475번 검증수 파이썬
+    lst = list(map(int, input().split()))
+    result = 0
+    for i in range(5):
+        result += lst[i] ** 2
+    print(result % 10)
+q2475()
