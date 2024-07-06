@@ -2179,4 +2179,9 @@ def q2445():
         print('*' * i + ' ' * (n - i) * 2 + '*' * i)
     for i in range(1, n):
         print('*' * (n - i) + ' ' * i * 2 + '*' * (n - i))
-q2445()
+
+
+def q2752():
+    # 백준 2752번 세수정렬 파이썬
+    print(*sorted(list(map(int, input().split()))))
+q2752()
