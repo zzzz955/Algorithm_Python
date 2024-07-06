@@ -2129,4 +2129,13 @@ def q11719():
             print(input())
         except:
             break
-q11719()
+
+
+def q2446():
+    # 백준 2446번 별 찍기 - 9 파이썬
+    n = int(input())
+    for i in range(n):
+        print(' ' * i + '*' * (2 * n - (2 * i + 1)))
+    for i in range(1, n):
+        print(' ' * (n - (i + 1)) + '*' * (2 * i + 1))
+q2446()
