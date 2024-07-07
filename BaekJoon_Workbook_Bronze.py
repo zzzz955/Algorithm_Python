@@ -2226,4 +2226,17 @@ def q2455():
         cur += i
         max_val = max(max_val, cur)
     print(max_val)
-q2455()
+
+
+def q1550():
+    # 백준 1550번 16진수 파이썬
+    s = input()
+    dic = {'0': 0, '1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8,
+           '9': 9, 'A': 10, 'B': 11, 'C': 12, 'D': 13, 'E': 14, 'F': 15}
+    result = 0
+    p = 1
+    for i in s[::-1]:
+        result += dic[i] * p
+        p *= 16
+    print(result)
+q1550()
