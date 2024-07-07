@@ -5087,4 +5087,26 @@ def q10799():
                 stack.pop()
                 result += 1
     print(result)
-q10799()
+
+
+def q13335():
+    # 백준 13335번 트럭 파이썬
+    from collections import deque
+
+    n, w, l = map(int, input().split())
+    lst = deque(list(map(int, input().split())))
+    bridge = deque()
+    time = 0
+    while lst or bridge:
+        time += 1
+        if bridge:
+            for i in range(len(bridge)):
+                bridge[i][0] -= 1
+            if bridge[0][0] == 0:
+                bridge.popleft()
+        weight = sum(map(lambda x: x[1], bridge))
+        if lst:
+            if weight + lst[0] <= l:
+                bridge.append([w, lst.popleft()])
+    print(time)
+q13335()
