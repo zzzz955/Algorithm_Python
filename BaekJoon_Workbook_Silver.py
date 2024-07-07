@@ -5069,4 +5069,22 @@ def q17413():
         else:
             result += i[::-1]
     print(result)
-q17413()
+
+
+def q10799():
+    # 백준 10799번 쇠막대기 파이썬
+    s = input()
+    stack = []
+    result = 0
+    for i in range(len(s)):
+        if s[i] == '(':
+            stack.append(s[i])
+        else:
+            if s[i - 1] == '(':
+                stack.pop()
+                result += len(stack)
+            else:
+                stack.pop()
+                result += 1
+    print(result)
+q10799()
