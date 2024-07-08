@@ -2239,4 +2239,12 @@ def q1550():
         result += dic[i] * p
         p *= 16
     print(result)
-q1550()
+
+
+def q4562():
+    # 백준 4562번 No Brainer 파이썬
+    for _ in range(int(input())):
+        x, y = map(int, input().split())
+        print('NO BRAINS' if x < y else 'MMM BRAINS')
+q4562()
+
