@@ -5182,4 +5182,37 @@ def q2178():
                     v[nx][ny] = True
                     q.append((nx, ny, d + 1))
     print(bfs(lst, (0, 0, 1)))
-q2178()
+
+
+def q2667():
+    # 백준 2667번 단지번호붙이기 파이썬
+    from collections import deque
+
+    n = int(input())
+    lst = [list(map(int, list(input()))) for _ in range(n)]
+    v = [[0] * n for _ in range(n)]
+    dist = [(1, 0), (-1, 0), (0, 1), (0, -1)]
+
+    def bfs(graph, start, c):
+        q = deque([start])
+        v[start[0]][start[1]] = True
+        while q:
+            x, y = q.popleft()
+            for dx, dy in dist:
+                nx, ny = x + dx, y + dy
+                if 0 <= nx < n and 0 <= ny < n and graph[nx][ny] and not v[nx][ny]:
+                    v[nx][ny] = True
+                    c += 1
+                    q.append((nx, ny))
+        return c
+
+    cnt = []
+    for i in range(n):
+        for j in range(n):
+            if lst[i][j] == 1 and v[i][j] == 0:
+                cnt.append(bfs(lst, (i, j), 1))
+    cnt.sort()
+    print(len(cnt))
+    for i in cnt:
+        print(i)
+q2667()
