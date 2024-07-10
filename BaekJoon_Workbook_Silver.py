@@ -5109,4 +5109,52 @@ def q13335():
             if weight + lst[0] <= l:
                 bridge.append([w, lst.popleft()])
     print(time)
-q13335()
+
+
+def q1260():
+    # 백준 1260번 파이썬 DFS와 BFS
+    from collections import deque
+
+    n, m, v = map(int, input().split())
+    lst = [[] for _ in range(n + 1)]
+    for _ in range(m):
+        a, b = map(int, input().split())
+        lst[a].append(b)
+        lst[b].append(a)
+    for i in lst:
+        i.sort()
+
+    def dfs(graph, start, visited):
+        stack = [start]
+        result = []
+
+        while stack:
+            node = stack.pop()
+            if not visited[node]:
+                visited[node] = True
+                result.append(node)
+                for neighbor in sorted(graph[node], reverse=True):
+                    if not visited[neighbor]:
+                        stack.append(neighbor)
+        return result
+
+    def bfs(graph, start, visited):
+        queue = deque([start])
+        result = []
+        visited[start] = True
+
+        while queue:
+            node = queue.popleft()
+            result.append(node)
+            for neighbor in sorted(graph[node]):
+                if not visited[neighbor]:
+                    visited[neighbor] = True
+                    queue.append(neighbor)
+        return result
+
+    visited_dfs = [False] * (n + 1)
+    visited_bfs = [False] * (n + 1)
+    dfs_result = dfs(lst, v, visited_dfs)
+    bfs_result = bfs(lst, v, visited_bfs)
+    print(*dfs_result)
+    print(*bfs_result)
