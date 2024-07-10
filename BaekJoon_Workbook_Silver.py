@@ -5158,3 +5158,29 @@ def q1260():
     bfs_result = bfs(lst, v, visited_bfs)
     print(*dfs_result)
     print(*bfs_result)
+
+
+def q2178():
+    # 백준 2178번 미로 탐색 파이썬
+    from collections import deque
+
+    n, m = map(int, input().split())
+    lst = [list(map(int, list(input()))) for _ in range(n)]
+    v = [[False] * m for _ in range(n)]
+    dist = [(1, 0), (0, 1), (-1, 0), (0, -1)]
+
+    def bfs(graph, start):
+        q = deque([start])
+        v[0][0] = True
+        while q:
+            x, y, d = q.popleft()
+            if x == n - 1 and y == m - 1:
+                return d
+            for dx, dy in dist:
+                nx, ny = x + dx, y + dy
+                if 0 <= nx < n and 0 <= ny < m and graph[nx][ny] == 1 and not v[nx][ny]:
+                    v[nx][ny] = True
+                    q.append((nx, ny, d + 1))
+
+    print(bfs(lst, (0, 0, 1)))
+q2178()
