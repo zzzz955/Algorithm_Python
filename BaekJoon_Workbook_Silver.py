@@ -5215,4 +5215,11 @@ def q2667():
     print(len(cnt))
     for i in cnt:
         print(i)
-q2667()
+
+
+def q10867():
+    # 백준 10867번 중복 빼고 정렬하기 파이썬
+    n = int(input())
+    lst = sorted(set(map(int, input().split())))
+    print(*lst)
+q10867()
