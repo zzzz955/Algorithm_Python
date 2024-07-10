@@ -5181,6 +5181,5 @@ def q2178():
                 if 0 <= nx < n and 0 <= ny < m and graph[nx][ny] == 1 and not v[nx][ny]:
                     v[nx][ny] = True
                     q.append((nx, ny, d + 1))
-
     print(bfs(lst, (0, 0, 1)))
 q2178()
